@@ -1,0 +1,43 @@
+.event-outline {
+  background-color: #1e8864;
+  .event-outline__wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 80px;
+    align-items: center;
+    text-align: center;
+    h2 {
+      font-size: 28px;
+      font-family: 'Lato', sans-serif;
+      font-style: italic;
+      color: white;
+    }
+    .borders {
+      color: white;
+      width: 45px;
+      height: 0px;
+      border: 1px solid white;
+    }
+    p {
+      margin: 40px 0;
+      font-size: 14px;
+      color: white;
+      text-align: justify;
+    }
+    table,
+    th,
+    td {
+      background-color: #eaf2ef;
+      border: 1px solid white;
+      border-collapse: collapse;
+      color: black;
+      font-size: 14px;
+      font-style: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    th {
+      text-align: center;
+      color: #1d8864;
+    }
+  }
+}

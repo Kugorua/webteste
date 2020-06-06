@@ -1,0 +1,73 @@
+.speakers {
+  background-color: #32908e;
+  .speakers__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 80px;
+    h2 {
+      font-size: 28px;
+      font-family: 'Lato', sans-serif;
+      font-style: italic;
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    .borders {
+      margin: 25px 0;
+      color: white;
+      width: 45px;
+      height: 0px;
+      border: 1px solid white;
+    }
+    .speakers__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .speaker__item {
+        width: 47%;
+        p {
+          font-family: 'Noto Sans JP', sans-serif;
+          font-size: 14px;
+          color: white;
+        }
+        .speaker__item__avata {
+          img {
+            margin: 0;
+          }
+          position: relative;
+          .btn-1 {
+            position: absolute;
+            color: blue;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+            background-color: #343434;
+            color: white;
+            padding: 11px 25px;
+          }
+          .group-btn {
+            position: absolute;
+            bottom: 18px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            a {
+              color: white;
+              text-decoration: none;
+              display: flex;
+              justify-content: flex-start;
+              p {
+                margin: 0;
+                padding: 2px;
+                background-color: #32908e;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

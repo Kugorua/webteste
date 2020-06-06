@@ -1,0 +1,92 @@
+.concept {
+  background-color: #00708d;
+  .concept__wrap {
+    padding: 80px 50px 0 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .concept__group-901 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      max-width: 576px;
+      color: white;
+      h1 {
+        font-size: 28px;
+        text-transform: uppercase;
+        font-family: 'Lato', sans-serif;
+        font-style: italic;
+        position: relative;
+        &::after {
+          content: '';
+          border-top: 1px solid white;
+          width: 50px;
+          height: 2px;
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .concept__group-901__content {
+        p {
+          font-size: 16px;
+          font-family: 'Noto Sans JP', sans-serif;
+        }
+      }
+    }
+    .concept__group-980 {
+      display: flex;
+      justify-content: space-between;
+
+      margin: 85px 0;
+      .concept__group-980__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 47%;
+        .concept__group-980__title {
+          display: flex;
+          background-color: #01637c;
+          justify-content: space-between;
+          align-items: center;
+          padding: 25px 50px;
+          img {
+            margin: 0;
+            width: 95px;
+            height: 56px;
+          }
+          span {
+            font-size: 18px;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: white;
+            position: relative;
+            &::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: -80%;
+              transform: translate(-50%, -50%);
+              height: 55px;
+              width: 1px;
+              opacity: 0.2;
+              border: 0.1px solid white;
+            }
+          }
+        }
+        .concept__group-980__content {
+          font-size: 14px;
+          font-family: 'Noto Sans JP', sans-serif;
+          color: white;
+          line-height: 19px;
+          margin: 35px 0;
+        }
+      }
+    }
+  }
+}
