@@ -21,6 +21,7 @@ export default function Concept() {
           <div className="concept__group-980__item">
             <div className="concept__group-980__title">
               <img src={imgMobievo} />
+              <div className="borders"></div>
               <span>モビエボとは</span>
             </div>
             <p className="concept__group-980__content">
@@ -30,7 +31,7 @@ export default function Concept() {
           <div className="concept__group-980__item">
             <div className="concept__group-980__title">
               <img src={imgGroup972} />
-
+              <div className="borders"></div>
               <span>モビエボとは</span>
             </div>
             <p className="concept__group-980__content">

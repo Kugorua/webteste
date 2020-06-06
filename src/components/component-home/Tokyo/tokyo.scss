@@ -1,0 +1,31 @@
+.tokyo {
+  background-color: #2269b0;
+  margin-top: -150px;
+  .tokyo__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .tokyo__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 0 0 0;
+      p {
+        font-size: 17px;
+        font-family: 'Noto Sans JP', sans-serif;
+        color: white;
+        margin: 0 50px;
+      }
+    }
+    a {
+      padding: 13px 30px;
+      background-color: #4382c1;
+      font-size: 16px;
+      color: white;
+      margin: 50px 0;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+  }
+}
