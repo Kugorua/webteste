@@ -68,7 +68,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription
         }
       ].concat(meta)}
-    />
+    >
+      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet" />
+    </Helmet>
   );
 }
 
