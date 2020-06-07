@@ -1,7 +1,7 @@
 .header {
-  background-image: url(../../images/bg_city.png);
-  background-size: cover;
-  height: 700px;
+  background-size: 100% 700px;
+  background-repeat: no-repeat;
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -14,7 +14,7 @@
     background-color: #222222;
 
     .nav-top__wrap {
-      padding: 13px 10px;
+      padding: 12.5px 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -50,6 +50,9 @@
           margin-right: 10px;
         }
       }
+      .icon-nav {
+        display: none;
+      }
     }
   }
   .header-watch-new {
@@ -57,7 +60,7 @@
     background-color: #097996;
     align-items: center;
     padding: 15px;
-    margin: -2px auto;
+    margin: 0px auto;
     width: 83%;
     p {
       margin: 0 25px;
@@ -90,9 +93,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 140px 0;
-    height: 55%;
+    padding: 60px 0;
     a {
+      margin: 40px 0;
       text-align: left;
       background-image: linear-gradient(to right, #ffeb34, #3de8ba);
       -webkit-transform: skew(160deg);
@@ -109,6 +112,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       span {
         color: white;
         font-size: 18px;
@@ -120,6 +124,141 @@
           margin-left: 50px;
           font-size: 30px;
           border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1060px) {
+  .header {
+    .header-position-img {
+      position: absolute;
+      right: -50px;
+      top: 100px;
+      img {
+        width: 60%;
+      }
+    }
+    .nav-top {
+      .nav-top__wrap {
+        .nav-top__logo {
+          img {
+            margin: 0;
+          }
+        }
+        .nav-top__list {
+          li {
+            margin: 0 20px;
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+        .entry {
+          font-size: 20px;
+          padding: 8px 20px;
+          img {
+            margin-right: 10px;
+          }
+        }
+        .icon-nav {
+          display: none;
+        }
+      }
+    }
+
+    .header-content {
+      padding: 60px 0;
+      a {
+        margin: 40px 0;
+        padding: 6px 40px;
+        font-size: 16px;
+      }
+      img {
+        margin-left: 55px;
+      }
+      .header-date {
+        span {
+          color: white;
+          font-size: 12px;
+          &:nth-child(1) {
+            border: 1px solid white;
+            padding: 0 10px;
+          }
+          &:nth-child(2) {
+            margin-left: 35px;
+            font-size: 25px;
+            border-bottom: 1px solid white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .header {
+    .header-position-img {
+      position: absolute;
+      right: -50px;
+      top: 100px;
+      img {
+        width: 60%;
+      }
+    }
+    .nav-top {
+      position: relative;
+      .nav-top__wrap {
+        .nav-top__logo {
+          img {
+            width: 80%;
+          }
+        }
+        .nav-top__list {
+          display: none;
+        }
+        .nav-top__list--reponsive {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }
+        .entry {
+          display: none;
+        }
+        .icon-nav {
+          display: block;
+          img {
+            width: 60%;
+          }
+        }
+      }
+    }
+
+    .header-content {
+      padding: 60px 0;
+      a {
+        margin: 40px 0;
+        padding: 6px 40px;
+        font-size: 16px;
+      }
+      img {
+        margin-left: 55px;
+      }
+      .header-date {
+        span {
+          color: white;
+          font-size: 12px;
+          &:nth-child(1) {
+            border: 1px solid white;
+            padding: 0 10px;
+          }
+          &:nth-child(2) {
+            margin-left: 35px;
+            font-size: 25px;
+            border-bottom: 1px solid white;
+          }
         }
       }
     }

@@ -1,5 +1,5 @@
 .event-outline {
-  background-image: url('../../../images/event-outline.png');
+  background-color: #1e8864;
   background-size: cover;
   margin-top: -145px;
   padding: 0 0 200px 0;
@@ -25,6 +25,7 @@
       margin: 20px 0;
     }
     p {
+      margin-bottom: 20px;
       font-size: 14px;
       color: white;
       text-align: justify;

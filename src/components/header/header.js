@@ -3,6 +3,7 @@ import imgLogo from '../../images/logo.png';
 import imgGp972 from '../../images/Group 972.png';
 import imgCath from '../../images/catch.png';
 import imgGp88 from '../../images/Group 888.png';
+import imgGp941 from '../../images/Group 941@2x.png';
 import React from 'react';
 import './header.scss';
 const Header = () => (
@@ -12,7 +13,7 @@ const Header = () => (
         <div className="nav-top__logo">
           <img src={imgLogo} />
         </div>
-        <ul className="nav-top__list">
+        <ul className="nav-top__list nav-top__list--reponsive">
           <li className="nav-top__list__item">
             <a>Concept</a>
           </li>
@@ -31,6 +32,9 @@ const Header = () => (
           <img src={imgGp88} />
           Entry
         </a>
+        <div className="icon-nav">
+          <img src={imgGp941} />
+        </div>
       </div>
     </div>
 
