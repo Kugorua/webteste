@@ -25,7 +25,7 @@ export default function EventOutline() {
             </tr>
             <tr>
               <th>テーマ</th>
-              <td colspan="3">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</td>
+              <td colSpan="3">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</td>
             </tr>
           </tbody>
         </table>
