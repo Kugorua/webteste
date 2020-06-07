@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
-import banner_text from '../../../svgs/banner_text.svg'
+import banner_text from '../../../svgs/banner_text.svg';
 import React from 'react';
 import './banner.scss';
 const Banner = () => (
