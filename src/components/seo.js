@@ -71,6 +71,7 @@ function SEO({ description, lang, meta, title }) {
     >
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"></link>
       <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet" />
+      <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     </Helmet>
   );
 }

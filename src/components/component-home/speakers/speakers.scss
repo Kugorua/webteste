@@ -1,6 +1,6 @@
 .speakers {
-  background-image: url('../../../images/bg-speakers.png');
-  background-size: cover;
+  background-color: #32908e;
+  clip-path: polygon(50% 3%, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 0);
   margin-top: -200px;
   .speakers__wrap {
     display: flex;

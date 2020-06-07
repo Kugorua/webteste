@@ -3,6 +3,8 @@ import './event-outline.scss';
 export default function EventOutline() {
   return (
     <div className="event-outline grid-full">
+      <div className="bg-tokyo-1 grid-full"></div>
+      <div className="bg-tokyo-2 grid-full"></div>
       <div className="event-outline__wrap grid">
         <h2>EVENT OUTLINE</h2>
         <div className="borders"></div>
