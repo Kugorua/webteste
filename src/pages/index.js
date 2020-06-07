@@ -9,6 +9,7 @@ import Speakers from '../components/component-home/speakers/Speakers';
 import Movie from '../components/component-home/movie/Movie';
 import Tokyo from '../components/component-home/Tokyo/Tokyo';
 import Footer from '../components/component-home/footer/Footer';
+import Background from '../components/component-home/background/background';
 
 const IndexPage = () => (
   <Layout>
@@ -20,6 +21,7 @@ const IndexPage = () => (
     <Movie />
     <Tokyo />
     <Footer />
+    <Background/>
   </Layout>
 );
 
