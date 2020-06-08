@@ -1,5 +1,5 @@
 import React from 'react';
-import movie from '../../../images2/movie@2x.png';
+import movie from '../../../svgs/movie.svg';
 import './movie.scss';
 export default function Movie() {
   return (

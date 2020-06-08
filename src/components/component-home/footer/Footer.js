@@ -1,7 +1,7 @@
 import React from 'react';
-import ft_knt_logo from '../../../images2/ft_knt_logo@2x.png';
+import ft_knt_logo from '../../../svgs/knt_logo.svg';
 import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
-import mobievo from '../../../images2/mobievo@2x.png';
+import mobievo from '../../../svgs/mobievo.svg';
 import tw_icon from '../../../svgs/tw_icon.svg';
 import fb_icon from '../../../svgs/fb_icon.svg';
 import np_logo from '../../../images2/np_logo.png';
@@ -19,12 +19,11 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <img src={mobievo} alt="" />
+          <img src={mobievo} alt=""/>
           <p>
             <img src={icon__buttonmenu} alt="" />
-            <a href="https://newspicks.com/theme-news/3698/"
-            >https://newspicks.com/theme-news/3698/</a
-            >
+            <a href="https://newspicks.com/theme-news/3698/">https://newspicks.com/theme-news/3698/
+            </a>
           </p>
         </div>
       </div>

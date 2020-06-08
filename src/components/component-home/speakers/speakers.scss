@@ -4,24 +4,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #32908e;
-  display: grid;
-  grid-column-gap: 60px;
-  grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr;
   &__title {
     letter-spacing: 2px;
     font-size: 28px;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-style: italic;
-    grid-column: 1/3;
     text-align: center;
     position: relative;
     display: inline-block;
     padding-bottom: 23.5px;
-    margin-bottom: 3.5px;
+    margin-bottom: 33.5px;
+    display: block;
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0px;
       left: 50%;
@@ -31,88 +27,96 @@
       border-bottom: 1px solid white;
     }
   }
-  &__item {
-    .thumbnail {
-      width: 100%;
-      position: relative;
-      img {
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &__item {
+      width: calc(50% - 60px);
+      @media screen and (max-width:780px){
+        width: 100% ;
+      }
+      .thumbnail {
         width: 100%;
-        height: auto;
-      }
-      &__text {
-        font-family: "Noto Sans", sans-serif;
-        position: absolute;
-        background-color: #32908e;
-        span {
-          font-size: 14px;
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
         }
-        &--above {
-          top: 70%;
-          padding: 10px 13px 10px 18px;
-          font-size: 14px;
-          font-weight: bold;
-          @media screen and (max-width: 780px) {
-            top: initial;
-            padding: 6px 14px 7px 11px;
-            bottom: 15%;
-            font-size: 12px;
+        &__text {
+          font-family: 'Noto Sans', sans-serif;
+          position: absolute;
+          background-color: #32908e;
+          span {
+            font-size: 14px;
           }
-        }
-        &--below {
-          top: 82%;
-          padding: 0px 13px 5px 18px;
-          font-size: 20px;
-          font-weight: bold;
-          @media screen and (max-width: 780px) {
-            position: initial;
+          &--above {
+            top: 70%;
+            padding: 10px 13px 10px 18px;
+            font-size: 14px;
+            font-weight: bold;
+            @media screen and (max-width: 780px) {
+              top: initial;
+              padding: 6px 14px 7px 11px;
+              bottom: 15%;
+              font-size: 12px;
+            }
+          }
+          &--below {
+            top: 82%;
+            padding: 0px 13px 5px 18px;
+            font-size: 20px;
+            font-weight: bold;
+            @media screen and (max-width: 780px) {
+              position: initial;
+              font-size: 18px;
+              padding: 0;
+              margin-top: 11px;
+              background-color: #32908e;
+            }
+          }
+          &--center {
+            top: 50%;
+            left: 50%;
+            padding: 11px 0px;
+            width: 126px;
+            text-align: center;
+            background-color: #343434;
+            color: white;
             font-size: 18px;
-            padding: 0;
-            margin-top: 11px;
-            background-color: #32908e;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: bold;
+            margin-top: -12px;
+            margin-left: -63px;
           }
-        }
-        &--center {
-          top: 50%;
-          left: 50%;
-          padding: 11px 0px;
-          width: 126px;
-          text-align: center;
-          background-color: #343434;
-          color: white;
-          font-size: 18px;
-          font-family: "Noto Sans", sans-serif;
-          font-weight: bold;
-          margin-top: -12px;
-          margin-left: -63px;
-        }
-        &--green {
-          background-color: #35886e;
-        }
-        &--brown {
-          background-color: #5d5d5d;
-        }
-        &--bg {
-          @media screen and (max-width: 780px) {
-            background-color: initial;
+          &--green {
+            background-color: #35886e;
+          }
+          &--brown {
+            background-color: #5d5d5d;
+          }
+          &--bg {
+            @media screen and (max-width: 780px) {
+              background-color: initial;
+            }
           }
         }
       }
-    }
-    &__text {
-      font-family: "Noto Sans", sans-serif;
-      line-height: 25px;
-      letter-spacing: 0.5px;
-      text-align: justify;
-      font-weight: 600;
-      font-size: 14px;
-      padding: 30px 0px;
+      &--text {
+        font-family: 'Noto Sans', sans-serif;
+        line-height: 25px;
+        letter-spacing: 0.5px;
+        text-align: justify;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 30px 0px;
+        @media screen and (max-width: 780px) {
+          font-size: 12px;
+          padding: 14px 0px;
+        }
+      }
       @media screen and (max-width: 780px) {
-        font-size: 12px;
-        padding: 14px 0px;
       }
-    }
-    @media screen and (max-width: 780px) {
-      grid-column: 1/3;
     }
   }
 }

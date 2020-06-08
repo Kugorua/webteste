@@ -28,27 +28,29 @@ export default function Concept() {
         </p>
         <p className="concept__description fontnoto-700">移動は人間の本能。</p>
       </div>
-      <div className="concept__item ">
-        <div className="concept__item-box d-flex">
-          <div className="concept__box-logo">
-            <img src={mobievo} />
+      <div className="concept__box ">
+        <div className="item ">
+          <div className="item-box d-flex">
+            <div className="concept__box-logo">
+              <img src={mobievo} />
+            </div>
+            <p className="concept__box-text c-white">モビエボとは</p>
           </div>
-          <p className="concept__box-text c-white">モビエボとは</p>
+          <p className="des-bottom c-white">
+            次世代の移動をテーマにした、オンライン番組をNewsPicksとYouTubeで配信中。毎月、モビリティサービスを手掛けるスタートアップに密着取材し、スタジオでは有識者を交えて、これからのモビリティビジネスについて議論している。
+          </p>
         </div>
-        <p className="des-bottom c-white">
-          次世代の移動をテーマにした、オンライン番組をNewsPicksとYouTubeで配信中。毎月、モビリティサービスを手掛けるスタートアップに密着取材し、スタジオでは有識者を交えて、これからのモビリティビジネスについて議論している。
-        </p>
-      </div>
-      <div className="concept__item">
-        <div className="concept__item-box d-flex">
-          <div className="concept__box-logo">
-            <img src={mobievo} />
+        <div className="item">
+          <div className="item-box d-flex">
+            <div className="concept__box-logo">
+              <img src={mobievo} />
+            </div>
+            <p className="concept__box-text c-white">モビエボNEXTとは</p>
           </div>
-          <p className="concept__box-text c-white">モビエボNEXTとは</p>
+          <p className="des-bottom c-white">
+            モビエボの「次」を見出し、発掘していくための視聴者参加型のオンラインイベント。モビリティビジネスに関心があり、次のアクションを考えるビジネスパーソンを対象に、よりリアルにビジネス視点で議論し、次世代のモビリティビジネスを生み出す場を目指す。
+          </p>
         </div>
-        <p className="des-bottom c-white">
-          モビエボの「次」を見出し、発掘していくための視聴者参加型のオンラインイベント。モビリティビジネスに関心があり、次のアクションを考えるビジネスパーソンを対象に、よりリアルにビジネス視点で議論し、次世代のモビリティビジネスを生み出す場を目指す。
-        </p>
       </div>
     </div>
   );
