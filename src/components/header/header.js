@@ -15,12 +15,12 @@ class header extends Component {
       <header className="header grid-full ">
         <div className="tg-1 wow fadeIn" data-wow-delay="2s"></div>
         <div className="tg-2 wow fadeIn" data-wow-delay="2s"></div>
-        <div className="tg-3 wow fadeIn" data-wow-delay="10s"></div>
-        <div className="tg-4 wow fadeIn " data-wow-delay="15s" ></div>
+        <div className="tg-3 wow fadeIn" data-wow-delay="3.5s"></div>
+        <div className="tg-4 wow fadeIn " data-wow-delay="5s" ></div>
         <div className="tg-5"></div>
         <div className="tg-6"></div>
 
-        <div className="nav-top wow bounceIn" >
+        <div className="nav-top wow fadeIn" data-wow-delay="8s">
           <div className="nav-top__wrap grid" >
             <div className="nav-top__logo">
               <img src={imgLogo} />
@@ -47,7 +47,7 @@ class header extends Component {
           </div>
         </div>
 
-        <div className="header-content wow fadeIn" data-wow-delay="8s" >
+        <div className="header-content wow fadeIn" data-wow-delay="3s" >
           <img src={imgGp972} />
           <a href={"#"}>オンラインイベント開催決定</a>
           <div className="header-date">
@@ -55,10 +55,10 @@ class header extends Component {
             <span>2020.07.07 THU</span>
           </div>
         </div>
-        <div className="header-position-img wow fadeIn" data-wow-delay="8s" >
+        <div className="header-position-img">
           <img src={imgCath} />
         </div>
-        <div className="header-watch-new grid wow fadeIn" data-wow-delay="8s" >
+        <div className="header-watch-new grid wow fadeIn" data-wow-delay="7s" >
           <p>WHAT’S NEW</p>
           <div className="borders"></div>
           <p>2020.07.07</p>
