@@ -1,0 +1,27 @@
+.form-detail {
+  max-width: 900px;
+  width: 90%;
+  background-color: #ffffff;
+  margin: 40px auto;
+
+  &__message {
+    font-size: 18px;
+    padding-top: 60px;
+  }
+  &__btn-area {
+    display: flex;
+    height: 140px;
+
+    &--root-btn {
+      margin: auto;
+      font-size: 18px;
+      display: block;
+      width: 280px;
+      padding: 15px 75px;
+      text-decoration: none;
+      border-radius: 5px;
+      color: #ffffff;
+      background-image: linear-gradient(45deg, #ffc107 0%, #ff5a5a 100%);
+    }
+  }
+}

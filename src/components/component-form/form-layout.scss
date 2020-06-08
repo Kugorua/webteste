@@ -1,0 +1,44 @@
+.form-area {
+  background-image: url(../../images/bg-city.png);
+  background-color: #212121;
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: contain;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+
+  &__upper-space {
+    background-color: #212121;
+    height: 10px;
+  }
+
+  &__upper-area {
+    margin-top: 48px;
+
+    &--title {
+      margin-top: 37px;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+  main {
+    flex: 1;
+  }
+
+  footer {
+    background-color: #212121;
+    height: 60px;
+    display: table;
+    width: 100%;
+    p {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      color: white;
+      font-size: 15px;
+    }
+  }
+}
