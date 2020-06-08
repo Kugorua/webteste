@@ -3,6 +3,8 @@ import './event-outline.scss';
 export default function EventOutline() {
   return (
     <div className="event-outline grid-full">
+      <div className="bg-tokyo-1 grid-full"></div>
+      <div className="bg-tokyo-2 grid-full"></div>
       <div className="event-outline__wrap grid">
         <h2>EVENT OUTLINE</h2>
         <div className="borders"></div>
@@ -25,7 +27,7 @@ export default function EventOutline() {
             </tr>
             <tr>
               <th>テーマ</th>
-              <td colspan="3">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</td>
+              <td colSpan="3">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</td>
             </tr>
           </tbody>
         </table>
