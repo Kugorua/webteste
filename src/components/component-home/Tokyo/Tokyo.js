@@ -1,6 +1,8 @@
 import React from 'react';
 import './tokyo.scss';
-import imgTokyo from '../../../images2/knt_logo@2x.png';
+import imgTokyo from '../../../svgs/tk_knt_logo.svg';
+import btnIcon from '../../../svgs/icon_btn.svg';
+
 export default function Tokyo() {
   return (
     <div className="site_wrap--padding mobiebo">
@@ -11,7 +13,7 @@ export default function Tokyo() {
       </div>
       <div className="mobiebo__button">
         <p >
-          <img src="~/assets/images/icon_btn@2x.png" alt="" />TOKYO JUNCTION by
+          <img src={btnIcon} alt="" />TOKYO JUNCTION by
         KINTOとは？
         </p>
       </div>

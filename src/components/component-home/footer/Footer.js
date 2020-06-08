@@ -4,7 +4,7 @@ import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
 import mobievo from '../../../svgs/mobievo.svg';
 import tw_icon from '../../../svgs/tw_icon.svg';
 import fb_icon from '../../../svgs/fb_icon.svg';
-import np_logo from '../../../images2/np_logo.png';
+import np_logo from '../../../svgs/np_logo.svg';
 import './footer.scss';
 
 export default function Footer() {
