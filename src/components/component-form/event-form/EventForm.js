@@ -21,10 +21,21 @@ const EventForm = () => {
 
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
-          <label>業界（学部名）</label>
+          <label>業種（学部名）</label>
           <select name="industry" ref={register}>
-            <option value="male">male</option>
-            <option value="female">female</option>
+            <option value="">Item1</option>
+            <option value="">Item2</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+
+        <div className="form-detail__fields--input">
+          <div className="form-detail__fields--underline"></div>
+          <label>職種（学科名）</label>
+          <select name="occupation" ref={register}>
+            <option value="">Item1</option>
+            <option value="">Item2</option>
+            <option value="other">その他</option>
           </select>
         </div>
 
@@ -38,8 +49,9 @@ const EventForm = () => {
           <div className="form-detail__fields--underline"></div>
           <label>役職名</label>
           <select name="position" ref={register}>
-            <option value="male">male</option>
-            <option value="female">female</option>
+            <option value="">Item1</option>
+            <option value="">Item2</option>
+            <option value="other">その他</option>
           </select>
         </div>
 
@@ -50,7 +62,6 @@ const EventForm = () => {
             <option value="startup">スタートアップ</option>
             <option value="listed">上場</option>
             <option value="private">非上場</option>
-            <option value="other">その他</option>
           </select>
         </div>
 
