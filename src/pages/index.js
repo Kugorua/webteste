@@ -1,20 +1,25 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Header from '../components/component-home/header/Header';
+import Banner from '../components/component-home/banner/Banner';
 import Concept from '../components/component-home/concept/Concept';
 import EventOutline from '../components/component-home/event-outline/EventOutline';
 import Speakers from '../components/component-home/speakers/Speakers';
-import Tokyo from '../components/component-home/Tokyo/Tokyo';
 import Movie from '../components/component-home/movie/Movie';
+import Tokyo from '../components/component-home/Tokyo/Tokyo';
+import Footer from '../components/component-home/footer/Footer';
+
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <Header />
+    <Banner />
     <Concept />
     <EventOutline />
     <Speakers />
     <Movie />
     <Tokyo />
+    <Footer />
   </Layout>
 );
 
