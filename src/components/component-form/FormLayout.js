@@ -8,7 +8,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './form-layout.scss';
-import imgGp972svg from '../../images/Group-972.svg';
+import imgGp972svg from '../../svgs/Group-972.svg';
 
 const FormFooter = () => {
   return (
