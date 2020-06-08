@@ -4,10 +4,10 @@ import { Link } from 'gatsby';
 
 const EventFormSubmit = () => {
   return (
-    <div className="form-detail">
-      <p className="form-detail__message">ご応募ありがとうございました</p>
-      <div className="form-detail__btn-area">
-        <Link to="/" className="form-detail__btn-area--root-btn">
+    <div className="form-submit">
+      <p className="form-submit__message">ご応募ありがとうございました</p>
+      <div className="form-submit__btn-area">
+        <Link to="/" className="form-submit__btn-area--root-btn">
           サイトトップへ
         </Link>
       </div>

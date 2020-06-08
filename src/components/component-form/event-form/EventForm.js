@@ -14,6 +14,7 @@ const EventForm = () => {
         </div>
 
         <div className="form-detail__fields--input">
+          <div className="form-detail__fields--underline--top"></div>
           <label>会社名（学校名）</label>
           <input name="company" ref={register} />
         </div>
