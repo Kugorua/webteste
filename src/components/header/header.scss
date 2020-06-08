@@ -1,29 +1,95 @@
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
 .header {
-
   height: 100vh;
   display: flex;
   position: relative;
   flex-direction: column;
   overflow: hidden;
   justify-content: space-around;
-  .tg-1 {
+
+  .tg-5{
     width: 50%;
-    height: 800px;
+    height: 100%;
     position: absolute;
-    background-image: linear-gradient(to right, #18D5DE, #C9ABF8);
-    opacity: .5;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background-color: black;
     z-index: 1;
-}
-  .tg-2 {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    &::before{
+      content: '';
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+      background: white;
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+    }
+  }
+  .tg-6{
     width: 50%;
-    height: 800px;
+    height: 100%;
     position: absolute;
-    background-image: linear-gradient(to right,#FFEB34, #3DE8BA);
-    opacity: .5;
-    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+    background-color: black;
     z-index: 1;
     right: 0;
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+    &::before{
+      content: '';
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+      background: white;
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+    }
+  }
+
+  .tg-1 {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to right, #18D5DE, #C9ABF8);
+    z-index: 99;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  }
+  .tg-2 {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to right,#FFEB34, #3DE8BA);
+    z-index: 99;
+    right: 0;
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
 }
 .tg-3 {
   background: #D3E6EA;

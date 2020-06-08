@@ -12,13 +12,16 @@ class header extends Component {
   }
   render() {
     return (
-      <header className="header grid-full">
-        <div className="tg-3 wow fadeIn" data-wow-delay="2s"></div>
-        <div className="tg-1 wow fadeInLeft"></div>
-        <div className="tg-2 wow fadeInRight"></div>
-        <div className="tg-4 wow fadeIn" data-wow-delay="2.5s"></div>
-        <div className="nav-top wow fadeInDown" data-wow-delay="3s">
-          <div className="nav-top__wrap grid">
+      <header className="header grid-full ">
+        <div className="tg-1 wow fadeIn" data-wow-delay="2s"></div>
+        <div className="tg-2 wow fadeIn" data-wow-delay="2s"></div>
+        <div className="tg-3 wow fadeIn" data-wow-delay="10s"></div>
+        <div className="tg-4 wow fadeIn " data-wow-delay="15s" ></div>
+        <div className="tg-5"></div>
+        <div className="tg-6"></div>
+
+        <div className="nav-top wow bounceIn" >
+          <div className="nav-top__wrap grid" >
             <div className="nav-top__logo">
               <img src={imgLogo} />
             </div>
@@ -44,7 +47,7 @@ class header extends Component {
           </div>
         </div>
 
-        <div className="header-content wow fadeInDown" data-wow-delay="1s">
+        <div className="header-content wow fadeIn" data-wow-delay="8s" >
           <img src={imgGp972} />
           <a href={"#"}>オンラインイベント開催決定</a>
           <div className="header-date">
@@ -52,10 +55,10 @@ class header extends Component {
             <span>2020.07.07 THU</span>
           </div>
         </div>
-        <div className="header-position-img">
+        <div className="header-position-img wow fadeIn" data-wow-delay="8s" >
           <img src={imgCath} />
         </div>
-        <div className="header-watch-new grid">
+        <div className="header-watch-new grid wow fadeIn" data-wow-delay="8s" >
           <p>WHAT’S NEW</p>
           <div className="borders"></div>
           <p>2020.07.07</p>
