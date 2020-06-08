@@ -1,43 +1,588 @@
+/* ===============================================================================
+   TABLE OF CONTENT
+   ===============================================================================
+   1. General
+   2. Make Container
+   3. Make Rows
+   4. Make Columns
+   5. Include Mixin
+*/
+
+/* ===============================================================================
+   1. General
+   =============================================================================== */
+@import url('https://fonts.google.com/specimen/Noto + Sans + JP?query=Noto + Sans + JP#standard-styles');
+@import url('https://fonts.google.com/specimen/Lato?query=lato#standard-styles');
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* Variables */
+$grid-gutter-width: 30px !default;
+$grid-columns: 12 !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1000px
+) !default;
+
+/* Set Breakpoints Value */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+/* Function Media Query */
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) ==null, '', '-#{$name}');
+}
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/* ===============================================================================
+      2. Make Container
+      =============================================================================== */
+
+@mixin make-container($gutter: $grid-gutter-width) {
+  width: 100%;
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+/* ===============================================================================
+      3. Make Rows
+      =============================================================================== */
+
+@mixin make-row($gutter: $grid-gutter-width) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$gutter / 2;
+  margin-left: -$gutter / 2;
+}
+
+/* ===============================================================================
+      4. Make Columns
+      =============================================================================== */
+
+@mixin make-col-ready($gutter: $grid-gutter-width) {
+  position: relative;
+  width: 100%;
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  margin-left: if($num==0, 0, percentage($num));
+}
+
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  %grid-column {
+    position: relative;
+    width: 100%;
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @for $i from 1 through $columns {
+      .col#{$infix}-#{$i} {
+        @extend %grid-column;
+      }
+    }
+
+    .col#{$infix},
+    .col#{$infix}-auto {
+      @extend %grid-column;
+    }
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      .col#{$infix} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+
+      .col#{$infix}-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+      }
+
+      @for $i from 1 through $columns {
+        .col#{$infix}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
+
+      .order#{$infix}-first {
+        order: -1;
+      }
+
+      .order#{$infix}-last {
+        order: $columns + 1;
+      }
+
+      @for $i from 0 through $columns {
+        .order#{$infix}-#{$i} {
+          order: $i;
+        }
+      }
+
+      @for $i from 0 through ($columns - 1) {
+        @if not($infix== '' and $i==0) {
+          .offset#{$infix}-#{$i} {
+            @include make-col-offset($i, $columns);
+          }
+        }
+      }
+    }
+  }
+}
+.container-fluid {
+  max-width: 100%;
+  padding: 0 20px;
+}
+/* ===============================================================================
+      5. Include Mixin
+      =============================================================================== */
+
+/* Make Container */
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+// .container {
+//     max-width: calc(1000/1200 * 100%);
+//     margin: auto;
+// }
+/* Make Rows */
+.row {
+  @include make-row;
+}
+
+/* Make Columns */
+@include make-grid-columns;
+.d-flex {
+  display: flex;
+}
+
+.c-white {
+  color: white;
+}
 a {
   text-decoration: none;
 }
-
-html,
-body {
-  font-size: 10px;
-  width: 100%;
-  background-color: white;
-  font-family: 'Lato', sans-serif;
-  font-family: 'Noto Sans JP', sans-serif;
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: inherit;
-  text-decoration: none;
+ul,
+ol {
   list-style: none;
 }
-.grid {
-  width: 1200px;
-  max-width: 100%;
-  margin: 0 auto;
+.h-100 {
+  height: 100%;
+}
+.text-center {
+  text-align: center;
+}
+$fontweight: 400, 700, 900;
+@each $fontweights in $fontweight {
+  .fontlato-#{$fontweights} {
+    font-weight: $fontweights;
+  }
+}
+$fontweights: 400, 700;
+@each $fontweight in $fontweight {
+  .fontnoto-#{$fontweight} {
+    font-weight: $fontweight;
+  }
+}
+//example : breakpointminmax(320, 767) { width:50%;....... }
+
+@mixin breakpointminmax($sizemin, $sizemax) {
+  @media (min-width: $sizemin + px) and (max-width: $sizemax + px) {
+    @content;
+  }
+}
+// example @include breakpoint(940) { width:80%; }
+@mixin breakpoint($size) {
+  @media only screen and (max-width: $size + px) {
+    @content;
+  }
+}
+// example @include min-breakpoint(940) { width:80%; }
+@mixin min-breakpoint($size) {
+  @media only screen and (min-width: $size + px) {
+    @content;
+  }
+}
+.hide-mb {
+  @include breakpointminmax(320, 779) {
+    display: none;
+  }
+}
+.hide-desktop {
+  display: none;
+}
+button:focus {
+  outline: none;
+}
+/*make page index */
+/*color */
+$header: #222222;
+$header__button--gradient: #ffdf57;
+.header {
+  font-family: 'Lato', sans-serif;
+  height: 80px;
+  background-color: $header;
+  position: relative;
+  &__mobile {
+    position: absolute;
+    top: 100%;
+    z-index: 999;
+    background: black;
+    width: 100%;
+    left: 0;
+    max-height: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    &.active {
+      max-height: 100vh;
+    }
+    .button__mb {
+      padding: 20.5px 31px;
+      border-top: 1px solid #484848;
+      button.header__button-mobile {
+        width: 100%;
+        padding: 20px;
+        border: none;
+        border-radius: 5px;
+        img {
+          margin-right: 14.5px;
+        }
+      }
+    }
+    .header__menu-list {
+      position: relative;
+      padding-left: 0;
+      .arrow {
+        position: absolute;
+        right: 31.9px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .header__menu-list__link {
+        display: block;
+        width: 100%;
+        padding: 20.5px 31px;
+        border-top: 1px solid #484848;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    @include breakpointminmax(320, 779) {
+      display: none;
+    }
+  }
+  &__menu {
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    @include breakpointminmax(320, 779) {
+      justify-content: space-between;
+    }
+
+    .showMb {
+      @include breakpointminmax(320, 779) {
+        display: block;
+      }
+    }
+
+    &-list {
+      padding-left: 36px;
+      &:first-child {
+        padding-left: 0;
+      }
+      &__link {
+        font-size: 14px;
+        font-weight: 700;
+        @include breakpointminmax(780, 820) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__logo {
+  }
+  &__button {
+    &-btn {
+      display: block;
+      padding: 12px 34px;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: 700;
+      img {
+        margin-right: 10px;
+      }
+      @include breakpointminmax(780, 820) {
+        font-size: 15px;
+        padding: 8px 21px;
+      }
+    }
+    &--gradient {
+      background-image: linear-gradient(to right, #ffdf57, #ff8b59, #ff7a59, #ff665a, #ff5a5a);
+    }
+  }
 }
 
-.grid__full-width {
-  width: 100%;
+.banner {
+  font-family: 'Noto Sans', sans-serif;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  .button__mb-banner {
+    display: none;
+    @include breakpointminmax(320, 779) {
+      position: absolute;
+      display: block;
+      right: -43px;
+      bottom: 137px;
+      transform: rotate(90deg);
+      .header__button-mobile {
+        border: none;
+        padding: 14px 32px;
+        border-radius: 5px;
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      @include breakpointminmax(320, 767) {
+        width: 155px;
+      }
+    }
+  }
+  &__bg {
+    background: url('../svgs/bg_line.svg') no-repeat center;
+    background-size: cover;
+    height: 35px;
+    margin-top: 35px;
+    @include breakpointminmax(320, 779) {
+      margin-top: 10px;
+    }
+  }
+  &__brebCrumb {
+    font-family: 'Lato', sans-serif;
+    // width: calc(1000/1200 * 100%);
+    padding: 18px 0;
+    background-color: #097996;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    transform: translateX(-50%);
+    &-item {
+      a {
+        padding-left: 18px;
+        font-size: 14px;
+      }
+      &:first-child {
+        @include breakpointminmax(320, 424) {
+          flex-basis: 100%;
+        }
+        a {
+          font-size: 16px;
+          padding-right: 18px;
+          border-right: 1px solid white;
+          @include breakpointminmax(320, 424) {
+            border-right: unset;
+          }
+        }
+      }
+      &:nth-child(2) {
+        a {
+          @include breakpointminmax(320, 424) {
+            font-size: 10px;
+          }
+        }
+      }
+      .banner__brebCrumb-item--active {
+        text-decoration: underline;
+        font-family: 'Noto Sans', sans-serif;
+      }
+    }
+  }
+  &__boxs {
+    @include breakpointminmax(320, 779) {
+      display: block;
+    }
+    &-buttons {
+      position: relative;
+      text-align: center;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 35%;
+        height: 2px;
+        top: 50%;
+        background: white;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 35%;
+        height: 2px;
+        top: 50%;
+        background: white;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+    &-dates {
+      font-family: 'Lato', sans-serif;
+      padding-bottom: 10px;
+      text-align: center;
+      border-bottom: 1px solid white;
+    }
+  }
+  &__box {
+    margin-top: 15px;
+    &-button {
+      padding: 8px 14px;
+      border: 1px solid white;
+    }
+    &-date {
+      display: inline-block;
+      font-size: 30px;
+      font-family: 'Lato', sans-serif;
+      margin-left: 15px;
+      border-bottom: 1px solid white;
+    }
+  }
 }
-.grid-row {
-  display: flex;
+
+.concept {
+  background-color: #00708d;
+  padding: 75px 0;
+  &__title-sub {
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    position: relative;
+    padding-bottom: 25px;
+    margin-bottom: 39.5px;
+    &:after {
+      content: '';
+      width: 42px;
+      height: 1px;
+      background: #ffffff;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__description {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    margin-bottom: 22px;
+    color: white;
+  }
+  &__box {
+    &-logo {
+      padding-right: 55.5px;
+      border-right: 1px solid white;
+      @include breakpointminmax(320, 425) {
+        padding-right: 25.5px;
+      }
+      @include breakpointminmax(780, 905) {
+        padding-right: 28.5px;
+      }
+      img {
+        width: 69px;
+      }
+    }
+    &-text {
+      padding-left: 55.5px;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: 'Noto Sans', sans-serif;
+      @include breakpointminmax(320, 425) {
+        padding-left: 25.5px;
+      }
+      @include breakpointminmax(780, 905) {
+        padding-left: 28.5px;
+        font-size: 17px;
+      }
+    }
+  }
+  .des-bottom {
+    margin-top: 29px;
+  }
 }
-img {
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+.site_wrap {
+  color: white;
+  &--padding {
+    padding: 75px 100px;
+    @media screen and (max-width: 780px) {
+      padding: 75px 30px;
+    }
+    @media screen and (max-width: 1060px) {
+      padding: 75px 30px;
+    }
+  }
 }
