@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import Layout from '../components/layout';
 import Header from '../components/component-home/header/Header';
@@ -13,12 +14,19 @@ import Footer from '../components/component-home/footer/Footer';
 const IndexPage = () => (
   <Layout>
     <Header />
+
     <Banner />
+
     <Concept />
+
     <EventOutline />
+
     <Speakers />
+
     <Movie />
+
     <Tokyo />
+
     <Footer />
   </Layout>
 );

@@ -2,7 +2,7 @@ import React from 'react';
 import './event-outline.scss';
 export default function EventOutline() {
   return (
-    <div className="site_wrap--padding event">
+    <div className="site_wrap--padding event" data-sal="zoom-in" data-sal-delay="100" ata-sal-easing="ease">
       <div className="event__title">
         <h3>EVENT OUTLINE</h3>
         <p>
@@ -28,9 +28,7 @@ export default function EventOutline() {
         </div>
         <div className="event__box__item">
           <div className="title">テーマ</div>
-          <div className="content">
-            モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ
-          </div>
+          <div className="content">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</div>
         </div>
       </div>
     </div>

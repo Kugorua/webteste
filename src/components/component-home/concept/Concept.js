@@ -4,32 +4,19 @@ import './concept.scss';
 export default function Concept() {
   return (
     <div className="site_wrap--padding concept">
-      <div className="concept__title">
-        <h3 className="concept__title-sub fontlato-700">
-          CONCEPT
-        </h3>
+      <div className="concept__title" data-sal="slide-down" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
+        <h3 className="concept__title-sub fontlato-700">CONCEPT</h3>
+        <p className="concept__description fontnoto-700">今こそ、移動を考えよう。</p>
+        <p className="concept__description fontnoto-700">移動＝モビリティ」を問い直すことで、これからのビジネス、 そして世界の動きが見。</p>
+        <p className="concept__description fontnoto-700">その「移動」がいま、変革期を迎えている。</p>
+        <p className="concept__description fontnoto-700">運転の担い手は人からAIに。クルマは所有するモノから、 シェアするサービスへ。テクノロジーが、移動の概念を覆しつつある。</p>
         <p className="concept__description fontnoto-700">
-          今こそ、移動を考えよう。
-        </p>
-        <p className="concept__description fontnoto-700">
-          移動＝モビリティ」を問い直すことで、これからのビジネス、
-          そして世界の動きが見。
-        </p>
-        <p className="concept__description fontnoto-700">
-          その「移動」がいま、変革期を迎えている。
-        </p>
-        <p className="concept__description fontnoto-700">
-          運転の担い手は人からAIに。クルマは所有するモノから、
-          シェアするサービスへ。テクノロジーが、移動の概念を覆しつつある。
-        </p>
-        <p className="concept__description fontnoto-700">
-          馬から鉄道、クルマ、飛行機と、人間は移動によって文明を進化させてきた。
-          現代も、物流は不可欠なインフラであり、旅行や観光は巨大産業に成長した。
+          馬から鉄道、クルマ、飛行機と、人間は移動によって文明を進化させてきた。 現代も、物流は不可欠なインフラであり、旅行や観光は巨大産業に成長した。
         </p>
         <p className="concept__description fontnoto-700">移動は人間の本能。</p>
       </div>
       <div className="concept__box ">
-        <div className="item ">
+        <div className="item " data-sal="slide-left" data-sal-easing="ease-out-back" data-sal-duration="5s">
           <div className="item-box d-flex">
             <div className="concept__box-logo">
               <img src={mobievo} />
@@ -40,7 +27,7 @@ export default function Concept() {
             次世代の移動をテーマにした、オンライン番組をNewsPicksとYouTubeで配信中。毎月、モビリティサービスを手掛けるスタートアップに密着取材し、スタジオでは有識者を交えて、これからのモビリティビジネスについて議論している。
           </p>
         </div>
-        <div className="item">
+        <div className="item" data-sal="slide-right" data-sal-easing="ease-out-back" data-sal-duration="5s">
           <div className="item-box d-flex">
             <div className="concept__box-logo">
               <img src={mobievo} />

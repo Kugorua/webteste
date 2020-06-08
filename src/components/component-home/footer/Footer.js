@@ -9,7 +9,7 @@ import './footer.scss';
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div className="footer" data-sal="flip-down" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
       <div className="footer__item">
         <div>
           <img src={ft_knt_logo} alt="" />
@@ -19,11 +19,10 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <img src={mobievo} alt=""/>
+          <img src={mobievo} alt="" />
           <p>
             <img src={icon__buttonmenu} alt="" />
-            <a href="https://newspicks.com/theme-news/3698/">https://newspicks.com/theme-news/3698/
-            </a>
+            <a href="https://newspicks.com/theme-news/3698/">https://newspicks.com/theme-news/3698/</a>
           </p>
         </div>
       </div>
