@@ -7,7 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format": "prettier --write \"*/.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -19,6 +19,7 @@
     "gatsby-plugin-emotion": "^4.3.2",
     "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-sass": "^2.3.2",
+    "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-typography": "^2.5.2",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-json": "^2.4.3",
@@ -27,7 +28,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
-    "wow.js": "^1.2.2"
+    "react-hook-form": "^5.7.2",
+    "wow.js": "^1.2.2",
+    "react-lazyload": "^2.6.7"
   },
   "devDependencies": {
     "prettier": "2.0.5"
