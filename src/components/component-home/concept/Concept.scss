@@ -84,6 +84,12 @@
         width: calc(50% - 30px);
         @media screen and (max-width: 780px) {
           width: 100%;
+          p{
+            font-family: 'Noto Sans', sans-serif;
+            line-height: 23px;
+            font-size: 12px;
+            font-weight: 600;
+          }
         }
         &-box {
           align-items: center;

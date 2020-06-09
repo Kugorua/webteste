@@ -1,7 +1,9 @@
 import React from 'react';
 import ft_knt_logo from '../../../svgs/knt_logo.svg';
+import kinto_mb from '../../../svgs/kinto_mb.svg';
 import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
 import mobievo from '../../../svgs/mobievo.svg';
+import mobievo_mb from '../../../svgs/mobiebo_mb.svg';
 import tw_icon from '../../../svgs/tw_icon.svg';
 import fb_icon from '../../../svgs/fb_icon.svg';
 import np_logo from '../../../svgs/np_logo.svg';
@@ -13,7 +15,8 @@ export default function Footer() {
     <div className="site_wrap--padding footer">
       <div className="footer__item" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
         <div>
-          <img src={ft_knt_logo} alt="" />
+          <img className="logo hidden_img hidden_img--mobile" src={ft_knt_logo} alt="" />
+          <img className="logo hidden_img hidden_img--desktop" src={kinto_mb} alt="" />
           <p>
             <img src={icon__buttonmenu} alt="" />
             <a href="https://corp.kinto-jp.com/" target="_blank" rel="noopener noreferrer">
@@ -22,7 +25,8 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <img src={mobievo} alt="" />
+          <img className="logo hidden_img hidden_img--mobile" src={mobievo} alt="" />
+          <img className="logo hidden_img hidden_img--desktop" src={mobievo_mb} alt="" />
           <p>
             <img src={icon__buttonmenu} alt="" />
             <a href="https://newspicks.com/theme-news/3698/" target="_blank" rel="noopener noreferrer">

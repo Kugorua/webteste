@@ -1,5 +1,8 @@
 import React from 'react';
 import mobievo from '../../../svgs/rgt.svg';
+import ft_knt_logo from '../../../svgs/knt_logo.svg';
+import mobievo_mb from '../../../svgs/mobiebo_mb.svg';
+
 import './concept.scss';
 export default function Concept() {
   return (
@@ -34,7 +37,7 @@ export default function Concept() {
           <div className="item " data-sal="slide-up" data-sal-easing="ease-out-back" data-sal-duration="5s">
             <div className="item-box d-flex">
               <div className="concept__box-logo">
-                <img src={mobievo} />
+                <img src={mobievo_mb} />
               </div>
               <p className="concept__box-text c-white">モビエボとは</p>
             </div>
