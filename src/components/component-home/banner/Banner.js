@@ -22,9 +22,6 @@ class Banner extends Component {
         <div className="tg-4 wow fadeIn " data-wow-delay="3.5s"></div>
         <div className="tg-5"></div>
         <div className="tg-6"></div>
-        <div className="banner__text-right">
-          <img src={text_banner} />
-        </div>
         <div className="button__mb-banner ">
           <Link to="/event-form" >
             <button className="header__button-mobile c-white header__button--gradient">
@@ -32,6 +29,9 @@ class Banner extends Component {
             ENTRY
           </button>
           </Link>
+        </div>
+        <div className="banner__text-right">
+          <img src={text_banner} />
         </div>
         <div className="banner__text wow fadeIn" data-wow-delay="2.5s">
           <div className="banner__text-img">
