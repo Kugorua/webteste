@@ -3,7 +3,7 @@ import mobievo from '../../../svgs/rgt.svg';
 import './concept.scss';
 export default function Concept() {
   return (
-    <div className="bg-concept">
+    <div className="bg-concept" id="scroll-concept">
       <div className="bg-concept__1"></div>
       <div className="bg-concept__2"></div>
       <div className="bg-concept__3"></div>

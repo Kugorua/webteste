@@ -2,7 +2,7 @@ import React from 'react';
 import './event-outline.scss';
 export default function EventOutline() {
   return (
-    <div className="bg__event">
+    <div className="bg__event" id="scroll-event">
       <div className="bg__event--1"></div>
       <div className="bg__event--2"></div>
       <div className="bg__event--3"></div>

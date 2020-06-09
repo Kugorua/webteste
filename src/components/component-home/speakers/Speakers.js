@@ -3,7 +3,7 @@ import './speakers.scss';
 import imgSpeaker from '../../../svgs/speaker.svg';
 export default function Speakers() {
   return (
-    <div className="bg__speaker">
+    <div className="bg__speaker" id="scroll-speaker">
       <div className="bg__speaker--1"></div>
       <div className="bg__speaker--2"></div>
       <div className="bg__speaker--3"></div>
