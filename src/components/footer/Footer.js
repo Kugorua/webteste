@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <img src={imgNPlogo} />
-          <p>Powered by NewsPicks</p>
+          <p>powered by NewsPicks</p>
         </div>
       </div>
     </div>
