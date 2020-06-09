@@ -10,8 +10,8 @@ export default function Tokyo() {
     setActive(!activ);
   };
   return (
-    <div className="site_wrap--padding mobiebo" data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
-      <div className={activ ? 'modal' : 'hide-modal'}>
+    <div className="site_wrap--padding mobiebo">
+      <div className={activ ? 'modal' : 'hide-modal'} data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
         <div className="modal__wrap ">
           <img className="icon-out" src={imgX} onClick={showHideModal} />
           <img src={imgTokyo} alt="" style={{ width: 170, height: 70 }} />
@@ -26,12 +26,12 @@ export default function Tokyo() {
           </div>
         </div>
       </div>
-      <div className="mobiebo__box">
+      <div className="mobiebo__box" data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
         <span>モビエボとモビエボNEXTは</span>
         <img src={imgTokyo} alt="" />
         <span>からお届けします。</span>
       </div>
-      <div className="mobiebo__button" onClick={showHideModal}>
+      <div className="mobiebo__button" onClick={showHideModal} data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
         <p>
           <img src={btnIcon} alt="" />
           TOKYO JUNCTION by KINTOとは？

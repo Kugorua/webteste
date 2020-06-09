@@ -9,8 +9,8 @@ import './footer.scss';
 
 export default function Footer() {
   return (
-    <div className="footer" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
-      <div className="footer__item">
+    <div className="footer">
+      <div className="footer__item" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
         <div>
           <img src={ft_knt_logo} alt="" />
           <p>
@@ -26,14 +26,14 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <div className="footer__social">
+      <div className="footer__social" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
         <p>
           SHARE THIS PAGE
           <img src={tw_icon} alt="" />
           <img src={fb_icon} alt="" />
         </p>
       </div>
-      <div className="footer__team">
+      <div className="footer__team" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
         <img src={np_logo} alt="" />
         <p>powered by NewsPicks</p>
       </div>
