@@ -31,7 +31,7 @@ export default function Tokyo() {
         <img src={imgTokyo} alt="" />
         <span>からお届けします。</span>
       </div>
-      <div className="mobiebo__button" onClick={showHideModal} v>
+      <div className="mobiebo__button" onClick={showHideModal} data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
         <p>
           <img src={btnIcon} alt="" />
           TOKYO JUNCTION by KINTOとは？

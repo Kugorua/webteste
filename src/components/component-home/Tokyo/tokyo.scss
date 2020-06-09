@@ -1,92 +1,140 @@
-.mobiebo {
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  background-color: #2269b0;
-  .hide-modal {
-    display: none;
-  }
-  .modal {
-    position: fixed;
-    z-index: 900;
-    left: 50%;
-    top: 50%;
-    height: 100%;
+.bg__mobiebo {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background-color: #2386ab;
+  &--1 {
+    position: absolute;
     width: 100%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px;
-    animation: showModal linear 1s;
-    .modal__wrap {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-around;
-      text-align: left;
-      padding: 30px;
-      background-color: #2269b0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      position: relative;
-      .icon-out {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        width: 20px;
-        cursor: pointer;
-        &:hover {
-          border-radius: 3px;
-          border: 1px solid white;
+    height: 400px;
+    background-color: #2269b0;
+    opacity: 0.6;
+    clip-path: polygon(0 11%, 100% 25%, 100% 100%, 0% 100%);
+  }
+  &--2 {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    opacity: 0.6;
+    background-color: #2269b0;
+    clip-path: polygon(0 39%, 100% 0, 100% 100%, 0% 100%);
+  }
+  &--3 {
+    position: relative;
+    top: 40%;
+    .mobiebo {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      .hide-modal {
+        display: none;
+      }
+      .modal {
+        position: fixed;
+        z-index: 900;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+        animation: showModal linear 1s;
+        .modal__wrap {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-around;
+          text-align: left;
+          padding: 30px;
+          background-color: #2269b0;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+          position: relative;
+          .icon-out {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 20px;
+            cursor: pointer;
+            &:hover {
+              border-radius: 3px;
+              border: 1px solid white;
+            }
+          }
+          .modal__content {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Noto Sans', sans-serif;
+            width: 70%;
+
+            p {
+              font-size: 12px;
+              line-height: 1.7;
+            }
+            h3 {
+              text-align: center;
+              font-size: 16px;
+              margin: 15px 0;
+            }
+            @media screen and (max-width: 780px) {
+              width: 100%;
+            }
+          }
         }
       }
-      .modal__content {
-        display: flex;
-        flex-direction: column;
-        font-family: 'Noto Sans', sans-serif;
-        width: 70%;
-
-        p {
-          font-size: 12px;
-          line-height: 1.7;
+      &__box {
+        height: 62px;
+        display: inline-flex;
+        align-items: center;
+        img {
+          height: 100%;
+          margin: 0px 15px;
         }
-        h3 {
-          text-align: center;
-          font-size: 16px;
-          margin: 15px 0;
+        span {
+          font-family: 'Noto Sans', sans-serif;
+          font-size: 17px;
+          font-weight: bold;
         }
         @media screen and (max-width: 780px) {
-          width: 100%;
+          display: inline-block;
+          img {
+            margin: 15px 0px;
+          }
+          span {
+            display: block;
+            font-size: 12px;
+          }
+        }
+      }
+      &__button {
+        margin-top: 32px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: 'Noto Sans', sans-serif;
+        p {
+          display: inline-block;
+          padding: 13px 55px;
+          background-color: #4382c1;
+          align-items: center;
+          display: inline-flex;
+          cursor: pointer;
+          img {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+          }
+          @media screen and (max-width: 780px) {
+            padding: 15px 17px;
+            font-size: 11px;
+          }
         }
       }
     }
-  }
-  &__box {
-    height: 62px;
-    display: inline-flex;
-    align-items: center;
-    img {
-      height: 100%;
-      margin: 0px 15px;
-    }
-    span {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 17px;
-      font-weight: bold;
-    }
-    @media screen and (max-width: 780px) {
-      display: inline-block;
-      img {
-        margin: 15px 0px;
-      }
-      span {
-        display: block;
-        font-size: 12px;
-      }
-    }
+<<<<<<< HEAD
   }
   &__button {
     cursor: pointer;
@@ -105,19 +153,15 @@
         width: 15px;
         height: 15px;
         margin-right: 10px;
+=======
+    @keyframes showModal {
+      from {
+        opacity: 0;
+>>>>>>> 4b043c72c68934d6d732b533426b370689c6a6ec
       }
-      @media screen and (max-width: 780px) {
-        padding: 15px 17px;
-        font-size: 11px;
+      to {
+        opacity: 1;
       }
     }
-  }
-}
-@keyframes showModal {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
