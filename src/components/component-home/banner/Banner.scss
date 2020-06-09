@@ -19,8 +19,23 @@
   .banner__text-right {
     position: absolute;
     top: 89px;
-    right: 50px;
+    right: 40px;
     z-index: 99;
+    .hidden-text-mb {
+      display: initial;
+    }
+    .hidden-text-pc {
+      display: none;
+    }
+    @media screen and (max-width: 780px) {
+      right: 15px;
+      .hidden-text-mb {
+        display: none;
+      }
+      .hidden-text-pc {
+        display: initial;
+      }
+    }
   }
   .tg-5 {
     width: 50%;
@@ -69,6 +84,60 @@
     background-image: linear-gradient(to right, #18d5de, #c9abf8);
     z-index: 99;
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    a {
+      display: inline-block;
+      position: absolute;
+      left: 5%;
+      bottom: 0;
+      z-index: 2;
+      padding: 10px 10px 110px;
+      overflow: hidden;
+      color: #fff;
+      font-size: 14px;
+      font-family: 'Josefin Sans', sans-serif;
+      line-height: 1;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      writing-mode: vertical-lr;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.4);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        height: 100px;
+        background: #fff;
+        animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+      }
+    }
+    @keyframes sdl {
+      0% {
+        transform: scale(1, 0);
+        transform-origin: 0 0;
+      }
+      50% {
+        transform: scale(1, 1);
+        transform-origin: 0 0;
+      }
+      50.1% {
+        transform: scale(1, 1);
+        transform-origin: 0 100%;
+      }
+      100% {
+        transform: scale(1, 0);
+        transform-origin: 0 100%;
+      }
+    }
   }
   .tg-2 {
     width: 50%;

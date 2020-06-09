@@ -71,18 +71,49 @@
       &__box {
         display: flex;
         flex-wrap: wrap;
+
+        &__table {
+          @media screen and (max-width: 779px) {
+            display: none;
+          }
+          border-collapse: collapse;
+          width: 100%;
+          table,
+          th,
+          td {
+            background-color: #eaf2ef;
+            border: 1.5px solid white;
+            border-collapse: collapse;
+            padding: 17px 0px;
+            width: 26px;
+            color: black;
+            font-size: 14px;
+            font-style: bold;
+            font-weight: 600;
+            font-family: 'Noto Sans JP', sans-serif;
+          }
+          td {
+            padding-left: 16px;
+          }
+          th {
+            text-align: center;
+            color: #1d8864;
+          }
+        }
         &__item {
           background-color: #cfe6de;
-          border: 1px solid white;
+          border-top: 1px solid white;
+          border-right: 1px solid white;
           font-family: 'Noto Sans', sans-serif;
           display: flex;
           width: 50%;
-          @media screen and (max-width: 780px) {
-            font-size: 13px;
-            width: 100%;
+          font-size: 13px;
+          width: 100%;
+          @media screen and (min-width: 780px) {
+            display: none;
           }
           .title {
-            flex: 1;
+            flex: 2;
             line-height: 55px;
             text-align: center;
             color: #1d8864;
@@ -102,14 +133,14 @@
           &:last-child {
             width: 100%;
             .title {
-              flex: 1;
+              flex: 2;
             }
             .content {
-              flex: 12;
+              flex: 14;
             }
             @media screen and (max-width: 780px) {
               .title {
-                flex: 1;
+                flex: 2;
               }
               .content {
                 flex: 5;

@@ -3,7 +3,7 @@ import movie from '../../../svgs/movie.svg';
 import './movie.scss';
 export default function Movie() {
   return (
-    <div className="bg__movie">
+    <div className="bg__movie" id="scroll-movie">
       <div className="bg__movie--1"></div>
       <div className="bg__movie--2"></div>
       <div className="bg__movie--3"></div>
