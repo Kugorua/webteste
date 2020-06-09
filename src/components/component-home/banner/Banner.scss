@@ -1,11 +1,27 @@
 .banner {
   position: relative;
+  &__brebCrumb {
+    &__mobile {
+      &--hidden {
+        @media screen and (max-width: 780px) {
+          display: none;
+        }
+      }
+    }
+    &__deskop {
+      &--hidden {
+        @media screen and (min-width: 780px) {
+          display: none;
+        }
+      }
+    }
+  }
   .banner__text-right {
     position: absolute;
     top: 89px;
     right: 50px;
     z-index: 99;
-}
+  }
   .tg-5 {
     width: 50%;
     height: 100%;
@@ -14,7 +30,7 @@
     z-index: 1;
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     &::before {
-      content: "";
+      content: '';
       width: calc(100% - 2px);
       height: calc(100% - 2px);
       clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
@@ -34,7 +50,7 @@
     right: 0;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
     &::before {
-      content: "";
+      content: '';
       width: calc(100% - 2px);
       height: calc(100% - 2px);
       clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
@@ -89,7 +105,7 @@
   .banner__text {
     z-index: 99;
     .banner__text-img {
-        margin-left: 46px;
+      margin-left: 46px;
     }
   }
 }

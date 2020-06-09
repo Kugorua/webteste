@@ -62,10 +62,12 @@ export default function Header() {
               </div>
             </li>
             <div className="button__mb ">
-              <button className="header__button-mobile c-white header__button--gradient">
-                <img src={icon__buttonmenu} />
+              <Link to="/event-form" >
+                <button className="header__button-mobile c-white header__button--gradient">
+                  <img src={icon__buttonmenu} />
                 ENTRY
               </button>
+              </Link>
             </div>
           </ul>
           <div className="header__list d-flex">
