@@ -12,14 +12,21 @@ export default function Concept() {
         <div className="concept__title" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
           <h3 className="concept__title-sub fontlato-700">CONCEPT</h3>
           <p className="concept__description fontnoto-700">移動は人間の本能。</p>
-          <p className="concept__description fontnoto-700">馬から鉄道、クルマ、飛行機と、人間は移動によって文明を進化させてきた。<br/>
-現代も、物流は不可欠なインフラであり、旅行や観光は巨大産業に成長した。</p>
+          <p className="concept__description fontnoto-700">
+            馬から鉄道、クルマ、飛行機と、人間は移動によって文明を進化させてきた。
+            <br />
+            現代も、物流は不可欠なインフラであり、旅行や観光は巨大産業に成長した。
+          </p>
           <p className="concept__description fontnoto-700">その「移動」がいま、変革期を迎えている。</p>
-          <p className="concept__description fontnoto-700">運転の担い手は人からAIに。クルマは所有するモノから、<br/>
-                シェアするサービスへ。テクノロジーが、移動の概念を覆しつつある。</p>
+          <p className="concept__description fontnoto-700">
+            運転の担い手は人からAIに。クルマは所有するモノから、
+            <br />
+            シェアするサービスへ。テクノロジーが、移動の概念を覆しつつある。
+          </p>
           <p className="concept__description fontnoto-700">
             「移動＝モビリティ」を問い直すことで、これからのビジネス、
-            そして世界の動きが見えてくるー
+            <br />
+            そして世界の動きが見えてくる。
           </p>
           <p className="concept__description fontnoto-700">今こそ、移動を考えよう。</p>
         </div>
