@@ -12,7 +12,7 @@ class Banner extends Component {
   render() {
     return (
       <div className="banner">
-        <div className="tg-1 wow fadeIn" data-wow-delay="2s"></div>
+        <div className="tg-1 wow fadeInDown" data-wow-delay="2s"></div>
         <div className="tg-2 wow fadeIn" data-wow-delay="2s"></div>
         <div className="tg-3 wow fadeIn" data-wow-delay="3s"></div>
         <div className="tg-4 wow fadeIn " data-wow-delay="3.5s"></div>
