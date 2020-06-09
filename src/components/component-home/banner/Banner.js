@@ -1,13 +1,13 @@
-import React, { Component } from "react"
-import icon__buttonmenu from "../../../svgs/icon__buttonmenu.svg"
-import banner_text from "../../../svgs/banner_text.svg"
-import text_banner from "../../../svgs/text.svg"
-import "./banner.scss"
-var WOW
+import React, { Component } from 'react';
+import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
+import banner_text from '../../../svgs/banner_text.svg';
+import text_banner from '../../../svgs/text.svg';
+import './banner.scss';
+var WOW;
 class Banner extends Component {
   componentDidMount() {
-    const WOW = require("wow.js")
-    new WOW().init()
+    const WOW = require('wow.js');
+    new WOW().init();
   }
   render() {
     return (
@@ -19,16 +19,15 @@ class Banner extends Component {
         <div className="tg-5"></div>
         <div className="tg-6"></div>
         <div className="banner__text-right">
-        <img src={text_banner} />
-    </div>
-        <div className="button__mb-banner " >
+          <img src={text_banner} />
+        </div>
+        <div className="button__mb-banner ">
           <button className="header__button-mobile c-white header__button--gradient">
             <img src={icon__buttonmenu} />
             ENTRY
           </button>
         </div>
         <div className="banner__text wow fadeIn" data-wow-delay="2.5s">
-
           <div className="banner__text-img">
             <img src={banner_text} />
           </div>
@@ -37,17 +36,13 @@ class Banner extends Component {
             <a href="#" className="banner__box-button fontnoto-700 c-white">
               第1回
             </a>
-            <span className="banner__box-date c-white fontlato-700">
-              2020.07.07 THU
-            </span>
+            <span className="banner__box-date c-white fontlato-700">2020.07.07 THU</span>
           </div>
           <div className="banner__boxs hide-desktop">
             <p className="banner__boxs-buttons fontnoto-700 c-white">
               <span className="text-content">第1回 </span>
             </p>
-            <p className="banner__boxs-dates c-white fontlato-700">
-              2020.07.07 THU
-            </p>
+            <p className="banner__boxs-dates c-white fontlato-700">2020.07.07 THU</p>
           </div>
         </div>
         <ul className="banner__brebCrumb d-flex container wow fadeIn" data-wow-delay="5s">
@@ -62,17 +57,14 @@ class Banner extends Component {
             </a>
           </li>
           <li className="banner__brebCrumb-item">
-            <a
-              href="#"
-              className="c-white fontnoto-700 banner__brebCrumb-item--active"
-            >
+            <a href="#" className="c-white fontnoto-700 banner__brebCrumb-item--active">
               セッションを更新しました
             </a>
           </li>
         </ul>
       </div>
-    )
+    );
   }
 }
 
-export default Banner
+export default Banner;

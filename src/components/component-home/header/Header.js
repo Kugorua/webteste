@@ -12,8 +12,8 @@ export default function Header() {
     setActive(!activeMenu);
   };
   useEffect(() => {
-    const WOW = require("wow.js")
-    new WOW().init()
+    const WOW = require('wow.js');
+    new WOW().init();
   }, []);
   return (
     <div className="header wow fadeIn" data-wow-delay="5s">

@@ -3,29 +3,76 @@
     @content;
   }
 }
-.concept {
-  background-size: cover;
-  &__title {
-    text-align: center;
+.bg-concept {
+  position: relative;
+  &__1 {
+    position: absolute;
+    width: 60%;
+    height: 490px;
+    background-image: linear-gradient(to right, #3de8ba, #3de8ba);
+    opacity: 0.3;
+    clip-path: polygon(0 0, 15% 0, 31% 29%, 7% 89%, 0 89%);
+    top: 0;
+    left: 0;
+    opacity: 0.05;
   }
-  &__box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    .item {
-      width: calc(50% - 30px);
-      @media screen and (max-width:780px){
-        width: 100% ;
-      }
-      &-box {
-        align-items: center;
-        justify-content: center;
-        background-color: #01637c;
-        padding: 0 52px;
-        height: 114px;
-        margin-top: 53px;
-        @include breakpointminmax(320, 574) {
-          padding: 0 15px;
+  &__2 {
+    position: absolute;
+    width: 30%;
+    height: 454px;
+    background-image: linear-gradient(to right, #3de8ba, #3de8ba);
+    opacity: 0.3;
+    clip-path: polygon(0 0, 1% 0, 42% 43%, 0 100%, 0 89%);
+    opacity: 0.05;
+    top: 35%;
+    left: 0;
+  }
+  &__3 {
+    position: absolute;
+    width: 30%;
+    height: 454px;
+    background-image: linear-gradient(to right, #3de8ba, #3de8ba);
+    opacity: 0.3;
+    clip-path: polygon(100% 0, 55% 45%, 100% 100%);
+    opacity: 0.05;
+    top: 35%;
+    right: 0;
+  }
+  &__4 {
+    position: absolute;
+    width: 30%;
+    height: 454px;
+    background-image: linear-gradient(to right, #3de8ba, #3de8ba);
+
+    clip-path: polygon(100% 0, 55% 45%, 100% 100%);
+    opacity: 0.05;
+    top: 4%;
+    right: 0;
+  }
+  .concept {
+    background-size: cover;
+    &__title {
+      text-align: center;
+    }
+    &__box {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .item {
+        width: calc(50% - 30px);
+        @media screen and (max-width: 780px) {
+          width: 100%;
+        }
+        &-box {
+          align-items: center;
+          justify-content: center;
+          background-color: #01637c;
+          padding: 0 52px;
+          height: 114px;
+          margin-top: 53px;
+          @include breakpointminmax(320, 574) {
+            padding: 0 15px;
+          }
         }
       }
     }
