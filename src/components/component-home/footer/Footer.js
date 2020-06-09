@@ -7,6 +7,7 @@ import mobievo_mb from '../../../svgs/mobiebo_mb.svg';
 import tw_icon from '../../../svgs/tw_icon.svg';
 import fb_icon from '../../../svgs/fb_icon.svg';
 import np_logo from '../../../svgs/np_logo.svg';
+import { TwitterShareButton, FacebookShareButton } from 'react-share';
 import './footer.scss';
 
 export default function Footer() {
@@ -18,7 +19,9 @@ export default function Footer() {
           <img className="logo hidden_img hidden_img--desktop" src={kinto_mb} alt="" />
           <p>
             <img src={icon__buttonmenu} alt="" />
-            <a href="https://corp.kinto-jp.com/">https://corp.kinto-jp.com/</a>
+            <a href="https://corp.kinto-jp.com/" target="_blank" rel="noopener noreferrer">
+              https://corp.kinto-jp.com/
+            </a>
           </p>
         </div>
         <div>
@@ -26,20 +29,26 @@ export default function Footer() {
           <img className="logo hidden_img hidden_img--desktop" src={mobievo_mb} alt="" />
           <p>
             <img src={icon__buttonmenu} alt="" />
-            <a href="https://newspicks.com/theme-news/3698/">https://newspicks.com/theme-news/3698/</a>
+            <a href="https://newspicks.com/theme-news/3698/" target="_blank" rel="noopener noreferrer">
+              https://newspicks.com/theme-news/3698/
+            </a>
           </p>
         </div>
       </div>
       <div className="footer__social" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
-        <p>
-          SHARE THIS PAGE
-          <img src={tw_icon} alt="" />
-          <img src={fb_icon} alt="" />
-        </p>
+        <div className="footer__social--icons">
+          <p>SHARE THIS PAGE</p>
+          <TwitterShareButton title="モビエボNEXT オンラインイベント開催決定" via="" url="https://westship.newspicks.com/?fbclid=IwAR3UZABbzs313FcDNwV3XhPeykci8sSOIXHdOAncHs-LFm5DfpyXqEVlRO0">
+            <img src={tw_icon} alt="" />
+          </TwitterShareButton>
+          <FacebookShareButton url="https://westship.newspicks.com/?fbclid=IwAR3UZABbzs313FcDNwV3XhPeykci8sSOIXHdOAncHs-LFm5DfpyXqEVlRO0">
+            <img src={fb_icon} alt="" />
+          </FacebookShareButton>
+        </div>
       </div>
       <div className="footer__team" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
         <img src={np_logo} alt="" />
-        <p>powered by NewsPicks</p>
+        <p>Powered by NewsPicks</p>
       </div>
     </div>
   );
