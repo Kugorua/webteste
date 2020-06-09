@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form/dist/react-hook-form.ie11';
 import './event-form.scss';
 
 const EventForm = () => {
@@ -59,6 +59,7 @@ const EventForm = () => {
           <div className="form-detail__fields--underline"></div>
           <label>業種（学部名）</label>
           <select name="industry" onChange={selectOrther1} ref={register({ required: true, maxLength: 20 })}>
+            <option value="">選択して下さい</option>
             <option value="Item1">Item1</option>
             <option value="Item2">Item2</option>
             <option value="other1">その他</option>
@@ -78,6 +79,7 @@ const EventForm = () => {
           <div className="form-detail__fields--underline"></div>
           <label>職種（学科名）</label>
           <select name="occupation" onChange={selectOrther2} ref={register({ required: true })}>
+            <option value="">選択して下さい</option>
             <option value="Item1">Item1</option>
             <option value="Item2">Item2</option>
             <option value="other2">その他</option>
@@ -103,6 +105,7 @@ const EventForm = () => {
           <div className="form-detail__fields--underline"></div>
           <label>役職名</label>
           <select name="position" onChange={selectOrther3} ref={register({ required: true })}>
+            <option value="">選択して下さい</option>
             <option value="Item1">Item1</option>
             <option value="Item2">Item2</option>
             <option value="other3">その他</option>
@@ -122,6 +125,7 @@ const EventForm = () => {
           <div className="form-detail__fields--underline"></div>
           <label>会社規模</label>
           <select name="company-class" ref={register({ required: true })}>
+            <option value="">選択して下さい</option>
             <option value="startup">スタートアップ</option>
             <option value="listed">上場</option>
             <option value="private">非上場</option>
