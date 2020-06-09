@@ -1,9 +1,9 @@
+import React, { useState, useEffect } from 'react';
 import logo from '../../../svgs/logo.svg';
 import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
 import arrow from '../../../svgs/arrow.svg';
 import close from '../../../svgs/close.svg';
 import bars from '../../../svgs/bars.svg';
-import React, { useState } from 'react';
 import './header.scss';
 import { Link } from 'gatsby';
 export default function Header() {
@@ -11,8 +11,12 @@ export default function Header() {
   const changeIcon = () => {
     setActive(!activeMenu);
   };
+  useEffect(() => {
+    const WOW = require("wow.js")
+    new WOW().init()
+  }, []);
   return (
-    <div className="header">
+    <div className="header wow fadeIn" data-wow-delay="5s">
       <div className="container-fluid h-100">
         <div className="header__menu d-flex h-100">
           <div className="header__logo">

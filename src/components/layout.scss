@@ -413,12 +413,20 @@ $header__button--gradient: #ffdf57;
     }
   }
   &__bg {
-    background: url('../svgs/bg_line.svg') no-repeat center;
-    background-size: cover;
     height: 35px;
     margin-top: 35px;
+    background-image: linear-gradient(to right, #FFEB34, #3DE8BA);
+    text-align: center;
+    line-height: 35px;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    -webkit-transform: skew(160deg);
+    -moz-transform: skew(160deg);
+    -o-transform: skew(160deg);
     @include breakpointminmax(320, 779) {
       margin-top: 10px;
+      font-size: 12px;
     }
   }
   &__brebCrumb {
