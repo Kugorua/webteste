@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
 import banner_text from '../../../svgs/banner_text.svg';
+import banner_text_mb from '../../../svgs/banner_text_mb.svg';
+
 import text_banner from '../../../svgs/text.svg';
 import banner__np from '../../../svgs/np_logo.svg';
 import { Link } from 'gatsby';
@@ -44,7 +46,8 @@ class Banner extends Component {
           </Link>
         </div>
         <div className="banner__text-right">
-          <img src={text_banner} />
+          <img src={text_banner} className="hidden-text-mb"/>
+          <img src={banner_text_mb} className="hidden-text-pc" />
         </div>
         <div className="banner__text">
           <div className="banner__text-img wow fadeIn" data-wow-delay="5s">
