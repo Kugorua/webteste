@@ -9,7 +9,7 @@ import './footer.scss';
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div className="site_wrap--padding footer">
       <div className="footer__item" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
         <div>
           <img src={ft_knt_logo} alt="" />
