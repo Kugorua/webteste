@@ -43,11 +43,19 @@
     width: 30%;
     height: 454px;
     background-image: linear-gradient(to right, #3de8ba, #3de8ba);
-
     clip-path: polygon(100% 0, 55% 45%, 100% 100%);
     opacity: 0.05;
     top: 4%;
     right: 0;
+  }
+  @media screen and (max-width: 780px){
+    &__1,
+    &__2,
+    &__3,
+    &__4
+    {
+      display: none;
+    }
   }
   .concept {
     background-size: cover;
