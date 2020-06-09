@@ -5,6 +5,7 @@ import arrow from '../../../svgs/arrow.svg';
 import close from '../../../svgs/close.svg';
 import bars from '../../../svgs/bars.svg';
 import './header.scss';
+import { Link } from 'gatsby';
 export default function Header() {
   const [activeMenu, setActive] = useState(false);
   const changeIcon = () => {
@@ -91,10 +92,10 @@ export default function Header() {
               </li>
             </ul>
             <div className="header__button">
-              <a href="#" className="header__button-btn c-white header__button--gradient">
+              <Link to="/event-form" className="header__button-btn c-white header__button--gradient">
                 <img src={icon__buttonmenu} />
                 ENTRY
-              </a>
+              </Link>
             </div>
           </div>
         </div>
