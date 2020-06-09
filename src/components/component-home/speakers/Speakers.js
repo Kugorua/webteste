@@ -4,11 +4,11 @@ import imgSpeaker from '../../../svgs/speaker.svg';
 export default function Speakers() {
   return (
     <div className="site_wrap--padding speaker">
-      <h3 className="speaker__title" data-sal="slide-down" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
+      <h3 className="speaker__title" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
         SPEAKERS
       </h3>
       <div className="speaker__box">
-        <div className="speaker__box__item" data-sal="flip-left" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
+        <div className="speaker__box__item" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
           <div className="thumbnail">
             <img src={imgSpeaker} alt="Speaker" />
             <p className="thumbnail__text thumbnail__text--above">ベンチャー事情に精通</p>
@@ -20,7 +20,7 @@ export default function Speakers() {
             Pitch発起人。主な著書は『一生を賭ける仕事の見つけ方』（ダイヤモンド社）。新聞・雑誌・テレビ・オンラインメディア等、メディア掲載多数。「2017年 日経ビジネス 次代を創る100人」に選出。
           </div>
         </div>
-        <div className="speaker__box__item" data-sal="flip-left" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
+        <div className="speaker__box__item" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
           <div className="thumbnail">
             <img src={imgSpeaker} alt="Speaker" />
             <p className="thumbnail__text thumbnail__text--above">テクノロジー分野に精通したアナリスト</p>
@@ -33,7 +33,7 @@ export default function Speakers() {
             著書「銀行はこれからどうなるのか」（クロスメディア）「Google vs トヨタ」(KADOKAWA)「日本の電機産業」(日本経済新聞社出版) 慶應義塾大学大学院修士課程修了
           </div>
         </div>
-        <div className="speaker__box__item" data-sal="flip-left" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
+        <div className="speaker__box__item" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
           <div className="thumbnail">
             <img src={imgSpeaker} alt="Speaker" />
             <p className="thumbnail__text thumbnail__text--above">テキストテキストテキスト</p>
@@ -48,7 +48,7 @@ export default function Speakers() {
             H-II TransferVehicle）開発では多くの賞を受賞。
           </div>
         </div>
-        <div className="speaker__box__item" data-sal="flip-left" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
+        <div className="speaker__box__item" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
           <div className="thumbnail">
             <img src={imgSpeaker} alt="Speaker" />
             <p className="thumbnail__text thumbnail__text--above thumbnail__text--green">学者　ベンチャーに詳しい</p>
@@ -61,7 +61,7 @@ export default function Speakers() {
             非常勤講師(企業戦略論)。
           </div>
         </div>
-        <div className="speaker__box__item" data-sal="flip-left" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
+        <div className="speaker__box__item" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
           <div className="thumbnail">
             <img src={imgSpeaker} alt="Speaker" />
             <p className="thumbnail__text thumbnail__text--above thumbnail__text--brown">ファシリテーター</p>
@@ -76,7 +76,7 @@ export default function Speakers() {
             Design編集長に就任。 （スタートアップ色を出す場合に担当）
           </div>
         </div>
-        <div className="speaker__box__item" data-sal="flip-left" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
+        <div className="speaker__box__item" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="200" ata-sal-easing="ease">
           <div className="thumbnail">
             <img src={imgSpeaker} alt="Speaker" />
             <p className="thumbnail__text thumbnail__text--above thumbnail__text--brown">ファシリテーター</p>

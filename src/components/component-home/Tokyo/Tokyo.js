@@ -10,7 +10,7 @@ export default function Tokyo() {
     setActive(!activ);
   };
   return (
-    <div className="site_wrap--padding mobiebo" data-sal="zoom-in" data-sal-delay="100" ata-sal-easing="ease">
+    <div className="site_wrap--padding mobiebo" data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
       <div className={activ ? 'modal' : 'hide-modal'}>
         <div className="modal__wrap ">
           <img className="icon-out" src={imgX} onClick={showHideModal} />
