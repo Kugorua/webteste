@@ -9,10 +9,10 @@ export default function Movie() {
       <div className="bg__movie--3"></div>
       <div className="bg__movie--4">
         <div className="site_wrap--padding movie">
-          <div className="movie__title">
+          <div className="movie__title" data-sal="slide-up" data-sal-delay="500">
             <h3>MOVIE</h3>
           </div>
-          <div className="movie__img">
+          <div className="movie__img" data-sal="slide-up" data-sal-delay="500">
             <iframe
               height={400}
               src="https://www.youtube.com/embed/AKmoccuRiN4"

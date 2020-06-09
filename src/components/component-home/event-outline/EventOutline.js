@@ -8,13 +8,13 @@ export default function EventOutline() {
       <div className="bg__event--3"></div>
       <div className="bg__event--4">
         <div className="site_wrap--padding event">
-          <div className="event__title">
+          <div className="event__title" data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
             <h3>EVENT OUTLINE</h3>
             <p>
               かつてなく移動が制限される経験をした2020年。これからの「移動」はどうなるのか。自動車メーカー、鉄道、不動産、小売りなど、これまでの業種、業界の垣根を越えて、新しいモビリティビジネスのチャンスがどこにあるのか、どのように育てていくのかを、産学それぞれの立場から議論する。
-          </p>
+        </p>
           </div>
-          <div className="event__box">
+          <div className="event__box" data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
             <div className="event__box__item">
               <div className="title">時期</div>
               <div className="content">7月下旬</div>
@@ -33,9 +33,36 @@ export default function EventOutline() {
             </div>
             <div className="event__box__item">
               <div className="title">テーマ</div>
-              <div className="content">
-                モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ
-              </div>
+              <div className="content">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</div>
+              {/* =======
+    <div className="site_wrap--padding event">
+      <div className="event__title" data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
+        <h3>EVENT OUTLINE</h3>
+        <p>
+          かつてなく移動が制限される経験をした2020年。これからの「移動」はどうなるのか。自動車メーカー、鉄道、不動産、小売りなど、これまでの業種、業界の垣根を越えて、新しいモビリティビジネスのチャンスがどこにあるのか、どのように育てていくのかを、産学それぞれの立場から議論する。
+        </p>
+      </div>
+      <div className="event__box" data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
+        <div className="event__box__item">
+          <div className="title">時期</div>
+          <div className="content">7月下旬</div>
+        </div>
+        <div className="event__box__item">
+          <div className="title">時間</div>
+          <div className="content">平日の夜　19時～　2時間程度</div>
+        </div>
+        <div className="event__box__item">
+          <div className="title">形式</div>
+          <div className="content">オンラインイベント TOKYO JCT から配信</div>
+        </div>
+        <div className="event__box__item">
+          <div className="title">定員</div>
+          <div className="content">150人程度</div>
+        </div>
+        <div className="event__box__item">
+          <div className="title">テーマ</div>
+          <div className="content">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</div>
+>>>>>>> be3675c07d4ea34b82053e74f85388447d70acf5 */}
             </div>
           </div>
         </div>

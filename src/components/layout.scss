@@ -386,11 +386,14 @@ $header__button--gradient: #ffdf57;
   .button__mb-banner {
     display: none;
     @include breakpointminmax(320, 779) {
-      position: absolute;
+      position: fixed;
+      overflow-y: scroll;
+      overflow-x: hidden;
       display: block;
       right: -43px;
       bottom: 137px;
       transform: rotate(90deg);
+      z-index: 99;
       .header__button-mobile {
         border: none;
         padding: 14px 32px;
@@ -413,12 +416,20 @@ $header__button--gradient: #ffdf57;
     }
   }
   &__bg {
-    background: url('../svgs/bg_line.svg') no-repeat center;
-    background-size: cover;
     height: 35px;
     margin-top: 35px;
+    background-image: linear-gradient(to right, #ffeb34, #3de8ba);
+    text-align: center;
+    line-height: 35px;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    -webkit-transform: skew(160deg);
+    -moz-transform: skew(160deg);
+    -o-transform: skew(160deg);
     @include breakpointminmax(320, 779) {
       margin-top: 10px;
+      font-size: 12px;
     }
   }
   &__brebCrumb {
