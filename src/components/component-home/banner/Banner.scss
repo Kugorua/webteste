@@ -19,8 +19,23 @@
   .banner__text-right {
     position: absolute;
     top: 89px;
-    right: 50px;
+    right: 40px;
     z-index: 99;
+    .hidden-text-mb {
+      display: initial;
+    }
+    .hidden-text-pc {
+      display: none;
+    }
+    @media screen and (max-width: 780px) {
+      right: 15px;
+      .hidden-text-mb {
+        display: none;
+      }
+      .hidden-text-pc {
+        display: initial;
+      }
+    }
   }
   .tg-5 {
     width: 50%;
