@@ -13,8 +13,16 @@ class Banner extends Component {
     new WOW().init();
     this.time = setTimeout(() => {
       const textRight = document.querySelector('.banner__np');
+
       textRight.classList.add('hide');
     }, 10000);
+    this.tg = setTimeout(() => {
+        const tg1 = document.querySelector('.tg-1')
+        tg1.classList.add('transform');
+        const tg2 = document.querySelector('.tg-2')
+        tg2.classList.add('transform2');
+
+    },6000)
   }
   componentWillMount() {
     this.timer = setInterval(() => {
@@ -27,6 +35,9 @@ class Banner extends Component {
       clearInterval(this.timer);
     }
     if (this.time) {
+      clearTimeout(this.timer);
+    }
+    if (this.tg) {
       clearTimeout(this.timer);
     }
   }

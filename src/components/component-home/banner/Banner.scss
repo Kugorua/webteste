@@ -119,12 +119,16 @@
 
   .tg-1 {
     width: 50%;
+    transition: .5s;
     height: 100%;
     position: absolute;
     background-image: linear-gradient(to right, #18d5de, #c9abf8);
     z-index: 99;
     clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
     opacity: .6;
+  }
+  .tg-1.wow.fadeIn.transform{
+    clip-path: polygon(0% 0%, 71% 0, 100% 27%, 4% 100%, 0% 100%);
   }
   .tg-5 {
     width: 50%;
@@ -193,8 +197,12 @@
     background-image: linear-gradient(to right, #ffeb34, #3de8ba);
     z-index: 99;
     right: 0;
+    transition: .5s;
     opacity: .6;
     clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
+  }
+  .tg-2.transform2{
+    clip-path: polygon(100% 2%, 100% 1%, 100% 100%, 25% 100%, 0 69%);
   }
   .tg-3 {
     background: #d3e6ea;
