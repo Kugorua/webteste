@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
 import banner_text from '../../../svgs/banner_text.svg';
 import banner_text_mb from '../../../svgs/banner_text_mb.svg';
+
 import text_banner from '../../../svgs/text.svg';
 import banner__np from '../../../svgs/np_logo.svg';
 import { Link } from 'gatsby';
+
 import './banner.scss';
 var WOW;
 class Banner extends Component {
@@ -34,7 +36,7 @@ class Banner extends Component {
       clearInterval(this.timer);
     }
     if (this.time) {
-      clearTimeout(this.timer);
+      clearTimeout(this.time);
     }
     if (this.tg) {
       clearTimeout(this.timer);
@@ -112,4 +114,5 @@ class Banner extends Component {
     );
   }
 }
+
 export default Banner;

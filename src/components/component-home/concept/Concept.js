@@ -12,7 +12,7 @@ export default function Concept() {
       <div className="bg-concept__3"></div>
       <div className="bg-concept__4"></div>
       <div className="site_wrap--padding concept">
-        <div className="concept__title" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
+        <div className="concept__title" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
           <h3 className="concept__title-sub fontlato-700">CONCEPT</h3>
           <p className="concept__description fontnoto-700">移動は人間の本能。</p>
           <p className="concept__description fontnoto-700">
@@ -34,7 +34,7 @@ export default function Concept() {
           <p className="concept__description fontnoto-700">今こそ、移動を考えよう。</p>
         </div>
         <div className="concept__box ">
-          <div className="item " data-sal="slide-up" data-sal-easing="ease-out-back" data-sal-duration="5s">
+          <div className="item " data-sal="slide-up" data-sal-easing="ease-out-back" data-sal-duration="1500" data-sal-delay="200">
             <div className="item-box d-flex">
               <div className="concept__box-logo">
                 <img src={mobievo_mb} />
@@ -45,7 +45,7 @@ export default function Concept() {
               次世代の移動をテーマにした、オンライン番組をNewsPicksとYouTubeで配信中。毎月、モビリティサービスを手掛けるスタートアップに密着取材し、スタジオでは有識者を交えて、これからのモビリティビジネスについて議論している。
             </p>
           </div>
-          <div className="item" data-sal="slide-up" data-sal-easing="ease-out-back" data-sal-duration="5s">
+          <div className="item" data-sal="slide-up" data-sal-easing="ease-out-back" data-sal-duration="1500" data-sal-delay="200">
             <div className="item-box d-flex">
               <div className="concept__box-logo">
                 <img src={mobievo} />
