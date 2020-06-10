@@ -23,10 +23,10 @@ const FormLayout = ({ children }) => {
     <>
       <div className="form-area">
         <div className="form-area__upper-space"></div>
-        <p className="form-area__upper-area">
+        <div className="form-area__upper-area">
           <img src={imgGp972svg} />
           <p className="form-area__upper-area--title">イベントエントリーフォーム</p>
-        </p>
+        </div>
         <main>{children}</main>
         <FormFooter />
       </div>
