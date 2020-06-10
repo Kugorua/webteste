@@ -186,11 +186,11 @@ const EventForm = () => {
           <input name="email" onChange={enterValue} value={valueInput.email} ref={register({ required: true, maxLength: 320, validate: validateEmail })} />
           {errors.email && errors.email.type === 'required' && <p className="form-detail__errors--color">必須項目です</p>}
           {errors.email && errors.email.type === 'maxLength' && <p className="form-detail__errors--color">320文字以下で入力してください </p>}
-          {errors.email && errors.email.type === 'validate' && <p className="form-detail__errors--color">正しいメールアドレスの形式で入力して下さい)</p>}
+          {errors.email && errors.email.type === 'validate' && <p className="form-detail__errors--color">正しいメールアドレスの形式で入力して下さい</p>}
         </div>
         <div className="form-detail__fields--textarea">
           <div className="form-detail__fields--underline"></div>
-          <label>あなたが取り組んでいる事業や研究内容についてご紹介ください</label>
+          <label>あなたが取り組んでいる事業や研究内容についてご紹介ください。</label>
           <textarea name="business-research" rows="10" ref={register({ required: true, maxLength: 1000, validate: validationEmpty })} />
           {errors['business-research'] && (errors['business-research'].type === 'required' || errors['business-research'].type === 'validate') && (
             <p className="form-detail__errors--color">必須項目です</p>
@@ -199,7 +199,7 @@ const EventForm = () => {
         </div>
         <div className="form-detail__fields--textarea">
           <div className="form-detail__fields--underline"></div>
-          <label>自由記入欄（アピールポイントやビジョン、KINTOやトヨタへのご意見など）</label>
+          <label>自由記入欄</label>
           <textarea name="free-text" rows="10" placeholder="アピールポイントやビジョン、KINTOやトヨタへのご意見など" ref={register({ maxLength: 1000 })} />
           {errors['free-text'] && errors['free-text'].type === 'maxLength' && <p className="form-detail__errors--color">1000文字以下で入力してください </p>}
         </div>
