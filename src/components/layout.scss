@@ -448,7 +448,8 @@ $header__button--gradient: #ffdf57;
     flex-wrap: wrap;
     transform: translateX(-50%);
     &-item {
-      a {
+      a,
+      p {
         padding-left: 18px;
         font-size: 14px;
       }
@@ -456,7 +457,7 @@ $header__button--gradient: #ffdf57;
         @include breakpointminmax(320, 424) {
           flex-basis: 100%;
         }
-        a {
+        p {
           font-size: 16px;
           padding-right: 18px;
           border-right: 1px solid white;
@@ -558,7 +559,7 @@ $header__button--gradient: #ffdf57;
     color: white;
     letter-spacing: 2px;
 
-    @media screen and (max-width:780px){
+    @media screen and (max-width: 780px) {
       text-align: left;
       font-size: 12px;
       font-size: 12px;
@@ -582,7 +583,7 @@ $header__button--gradient: #ffdf57;
       text-align: center;
       flex: 1;
       font-family: 'Noto Sans', sans-serif;
-      @media screen and (max-width: 780px){
+      @media screen and (max-width: 780px) {
         font-size: 14px;
       }
     }
