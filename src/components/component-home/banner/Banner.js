@@ -13,19 +13,25 @@ class Banner extends Component {
   componentDidMount() {
     const WOW = require('wow.js');
     new WOW().init();
-    setTimeout(() => {
-      const textRight = document.querySelector(".banner__np");
+    this.time = setTimeout(() => {
+      const textRight = document.querySelector('.banner__np');
       textRight.classList.add('hide');
-
     }, 10000);
   }
   componentWillMount() {
-    setInterval(() => {
-      const dot = document.querySelector(".banner__dot");
+    this.timer = setInterval(() => {
+      const dot = document.querySelector('.banner__dot');
       dot.classList.add('hide');
-    }, 6000);
+    }, 1000);
   }
-
+  componentWillUnmount() {
+    if (this.timer) {
+      clearInterval(this.timer);
+    }
+    if (this.time) {
+      clearTimeout(this.timer);
+    }
+  }
   render() {
     return (
       <div className="banner">
@@ -35,7 +41,7 @@ class Banner extends Component {
         </div>
         <div className="tg-1 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-5 wow fadeIn " data-wow-delay="8s">
-            <a href="#scroll-concept">Scroll</a>
+          <a href="#scroll-concept">Scroll</a>
         </div>
         <div className="tg-2 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-3 wow fadeIn" data-wow-delay="6s"></div>
@@ -59,8 +65,10 @@ class Banner extends Component {
           <div className="banner__text-img wow fadeIn" data-wow-delay="4s">
             <img src={banner_text} />
           </div>
-          <div className="banner__bg wow fadeIn" data-wow-delay="8s">オンラインイベント開催決定</div>
-          <div className="banner__box d-flex hide-mb wow fadeIn"  data-wow-delay="8s">
+          <div className="banner__bg wow fadeIn" data-wow-delay="8s">
+            オンラインイベント開催決定
+          </div>
+          <div className="banner__box d-flex hide-mb wow fadeIn" data-wow-delay="8s">
             <a href="#" className="banner__box-button fontnoto-700 c-white">
               第1回
             </a>
