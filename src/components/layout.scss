@@ -422,6 +422,7 @@ $header__button--gradient: #ffdf57;
     height: 35px;
     margin-top: 35px;
     background-image: linear-gradient(to right, #ffeb34, #3de8ba);
+    opacity: 0.9;
     text-align: center;
     line-height: 35px;
     color: black;
@@ -430,6 +431,10 @@ $header__button--gradient: #ffdf57;
     -webkit-transform: skew(160deg);
     -moz-transform: skew(160deg);
     -o-transform: skew(160deg);
+    &--title {
+      color: #000000;
+      letter-spacing: 3px;
+    }
     @include breakpointminmax(320, 779) {
       margin-top: 10px;
       font-size: 12px;
@@ -515,16 +520,21 @@ $header__button--gradient: #ffdf57;
     }
   }
   &__box {
+    display: flex;
+    justify-content: space-between;
     margin-top: 15px;
     &-button {
+      letter-spacing: 3px;
+      font-size: 18px;
       padding: 8px 14px;
       border: 1px solid white;
     }
     &-date {
       display: inline-block;
+      letter-spacing: 1px;
       font-size: 30px;
+      font-style: italic;
       font-family: 'Lato', sans-serif;
-      margin-left: 15px;
       border-bottom: 1px solid white;
     }
   }

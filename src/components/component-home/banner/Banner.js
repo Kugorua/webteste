@@ -18,11 +18,11 @@ class Banner extends Component {
       textRight.classList.add('hide');
     }, 10000);
     this.tg = setTimeout(() => {
-        const tg1 = document.querySelector('.tg-1')
-        tg1.classList.add('transform');
-        const tg2 = document.querySelector('.tg-2')
-        tg2.classList.add('transform2');
-    },6000)
+      const tg1 = document.querySelector('.tg-1');
+      tg1.classList.add('transform');
+      const tg2 = document.querySelector('.tg-2');
+      tg2.classList.add('transform2');
+    }, 6000);
   }
 
   componentWillMount() {
@@ -86,19 +86,19 @@ class Banner extends Component {
             <img src={banner_text} />
           </div>
           <div className="banner__bg wow fadeIn" data-wow-delay="8s">
-            オンラインイベント開催決定
+            <p className="banner__bg--title">オンラインイベント開催決定</p>
           </div>
           <div className="banner__box d-flex hide-mb wow fadeIn" data-wow-delay="8s">
-            <a href="#" className="banner__box-button fontnoto-700 c-white">
+            <p href="#" className="banner__box-button fontnoto-700 c-white">
               第1回
-            </a>
-            <span className="banner__box-date c-white fontlato-700 ">2020.07.07 THU</span>
+            </p>
+            <p className="banner__box-date c-white fontlato-700 ">2020.07.27 MON</p>
           </div>
           <div className="banner__boxs hide-desktop">
             <p className="banner__boxs-buttons fontnoto-700 c-white">
               <span className="text-content">第1回 </span>
             </p>
-            <p className="banner__boxs-dates c-white fontlato-700">2020.07.07 THU</p>
+            <p className="banner__boxs-dates c-white fontlato-700">2020.07.27 MON</p>
           </div>
         </div>
         <ul className="banner__brebCrumb d-flex container wow fadeIn banner__brebCrumb__mobile--hidden" data-wow-delay="8s">
