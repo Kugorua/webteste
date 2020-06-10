@@ -5,7 +5,7 @@ const EventForm = () => {
   const { register, handleSubmit, errors } = useForm();
   let [selects, setSelect] = useState({ other1: false, other2: false, other3: false });
   let [choose, setChoose] = useState(false);
-  let [valueInput, setValueInput] = useState({ fullname: '', company: '' });
+  let [valueInput, setValueInput] = useState({ email: '', url: '', positionOther3: '', fullname: '', company: '', industry: '', industryOther: '', occupationOther: '', department: '' });
   const handleChange = () => {
     setChoose(!choose);
   };
@@ -49,10 +49,32 @@ const EventForm = () => {
     setValueInput({ ...valueInput, [e.target.name]: e.target.value });
   };
   const resValue = () => {
-    if (valueInput.fullname.trim) {
+    if (valueInput.fullname) {
       setValueInput({ ...valueInput, fullname: '' });
-    } else if (valueInput.company.trim) {
+    }
+    if (valueInput.company) {
       setValueInput({ ...valueInput, company: '' });
+    }
+    if (valueInput.email) {
+      setValueInput({ ...valueInput, email: '' });
+    }
+    if (valueInput.url) {
+      setValueInput({ ...valueInput, url: '' });
+    }
+    if (valueInput.mail) {
+      setValueInput({ ...valueInput, mail: '' });
+    }
+    if (valueInput.industry) {
+      setValueInput({ ...valueInput, industry: '' });
+    }
+    if (valueInput.industryOther) {
+      setValueInput({ ...valueInput, industryOther: '' });
+    }
+    if (valueInput.occupationOther) {
+      setValueInput({ ...valueInput, occupationOther: '' });
+    }
+    if (valueInput.department) {
+      setValueInput({ ...valueInput, department: '' });
     }
   };
 
@@ -88,7 +110,7 @@ const EventForm = () => {
           <div className="form-detail__fields--input">
             <div className="form-detail__fields--underline"></div>
             <label>業種（学部名）</label>
-            <input name="industryOther" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} onClick={focus} />
+            <input name="industryOther" onChange={enterValue} value={valueInput.industryOther} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} onClick={focus} />
             {errors.industryOther && (errors.industryOther.type === 'required' || errors.industryOther.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
             {errors.industryOther && errors.industryOther.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
           </div>
@@ -109,7 +131,7 @@ const EventForm = () => {
           <div className="form-detail__fields--input">
             <div className="form-detail__fields--underline"></div>
             <label>職種（学科名）</label>
-            <input name="occupationOther" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+            <input name="occupationOther" onChange={enterValue} value={valueInput.occupationOther} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
             {errors.occupationOther && (errors.occupationOther.type === 'required' || errors.occupationOther.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
             {errors.occupationOther && errors.occupationOther.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
           </div>
@@ -117,7 +139,7 @@ const EventForm = () => {
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>部署名</label>
-          <input name="department" ref={register({ maxLength: 20 })} />
+          <input name="department" onChange={enterValue} value={valueInput.department} ref={register({ maxLength: 20 })} />
           {errors.department && errors.department.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
         </div>
         <div className="form-detail__fields--input">
@@ -136,7 +158,7 @@ const EventForm = () => {
           <div className="form-detail__fields--input">
             <div className="form-detail__fields--underline"></div>
             <label>役職名</label>
-            <input name="positionOther3" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+            <input name="positionOther3" onChange={enterValue} value={valueInput.positionOther3} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
             {errors.positionOther3 && (errors.positionOther3.type === 'required' || errors.positionOther3.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
             {errors.positionOther3 && errors.positionOther3.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
           </div>
@@ -155,13 +177,13 @@ const EventForm = () => {
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>URL</label>
-          <input name="url" ref={register({ maxLength: 320 })} />
+          <input name="url" onChange={enterValue} value={valueInput.url} ref={register({ maxLength: 320 })} />
           {errors.url && errors.url.type === 'maxLength' && <p className="form-detail__errors--color">320文字以下で入力してください </p>}
         </div>
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>メールアドレス</label>
-          <input name="email" ref={register({ required: true, maxLength: 320, validate: validateEmail })} />
+          <input name="email" onChange={enterValue} value={valueInput.email} ref={register({ required: true, maxLength: 320, validate: validateEmail })} />
           {errors.email && errors.email.type === 'required' && <p className="form-detail__errors--color">必須項目です</p>}
           {errors.email && errors.email.type === 'maxLength' && <p className="form-detail__errors--color">320文字以下で入力してください </p>}
           {errors.email && errors.email.type === 'validate' && <p className="form-detail__errors--color">正しいメールアドレスの形式で入力して下さい)</p>}
@@ -213,7 +235,7 @@ const EventForm = () => {
         </div>
       </div>
       <div className="form-detail__confirmation">
-        <input onChange={handleChange} ref={register({ required: true })} />
+        <input type="checkbox" className="form-detail__confirmation--checkbox" name="checkbox" onChange={handleChange} ref={register({ required: true })} />
         <p className="form-detail__confirmation--text">上記内容に同意する</p>
       </div>
       <div className="form-detail__btn-area">

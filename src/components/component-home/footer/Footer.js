@@ -13,7 +13,7 @@ import './footer.scss';
 export default function Footer() {
   return (
     <div className="site_wrap--padding footer">
-      <div className="footer__item" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
+      <div className="footer__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1300" data-sal-delay="200">
         <div>
           <img className="logo hidden_img hidden_img--mobile" src={ft_knt_logo} alt="" />
           <img className="logo hidden_img hidden_img--desktop" src={kinto_mb} alt="" />
@@ -35,7 +35,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <div className="footer__social" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
+      <div className="footer__social" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1300" data-sal-delay="200">
         <div className="footer__social--icons">
           <p>SHARE THIS PAGE</p>
           <TwitterShareButton title="モビエボNEXT オンラインイベント開催決定" via="" url="https://westship.newspicks.com/?fbclid=IwAR3UZABbzs313FcDNwV3XhPeykci8sSOIXHdOAncHs-LFm5DfpyXqEVlRO0">
@@ -51,7 +51,7 @@ export default function Footer() {
         <p>Powered by NewsPicks</p>
       </div> */}
 
-      <div className="footer__team" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
+      <div className="footer__team" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1300" data-sal-delay="200">
         <img src={np_logo} alt="" />
         <p>Powered by NewsPicks</p>
       </div>
