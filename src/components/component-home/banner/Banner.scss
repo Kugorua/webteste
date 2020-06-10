@@ -14,9 +14,21 @@
     transform: rotate(-45deg) scale(1);
   }
 }
-
+@keyframes dot {
+  from{
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .banner {
   position: relative;
+  // &__dot{
+  //   animation: dot .5s;
+  // }
   .banner__np.hide{
     opacity: 0;
     visibility: hidden;
@@ -45,8 +57,8 @@
 }
   .banner__dot {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 2px;
+    height: 2px;
     background: black;
     border-radius: 50%;
     top: 50%;
@@ -182,7 +194,7 @@
     z-index: 99;
     right: 0;
     opacity: .6;
-    clip-path: polygon(50% 0, 100% 1%, 100% 100%, 49% 100%, 0% 50%);
+    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
   }
   .tg-3 {
     background: #d3e6ea;
