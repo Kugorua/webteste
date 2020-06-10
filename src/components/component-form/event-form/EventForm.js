@@ -73,14 +73,20 @@ const EventForm = () => {
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>業種（学部名）</label>
-          <select name="industry" onChange={selectOrther1} ref={register({ required: true, maxLength: 20 })}>
+          {/* <select name="industry" onChange={selectOrther1} ref={register({ required: true, maxLength: 20 })}>
             <option value="">選択して下さい</option>
             <option value="Item1">Item1</option>
             <option value="Item2">Item2</option>
             <option value="other1">その他</option>
           </select>
           {errors.industry && errors.industry.type === 'required' && <p className="form-detail__errors--color">必須項目です </p>}
-          {errors.industry && errors.industry.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
+          {errors.industry && errors.industry.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>} */}
+          <select name="industry" onChange={selectOrther1} ref={register({ required: true, maxLength: 20 })}>
+            <option value="">選択して下さい</option>
+            <option value="Item1">Item1</option>
+            <option value="Item2">Item2</option>
+            <option value="other1">その他</option>
+          </select>
         </div>
         {selects.other1 && (
           <div className="form-detail__fields--input">
