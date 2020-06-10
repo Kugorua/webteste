@@ -22,14 +22,22 @@ class Banner extends Component {
         tg1.classList.add('transform');
         const tg2 = document.querySelector('.tg-2')
         tg2.classList.add('transform2');
-
     },6000)
   }
+
   componentWillMount() {
     this.timer = setInterval(() => {
       const dot = document.querySelector('.banner__dot');
       dot.classList.add('hide');
     }, 1000);
+    this.timeLine = setInterval(() => {
+      const line = document.querySelector('.line-3');
+      line.classList.add('hide');
+    }, 6000);
+    this.timeLine = setInterval(() => {
+      const line = document.querySelector('.line2');
+      line.classList.add('hide');
+    }, 6000);
   }
   componentWillUnmount() {
     if (this.timer) {
