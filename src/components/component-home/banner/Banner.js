@@ -14,18 +14,11 @@ class Banner extends Component {
     const WOW = require('wow.js');
     new WOW().init();
     setTimeout(() => {
-<<<<<<< HEAD
       const textRight = document.querySelector(".banner__np");
-
-=======
-      const textRight = document.querySelector('.banner__np');
-      const dot = document.querySelector('.banner__dot');
->>>>>>> c8fe1cd5f5d43373d94489367c8b6b20722453f7
       textRight.classList.add('hide');
 
     }, 10000);
   }
-
   componentWillMount() {
     setInterval(() => {
       const dot = document.querySelector(".banner__dot");
