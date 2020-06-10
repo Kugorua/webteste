@@ -6,7 +6,7 @@ import mobievo from '../../../svgs/mobievo.svg';
 import mobievo_mb from '../../../svgs/mobiebo_mb.svg';
 import tw_icon from '../../../svgs/tw_icon.svg';
 import fb_icon from '../../../svgs/fb_icon.svg';
-import np_logo from '../../../svgs/np_logo.svg';
+import np_logo from '../../../svgs/np_logof.svg';
 import { TwitterShareButton, FacebookShareButton } from 'react-share';
 import './footer.scss';
 
@@ -46,6 +46,11 @@ export default function Footer() {
           </FacebookShareButton>
         </div>
       </div>
+      {/* <div className="footer__team" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
+        <img src={np_logo} alt="" />
+        <p>Powered by NewsPicks</p>
+      </div> */}
+
       <div className="footer__team" data-sal="slide-up" data-sal-duration="5s" data-sal-delay="500" ata-sal-easing="ease">
         <img src={np_logo} alt="" />
         <p>Powered by NewsPicks</p>
