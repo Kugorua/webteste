@@ -24,23 +24,23 @@ export default function Tokyo() {
                 <h3>TOKYO JUNCTION by KINTOとは？</h3>
                 <p>
                   モビリティ・カンパニーへの変革に取り組むトヨタグループのモビリティサービスブランドKINTO。
-              <br /> KINTOは様々なモビリティ事業者ともに、幅広いモビリティサービスを展開する体制をめざしています。
-              <br />
-              事業者の方々と知り合う場が、東京・日本橋にある「TOKYO JUNCTION」です。
-            </p>
+                  <br /> KINTOは様々なモビリティ事業者ともに、幅広いモビリティサービスを展開する体制をめざしています。
+                  <br />
+                  事業者の方々と知り合う場が、東京・日本橋にある「TOKYO JUNCTION」です。
+                </p>
               </div>
             </div>
           </div>
-          <div className="mobiebo__box" data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
+          <div className="mobiebo__box" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1300" data-sal-delay="200">
             <span>モビエボとモビエボNEXTは</span>
             <img src={imgTokyo} alt="" />
             <span>からお届けします。</span>
           </div>
-          <div className="mobiebo__button" onClick={showHideModal} data-sal="slide-up" data-sal-delay="100" ata-sal-easing="ease">
+          <div className="mobiebo__button" onClick={showHideModal} data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1300" data-sal-delay="200">
             <p>
               <img src={btnIcon} alt="" />
-          TOKYO JUNCTION by KINTOとは？
-        </p>
+              TOKYO JUNCTION by KINTOとは？
+            </p>
           </div>
         </div>
       </div>
