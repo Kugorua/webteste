@@ -18,11 +18,11 @@ class Banner extends Component {
       textRight.classList.add('hide');
     }, 10000);
     this.tg = setTimeout(() => {
-        const tg1 = document.querySelector('.tg-1')
-        tg1.classList.add('transform');
-        const tg2 = document.querySelector('.tg-2')
-        tg2.classList.add('transform2');
-    },6000)
+      const tg1 = document.querySelector('.tg-1');
+      tg1.classList.add('transform');
+      const tg2 = document.querySelector('.tg-2');
+      tg2.classList.add('transform2');
+    }, 8000);
   }
 
   componentWillMount() {
@@ -57,10 +57,10 @@ class Banner extends Component {
           <img src={banner__np} />
           <p id="text-vertical">powered by NewsPicks</p>
         </div>
-        <div className="tg-1 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-5 wow fadeIn " data-wow-delay="8s">
           <a href="#scroll-concept">Scroll</a>
         </div>
+        <div className="tg-1 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-2 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-3 wow fadeIn" data-wow-delay="6s"></div>
         <div className="tg-4 wow fadeIn " data-wow-delay="7s"></div>
