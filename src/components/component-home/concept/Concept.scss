@@ -18,35 +18,36 @@
   }
   &__2 {
     position: absolute;
-    width: 30%;
-    height: 454px;
+    width: 170px;
+    height: 530px;
     background-image: linear-gradient(to right, #3de8ba, #3de8ba);
     opacity: 0.3;
-    clip-path: polygon(0 0, 1% 0, 42% 43%, 0 100%, 0 89%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
     opacity: 0.05;
     top: 35%;
     left: 0;
   }
   &__3 {
     position: absolute;
-    width: 30%;
-    height: 454px;
     background-image: linear-gradient(to right, #3de8ba, #3de8ba);
-    opacity: 0.3;
-    clip-path: polygon(100% 0, 55% 45%, 100% 100%);
-    opacity: 0.05;
-    top: 35%;
-    right: 0;
-  }
-  &__4 {
-    position: absolute;
-    width: 30%;
-    height: 454px;
-    background-image: linear-gradient(to right, #3de8ba, #3de8ba);
-    clip-path: polygon(100% 0, 55% 45%, 100% 100%);
+    clip-path: polygon(100% 0, 0 45%, 100% 100%);
     opacity: 0.05;
     top: 4%;
     right: 0;
+    width: 250px;
+    height: 585px;
+    top: 45%;
+
+  }
+  &__4 {
+    position: absolute;
+    background-image: linear-gradient(to right, #3de8ba, #3de8ba);
+    clip-path: polygon(100% 0, 0 45%, 100% 100%);
+    opacity: 0.05;
+    top: 4%;
+    right: 0;
+    width: 250px;
+    height: 585px;
   }
   @media screen and (max-width: 780px) {
     &__1,
@@ -62,8 +63,11 @@
       text-align: center;
       width: 642px;
       margin: 0 auto;
-      @media screen and (max-width: 780px){
+      @media screen and (max-width: 780px) {
         width: 100%;
+        p {
+          margin-top: 27px;
+        }
       }
     }
     &__description {
@@ -75,8 +79,8 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      &-text{
-        @media screen and (max-width: 780px){
+      &-text {
+        @media screen and (max-width: 780px) {
           font-size: 14px;
         }
       }
@@ -84,7 +88,7 @@
         width: calc(50% - 30px);
         @media screen and (max-width: 780px) {
           width: 100%;
-          p{
+          p {
             font-family: 'Noto Sans', sans-serif;
             line-height: 23px;
             font-size: 12px;
@@ -96,8 +100,11 @@
           justify-content: center;
           background-color: #01637c;
           height: 114px;
-          margin-top: 53px;
+          margin-top: 85px;
           position: relative;
+          @media screen and (max-width: 780px) {
+            margin-top: 31px;
+          }
         }
       }
     }

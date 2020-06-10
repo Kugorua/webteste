@@ -30,11 +30,11 @@ class Banner extends Component {
       const dot = document.querySelector('.banner__dot');
       dot.classList.add('hide');
     }, 1000);
-    this.timeLine = setInterval(() => {
+    this.timeLine1 = setInterval(() => {
       const line = document.querySelector('.line-3');
       line.classList.add('hide');
     }, 6000);
-    this.timeLine = setInterval(() => {
+    this.timeLine2 = setInterval(() => {
       const line = document.querySelector('.line2');
       line.classList.add('hide');
     }, 6000);
@@ -47,7 +47,13 @@ class Banner extends Component {
       clearTimeout(this.time);
     }
     if (this.tg) {
-      clearTimeout(this.timer);
+      clearTimeout(this.tg);
+    }
+    if (this.timeLine1) {
+      clearTimeout(this.timeLine1);
+    }
+    if (this.timeLine2) {
+      clearTimeout(this.timeLine2);
     }
   }
   render() {
