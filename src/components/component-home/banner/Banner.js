@@ -17,6 +17,12 @@ class Banner extends Component {
       const textRight = document.querySelector('.banner__np');
       textRight.classList.add('hide');
     }, 10000);
+    this.tg = setTimeout(() => {
+        const tg1 = document.querySelector('.tg-1')
+        tg1.classList.add('transform');
+        const tg2 = document.querySelector('.tg-2')
+        tg2.classList.add('transform2');
+    },6000)
   }
 
   componentWillMount() {
@@ -24,6 +30,14 @@ class Banner extends Component {
       const dot = document.querySelector('.banner__dot');
       dot.classList.add('hide');
     }, 1000);
+    this.timeLine = setInterval(() => {
+      const line = document.querySelector('.line-3');
+      line.classList.add('hide');
+    }, 6000);
+    this.timeLine = setInterval(() => {
+      const line = document.querySelector('.line2');
+      line.classList.add('hide');
+    }, 6000);
   }
   componentWillUnmount() {
     if (this.timer) {
@@ -31,6 +45,9 @@ class Banner extends Component {
     }
     if (this.time) {
       clearTimeout(this.time);
+    }
+    if (this.tg) {
+      clearTimeout(this.timer);
     }
   }
   render() {
@@ -50,6 +67,8 @@ class Banner extends Component {
         <div className="line-3"></div>
         <div className="line2"></div>
         <div className="banner__dot "></div>
+        <div className="banner__triangle-left wow fadeIn" data-wow-delay="5s"></div>
+        <div className="banner__triangle-right  wow fadeIn" data-wow-delay="5s"></div>
         <div className="button__mb-banner ">
           <Link to="/event-form">
             <button className="header__button-mobile c-white header__button--gradient">
