@@ -213,7 +213,7 @@ const EventForm = () => {
         </div>
       </div>
       <div className="form-detail__confirmation">
-        <input type="checkbox" className="form-detail__confirmation--checkbox" onChange={handleChange} ref={register({ required: true })} />
+        <input onChange={handleChange} ref={register({ required: true })} />
         <p className="form-detail__confirmation--text">上記内容に同意する</p>
       </div>
       <div className="form-detail__btn-area">
