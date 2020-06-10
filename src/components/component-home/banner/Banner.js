@@ -13,7 +13,6 @@ class Banner extends Component {
     new WOW().init();
     this.time = setTimeout(() => {
       const textRight = document.querySelector('.banner__np');
-
       textRight.classList.add('hide');
     }, 10000);
     this.tg = setTimeout(() => {
@@ -58,6 +57,8 @@ class Banner extends Component {
         <div className="line-3"></div>
         <div className="line2"></div>
         <div className="banner__dot "></div>
+        <div className="banner__triangle-left wow fadeIn" data-wow-delay="5s"></div>
+        <div className="banner__triangle-right  wow fadeIn" data-wow-delay="5s"></div>
         <div className="button__mb-banner ">
           <Link to="/event-form">
             <button className="header__button-mobile c-white header__button--gradient">
