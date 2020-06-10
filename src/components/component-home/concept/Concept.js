@@ -1,8 +1,9 @@
 import React from 'react';
-import mobievo from '../../../svgs/rgt.svg';
 import ft_knt_logo from '../../../svgs/knt_logo.svg';
+import mobievo_pc from '../../../svgs/mobievo_pc.svg';
 import mobievo_mb from '../../../svgs/mobiebo_mb.svg';
-
+import mobiebo_next_pc from '../../../svgs/mobiebo_next_pc.svg';
+import mobiebo_next_mb from '../../../svgs/mobiebo_next_mb.svg';
 import './concept.scss';
 export default function Concept() {
   return (
@@ -23,11 +24,10 @@ export default function Concept() {
           <p className="concept__description fontnoto-700">その「移動」がいま、変革期を迎えている。</p>
           <p className="concept__description fontnoto-700">
             運転の担い手は人からAIに。クルマは所有するモノから、
-            <br />
+            <br className="desktop" />
             シェアするサービスへ。テクノロジーが、移動の概念を覆しつつある。
           </p>
-          <p className="concept__description fontnoto-700">
-            「移動＝モビリティ」を問い直すことで、これからのビジネス、
+          <p className="concept__description fontnoto-700">「移動＝モビリティ」を問い直すことで、これからのビジネス、
             <br />
             そして世界の動きが見えてくる。
           </p>
@@ -37,7 +37,8 @@ export default function Concept() {
           <div className="item " data-sal="slide-up" data-sal-easing="ease-out-back" data-sal-duration="1500" data-sal-delay="200">
             <div className="item-box d-flex">
               <div className="concept__box-logo">
-                <img src={mobievo_mb} />
+                <img className="mobile" src={mobievo_mb} />
+                <img className="desktop" src={mobievo_pc} />
               </div>
               <p className="concept__box-text c-white">モビエボとは</p>
             </div>
@@ -48,9 +49,10 @@ export default function Concept() {
           <div className="item" data-sal="slide-up" data-sal-easing="ease-out-back" data-sal-duration="1500" data-sal-delay="200">
             <div className="item-box d-flex">
               <div className="concept__box-logo">
-                <img src={mobievo} />
+                <img className="desktop" src={mobiebo_next_pc} />
+                <img className="mobile" src={mobiebo_next_pc} />
               </div>
-              <p className="concept__box-text c-white">モビエボNEXTとは</p>
+              <p className="concept__box-text c-white">モビエボ<br className="mobile" />NEXTとは</p>
             </div>
             <p className="des-bottom c-white">
               モビエボの「次」を見出し、発掘していくための視聴者参加型のオンラインイベント。モビリティビジネスに関心があり、次のアクションを考えるビジネスパーソンを対象に、よりリアルにビジネス視点で議論し、次世代のモビリティビジネスを生み出す場を目指す。

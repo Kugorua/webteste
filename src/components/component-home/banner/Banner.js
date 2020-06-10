@@ -30,11 +30,11 @@ class Banner extends Component {
       const dot = document.querySelector('.banner__dot');
       dot.classList.add('hide');
     }, 1000);
-    this.timeLine = setInterval(() => {
+    this.timeLine1 = setInterval(() => {
       const line = document.querySelector('.line-3');
       line.classList.add('hide');
     }, 6000);
-    this.timeLine = setInterval(() => {
+    this.timeLine2 = setInterval(() => {
       const line = document.querySelector('.line2');
       line.classList.add('hide');
     }, 6000);
@@ -47,7 +47,13 @@ class Banner extends Component {
       clearTimeout(this.time);
     }
     if (this.tg) {
-      clearTimeout(this.timer);
+      clearTimeout(this.tg);
+    }
+    if (this.timeLine1) {
+      clearTimeout(this.timeLine1);
+    }
+    if (this.timeLine2) {
+      clearTimeout(this.timeLine2);
     }
   }
   render() {
@@ -86,19 +92,19 @@ class Banner extends Component {
             <img src={banner_text} />
           </div>
           <div className="banner__bg wow fadeIn" data-wow-delay="8s">
-            オンラインイベント開催決定
+            <p className="banner__bg--title">オンラインイベント開催決定</p>
           </div>
           <div className="banner__box d-flex hide-mb wow fadeIn" data-wow-delay="8s">
-            <a href="#" className="banner__box-button fontnoto-700 c-white">
+            <p href="#" className="banner__box-button fontnoto-700 c-white">
               第1回
-            </a>
-            <span className="banner__box-date c-white fontlato-700 ">2020.07.07 THU</span>
+            </p>
+            <p className="banner__box-date c-white fontlato-700 ">2020.07.27 MON</p>
           </div>
           <div className="banner__boxs hide-desktop">
             <p className="banner__boxs-buttons fontnoto-700 c-white">
               <span className="text-content">第1回 </span>
             </p>
-            <p className="banner__boxs-dates c-white fontlato-700">2020.07.07 THU</p>
+            <p className="banner__boxs-dates c-white fontlato-700">2020.07.27 MON</p>
           </div>
         </div>
         <ul className="banner__brebCrumb d-flex container wow fadeIn banner__brebCrumb__mobile--hidden" data-wow-delay="8s">

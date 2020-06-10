@@ -422,6 +422,7 @@ $header__button--gradient: #ffdf57;
     height: 35px;
     margin-top: 35px;
     background-image: linear-gradient(to right, #ffeb34, #3de8ba);
+    opacity: 0.9;
     text-align: center;
     line-height: 35px;
     color: black;
@@ -430,6 +431,10 @@ $header__button--gradient: #ffdf57;
     -webkit-transform: skew(160deg);
     -moz-transform: skew(160deg);
     -o-transform: skew(160deg);
+    &--title {
+      color: #000000;
+      letter-spacing: 3px;
+    }
     @include breakpointminmax(320, 779) {
       margin-top: 10px;
       font-size: 12px;
@@ -515,16 +520,21 @@ $header__button--gradient: #ffdf57;
     }
   }
   &__box {
+    display: flex;
+    justify-content: space-between;
     margin-top: 15px;
     &-button {
+      letter-spacing: 3px;
+      font-size: 18px;
       padding: 8px 14px;
       border: 1px solid white;
     }
     &-date {
       display: inline-block;
+      letter-spacing: 1px;
       font-size: 30px;
+      font-style: italic;
       font-family: 'Lato', sans-serif;
-      margin-left: 15px;
       border-bottom: 1px solid white;
     }
   }
@@ -538,9 +548,10 @@ $header__button--gradient: #ffdf57;
     font-family: 'Lato', sans-serif;
     color: white;
     position: relative;
-    padding-bottom: 25px;
-    margin-bottom: 39.5px;
+    padding-bottom: 28.4px;
+    margin-bottom: 42.5px;
     font-style: italic;
+    letter-spacing: 4px;
     &:after {
       content: '';
       width: 42px;
@@ -558,14 +569,14 @@ $header__button--gradient: #ffdf57;
     margin-bottom: 22px;
     color: white;
     letter-spacing: 2px;
-
+    line-height: 27px;
     @media screen and (max-width: 780px) {
       text-align: left;
       font-size: 12px;
       font-size: 12px;
       font-weight: bold;
       font-weight: 600;
-      line-height: 23px;
+      line-height: 22px;
     }
   }
   &__box {
@@ -573,9 +584,6 @@ $header__button--gradient: #ffdf57;
       border-right: 1px solid white;
       flex: 1;
       text-align: center;
-      img {
-        width: 69px;
-      }
     }
     &-text {
       font-size: 18px;
@@ -583,6 +591,8 @@ $header__button--gradient: #ffdf57;
       text-align: center;
       flex: 1;
       font-family: 'Noto Sans', sans-serif;
+      line-height: 24px;
+      letter-spacing: 2px;
       @media screen and (max-width: 780px) {
         font-size: 14px;
       }
@@ -590,6 +600,14 @@ $header__button--gradient: #ffdf57;
   }
   .des-bottom {
     margin-top: 29px;
+    line-height: 19px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    @media screen and (max-width: 780px) {
+      margin-top: 17px;
+    }
   }
 }
 .site_wrap {
@@ -602,5 +620,20 @@ $header__button--gradient: #ffdf57;
     @media screen and (max-width: 1060px) {
       padding: 75px 30px;
     }
+  }
+}
+
+.desktop {
+  display: initial;
+}
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 780px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: initial;
   }
 }
