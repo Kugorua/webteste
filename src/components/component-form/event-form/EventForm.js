@@ -235,8 +235,10 @@ const EventForm = () => {
         </div>
       </div>
       <div className="form-detail__confirmation">
-        <input type="checkbox" className="form-detail__confirmation--checkbox" name="checkbox" onChange={handleChange} ref={register({ required: true })} />
-        <p className="form-detail__confirmation--text">上記内容に同意する</p>
+        <input id="check" type="checkbox" className="form-detail__confirmation--checkbox" name="checkbox" onChange={handleChange} ref={register({ required: true })} />
+        <label for="check" className="form-detail__confirmation--text">
+          上記内容に同意する
+        </label>
       </div>
       <div className="form-detail__btn-area">
         <button type="submit" onClick={resValue} className={!choose ? 'btn-disable' : 'form-detail__btn-area--submit-btn'}>

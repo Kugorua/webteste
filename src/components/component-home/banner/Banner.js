@@ -18,6 +18,7 @@ class Banner extends Component {
       textRight.classList.add('hide');
     }, 10000);
   }
+
   componentWillMount() {
     this.timer = setInterval(() => {
       const dot = document.querySelector('.banner__dot');
