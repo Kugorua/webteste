@@ -1,21 +1,21 @@
 .bg__mobiebo {
   position: relative;
-  background-color: #2284B0;
+  background-color: #2284b0;
   &--1 {
     position: absolute;
     width: 100%;
     height: 100%;
     clip-path: polygon(0 26%, 100% 16%, 100% 100%, 0% 100%);
-    background-color: #2269B0;
+    background-color: #2269b0;
     opacity: 0.52;
-    top: -12%;
+    top: -20%;
   }
   &--2 {
     width: 100%;
     position: absolute;
     height: 100%;
     clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
-    background-color: #2269B0;
+    background-color: #2269b0;
     opacity: 0.6;
   }
   &--3 {
@@ -24,7 +24,6 @@
     height: 50%;
     top: 50%;
     background-color: #226eaf;
-    opacity: 0.6;
   }
   &--4 {
     position: relative;
