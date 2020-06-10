@@ -5,6 +5,7 @@ const EventForm = () => {
   const { register, handleSubmit, errors } = useForm();
   let [selects, setSelect] = useState({ other1: false, other2: false, other3: false });
   let [choose, setChoose] = useState(false);
+  let [valueCompany, setValueCompnay] = useState('');
   const handleChange = () => {
     setChoose(!choose);
   };
@@ -44,6 +45,14 @@ const EventForm = () => {
     }
     return true;
   };
+  const enterValue = (e) => {
+    setValueCompnay(e.target.value);
+  };
+  const resValue = () => {
+    if (valueCompany == '') {
+      setValueCompnay('');
+    }
+  };
   console.log(errors.fullname);
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="form-detail">
@@ -57,7 +66,7 @@ const EventForm = () => {
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline--top"></div>
           <label>会社名（学校名）</label>
-          <input name="company" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+          <input name="company" value={valueCompany} onChange={enterValue} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
           {errors.company && (errors.company.type === 'required' || errors.company.type === 'validate') && <p className="form-detail__errors--color">必須項目です </p>}
           {errors.company && errors.company.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
         </div>
@@ -206,7 +215,7 @@ const EventForm = () => {
         <p className="form-detail__confirmation--text">上記内容に同意する</p>
       </div>
       <div className="form-detail__btn-area">
-        <button type="submit" className={!choose ? 'btn-disable' : 'form-detail__btn-area--submit-btn'}>
+        <button type="submit" onClick={resValue} className={!choose ? 'btn-disable' : 'form-detail__btn-area--submit-btn'}>
           送信
         </button>
       </div>
