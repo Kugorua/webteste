@@ -27,7 +27,7 @@ class Banner extends Component {
       clearInterval(this.timer);
     }
     if (this.time) {
-      clearTimeout(this.timer);
+      clearTimeout(this.time);
     }
   }
   render() {
