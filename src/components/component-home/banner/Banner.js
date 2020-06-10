@@ -20,7 +20,7 @@ class Banner extends Component {
     this.timer = setInterval(() => {
       const dot = document.querySelector('.banner__dot');
       dot.classList.add('hide');
-    }, 100);
+    }, 1000);
   }
   componentWillUnmount() {
     if (this.timer) {
