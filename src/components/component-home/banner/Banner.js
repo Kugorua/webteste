@@ -14,8 +14,13 @@ class Banner extends Component {
     const WOW = require('wow.js');
     new WOW().init();
     setTimeout(() => {
+<<<<<<< HEAD
       const textRight = document.querySelector(".banner__np");
 
+=======
+      const textRight = document.querySelector('.banner__np');
+      const dot = document.querySelector('.banner__dot');
+>>>>>>> c8fe1cd5f5d43373d94489367c8b6b20722453f7
       textRight.classList.add('hide');
 
     }, 10000);
@@ -32,8 +37,8 @@ class Banner extends Component {
     return (
       <div className="banner">
         <div className="banner__np">
-            <img src={banner__np}/>
-            <p id="text-vertical">powered by NewsPicks</p>
+          <img src={banner__np} />
+          <p id="text-vertical">powered by NewsPicks</p>
         </div>
         <div className="tg-1 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-5 wow fadeIn " data-wow-delay="8s">
@@ -44,17 +49,17 @@ class Banner extends Component {
         <div className="tg-4 wow fadeIn " data-wow-delay="7s"></div>
         <div className="line-3"></div>
         <div className="line2"></div>
-         <div className="banner__dot "></div>
+        <div className="banner__dot "></div>
         <div className="button__mb-banner ">
-          <Link to="/event-form" >
+          <Link to="/event-form">
             <button className="header__button-mobile c-white header__button--gradient">
               <img src={icon__buttonmenu} />
-            ENTRY
-          </button>
+              ENTRY
+            </button>
           </Link>
         </div>
         <div className="banner__text-right">
-          <img src={text_banner} className="hidden-text-mb"/>
+          <img src={text_banner} className="hidden-text-mb" />
           <img src={banner_text_mb} className="hidden-text-pc" />
         </div>
         <div className="banner__text">
@@ -66,7 +71,7 @@ class Banner extends Component {
             <a href="#" className="banner__box-button fontnoto-700 c-white">
               第1回
             </a>
-            <span className="banner__box-date c-white fontlato-700 " >2020.07.07 THU</span>
+            <span className="banner__box-date c-white fontlato-700 ">2020.07.07 THU</span>
           </div>
           <div className="banner__boxs hide-desktop">
             <p className="banner__boxs-buttons fontnoto-700 c-white">
@@ -77,14 +82,14 @@ class Banner extends Component {
         </div>
         <ul className="banner__brebCrumb d-flex container wow fadeIn banner__brebCrumb__mobile--hidden" data-wow-delay="8s">
           <li className="banner__brebCrumb-item">
-            <a href="#" className="c-white fontlato-700">
+            <p href="#" className="c-white fontlato-700">
               WHAT’S NEW
-            </a>
+            </p>
           </li>
           <li className="banner__brebCrumb-item">
-            <a href="#" className="c-white fontlato-700">
+            <p href="#" className="c-white fontlato-700">
               2020.07.07
-            </a>
+            </p>
           </li>
           <li className="banner__brebCrumb-item">
             <a href="#" className="c-white fontnoto-700 banner__brebCrumb-item--active">
