@@ -83,8 +83,8 @@ class Banner extends Component {
         <div className="line-3"></div>
         <div className="line2"></div>
         <div className="banner__dot "></div>
-        <div className="banner__triangle-left wow fadeIn" data-wow-delay="5s"></div>
-        <div className="banner__triangle-right  wow fadeIn" data-wow-delay="5s"></div>
+        <div className="banner__triangle-left wow fadeIn" id="banner__triangle-left" data-wow-delay="5s"></div>
+        <div className="banner__triangle-right  wow fadeIn" id="banner__triangle-right" data-wow-delay="5s"></div>
         <div className="button__mb-banner ">
           <Link to="/event-form">
             <button className="header__button-mobile c-white header__button--gradient">

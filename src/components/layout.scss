@@ -528,6 +528,9 @@ $header__button--gradient: #ffdf57;
       font-size: 18px;
       padding: 8px 14px;
       border: 1px solid white;
+      @media (max-width:780px) {
+        display: none;
+      }
     }
     &-date {
       display: inline-block;
@@ -536,6 +539,9 @@ $header__button--gradient: #ffdf57;
       font-style: italic;
       font-family: 'Lato', sans-serif;
       border-bottom: 1px solid white;
+      @media (max-width:780px) {
+        display: none;
+      }
     }
   }
 }

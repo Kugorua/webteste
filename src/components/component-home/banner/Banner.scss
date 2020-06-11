@@ -68,14 +68,12 @@
 }
 .banner {
   position: relative;
+  #banner__triangle-left{
+    @media (max-width: 767px) {
+      clip-path: polygon(0 68%, 0% 89%, 37% 76%);
+    }
+  }
   .banner__triangle-left {
-    // position: absolute;
-    // width: 25%;
-    // height: 80%;
-    // background-image: linear-gradient(to right, #18d5de, #c9abf8);
-    // left: 0;
-    // opacity: 0.6;
-    // clip-path: polygon(44% 66%, 0 1%, 0 99%);
     width: 50%;
     transition: 0.5s;
     height: 100%;
@@ -84,9 +82,7 @@
     z-index: 99;
     clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
     opacity: 0.6;
-    @media (max-width: 767px) {
-      clip-path: polygon(0 68%, 0% 89%, 37% 76%);
-    }
+
     &.transform{
       width: 25%;
       height: 80%;
@@ -94,17 +90,12 @@
       opacity: 0.6;
     }
   }
+  #banner__triangle-right{
+    @media (max-width: 767px) {
+      clip-path: polygon(100% 43%, 58% 51%, 100% 58%);
+    }
+  }
   .banner__triangle-right {
-    // position: absolute;
-    // width: 25%;
-    // height: 100%;
-    // opacity: 0.6;
-    // background-image: linear-gradient(to right, #ffeb34, #3de8ba);
-    // bottom: 0;
-    // right: 0;
-    // transition: 0.5s;
-    // clip-path: polygon(42% 0, 100% 1%, 100% 100%, 100% 100%, 0% 24%);
-
     width: 50%;
     height: 100%;
     position: absolute;
@@ -115,9 +106,7 @@
     opacity: 0.6;
     -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
     clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
-    @media (max-width: 767px) {
-      clip-path: polygon(100% 43%, 58% 51%, 100% 58%);
-    }
+
     &.transform{
       width: 25%;
       height: 100%;
@@ -221,12 +210,26 @@
     transition: 0.5s;
     height: 100%;
     position: absolute;
-    background-image: linear-gradient(to right, #18d5de, #c9abf8);
-    z-index: 99;
+    z-index: 9;
     clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
     opacity: 0.6;
+    background: black;
+   &::before{
+    content: '';
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background-image: linear-gradient(to right, #18d5de, #c9abf8);
+    display: block;
+    position: absolute;
+    clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
+    top: 1px;
+    left: 1px;
+   }
+   @media (max-width:767px) {
+    background: transparent;
   }
-  .tg-1.wow.fadeIn.transform {
+  }
+  .tg-1.transform {
     clip-path: polygon(0% 0%, 37% 0, 61% 27%, 2% 100%, 0 99%);
     @media (max-width: 767px) {
       clip-path: polygon(0 69%, -1% 61%, 70% 94%, 39% 110%, 0% 100%);
@@ -309,12 +312,27 @@
     width: 50%;
     height: 100%;
     position: absolute;
-    background-image: linear-gradient(to right, #ffeb34, #3de8ba);
     z-index: 99;
+    background: black;
     right: 0;
     transition: 0.5s;
     opacity: 0.6;
+    -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
     clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
+    &::before{
+      content: '';
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    display: block;
+    position: absolute;
+    top: 1px;
+    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
+    background-image: linear-gradient(to right, #ffeb34, #3de8ba);
+    left: 1px;
+    }
+    @media (max-width:767px) {
+      background: transparent;
+    }
   }
   .tg-2.transform2 {
     clip-path: polygon(100% 0, 100% 1%, 100% 100%, 57% 100%, 38% 76%);
