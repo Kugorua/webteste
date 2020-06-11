@@ -101,12 +101,13 @@
         text-align: center;
       }
       &__box {
-        display: flex;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-wrap: wrap;
         &__table {
-          @media screen and (max-width: 779px) {
-            display: none;
-          }
+          // @media screen and (max-width: 779px) {
+          //   display: none;
+          // }
+          width: 100%;
           border-collapse: collapse;
           width: 100%;
           table,
@@ -116,71 +117,35 @@
             border: 1.5px solid white;
             border-collapse: collapse;
             padding: 17px 0px;
-            color: black;
             font-family: 'Noto Sans', sans-serif;
           }
           td {
             padding-left: 26px;
+            padding-right: 26px;
+            color: #000000;
             font-size: 14px;
             font-weight: 600;
             line-height: 1.36;
             letter-spacing: 0.7px;
+            width: 20%;
+            @media screen and (max-width: 780px) {
+              font-size: 13px;
+              line-height: 1.54;
+              letter-spacing: 0.65px;
+            }
           }
           th {
-            width: 104px;
+            width: 8%;
             font-size: 16px;
             font-weight: bold;
             line-height: 1.38;
             letter-spacing: 0.8px;
             color: #1d8864;
-          }
-        }
-        &__item {
-          background-color: #cfe6de;
-          border-top: 1px solid white;
-          border-right: 1px solid white;
-          font-family: 'Noto Sans', sans-serif;
-          display: flex;
-          width: 100%;
-          font-size: 13px;
-          @media screen and (min-width: 780px) {
-            display: none;
-          }
-          .title {
-            flex: 2;
-            line-height: 55px;
-            text-align: center;
-            color: #1d8864;
-            font-weight: bold;
-            border-right: 1px solid white;
-          }
-          .content {
-            flex: 5;
-            padding: 17px 26.5px;
-            color: black;
-            font-weight: 600;
-            font-size: 14px;
             @media screen and (max-width: 780px) {
+              width: 10%;
               font-size: 13px;
-              line-height: 1.62;
+              line-height: 1.23;
               letter-spacing: 0.65px;
-            }
-          }
-          &:last-child {
-            width: 100%;
-            .title {
-              flex: 2;
-            }
-            .content {
-              flex: 14;
-            }
-            @media screen and (max-width: 780px) {
-              .title {
-                flex: 2;
-              }
-              .content {
-                flex: 5;
-              }
             }
           }
         }
