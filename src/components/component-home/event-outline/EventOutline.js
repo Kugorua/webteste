@@ -10,6 +10,7 @@ export default function EventOutline() {
         <div className="site_wrap--padding event">
           <div className="event__title" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
             <h3>EVENT OUTLINE</h3>
+            <h4>モビリティビジネスは辺境で生まれる</h4>
             <p>
               かつてなく移動が制限される経験をした2020年。これからの「移動」はどうなるのか。自動車メーカー、鉄道、不動産、小売りなど、これまでの業種、業界の垣根を越えて、新しいモビリティビジネスのチャンスがどこにあるのか、どのように育てていくのかを、産学それぞれの立場から議論する。
             </p>

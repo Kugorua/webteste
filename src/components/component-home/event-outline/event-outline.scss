@@ -7,8 +7,8 @@
     width: 100%;
     height: 100%;
     clip-path: polygon(0 33%, 100% 15%, 100% 100%, 0% 100%);
-    background-color: #1e8864;
-    opacity: 0.52;
+    opacity: 0.82;
+    background-image: linear-gradient(to bottom, rgba(30, 136, 100, 0.5) 3%, #1e8864);
     top: -22%;
     @media screen and (max-width: 780px) {
       clip-path: polygon(0 25%, 100% 14%, 100% 100%, 0% 100%);
@@ -19,8 +19,8 @@
     position: absolute;
     height: 100%;
     clip-path: polygon(0 0%, 100% 24%, 100% 100%, 0% 100%);
-    background-color: #1e8864;
-    opacity: 0.6;
+    opacity: 1;
+    background-image: linear-gradient(to bottom, rgba(30, 136, 100, 0.5) 3%, #1e8864);
     top: -10%;
     @media screen and (max-width: 780px) {
       clip-path: polygon(0 6%, 100% 12%, 100% 100%, 0% 100%);
@@ -44,15 +44,17 @@
       &__title {
         h3 {
           letter-spacing: 2px;
-          padding-bottom: 60px;
-          font-size: 28px;
           font-family: 'Lato', sans-serif;
-          font-weight: bold;
-          font-style: italic;
           position: relative;
           display: inline-block;
           padding-bottom: 23.5px;
           margin-bottom: 33.5px;
+          font-size: 28px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: italic;
+          line-height: 1.21;
+          letter-spacing: 2.8px;
           &:after {
             content: '';
             position: absolute;
@@ -63,13 +65,37 @@
             margin-left: -21px;
             border-bottom: 1px solid white;
           }
+          @media screen and (max-width: 780px){
+            font-size: 23px;
+            line-height: 1.22;
+            letter-spacing: 2.3px;
+          }
+        }
+        h4 {
+          font-family: 'Noto Sans', sans-serif;
+          font-size: 22px;
+          font-weight: bold;
+          line-height: 1;
+          letter-spacing: 1.1px;
+          margin-bottom: 26px;
+          @media screen and (max-width: 780px) {
+            font-size: 22px;
+            line-height: 1.27;
+            letter-spacing: 1.1px;
+          }
         }
         p {
-          line-height: 22px;
-          font-size: 14px;
           font-family: 'Noto Sans', sans-serif;
           font-weight: 600;
           text-align: justify;
+          font-size: 14px;
+          line-height: 1.57;
+          letter-spacing: 0.7px;
+          @media screen and (max-width: 780px){
+            font-size: 12px;
+            line-height: 1.92;
+            letter-spacing: 1.2px;
+          }
         }
         padding-bottom: 32px;
         text-align: center;
@@ -91,18 +117,22 @@
             border: 1.5px solid white;
             border-collapse: collapse;
             padding: 17px 0px;
-            width: 26px;
             color: black;
-            font-size: 14px;
-            font-style: bold;
-            font-weight: 600;
-            font-family: 'Noto Sans JP', sans-serif;
+            font-family: 'Noto Sans', sans-serif;
           }
           td {
-            padding-left: 16px;
+            padding-left: 26px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.36;
+            letter-spacing: 0.7px;
           }
           th {
-            text-align: center;
+            width: 104px;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.38;
+            letter-spacing: 0.8px;
             color: #1d8864;
           }
         }
@@ -134,6 +164,8 @@
             font-size: 14px;
             @media screen and (max-width: 780px) {
               font-size: 13px;
+              line-height: 1.62;
+              letter-spacing: 0.65px;
             }
           }
           &:last-child {
