@@ -77,8 +77,8 @@
     margin-bottom: 30px;
     &--icons {
       margin: 0 auto;
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-top: 18.5px;
+      padding-bottom: 18.5px;
       width: 200px;
       border-top: 1px solid #707070;
       border-bottom: 1px solid #707070;
@@ -87,10 +87,11 @@
       p {
         font-size: 12px;
         font-weight: bold;
-        display: inline-block;
+        padding-top: 2px;
       }
       button {
         display: block;
+        height: auto;
       }
     }
   }
