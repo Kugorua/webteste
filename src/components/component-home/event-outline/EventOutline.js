@@ -36,6 +36,7 @@ export default function EventOutline() {
               <div className="title">テーマ</div>
               <div className="content">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</div>
             </div>
+
             <table className="event__box__table">
               <tbody>
                 <tr>
@@ -56,6 +57,30 @@ export default function EventOutline() {
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div className="footer_box" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
+            <div className="item_box">
+              <div className="item_box--item">
+                <div className="content">
+                  <p><span>PROGRAM 1</span><span>講演</span></p>
+                  <p>斎藤祐馬 「アフターコロナのスタートアップ事情」<br />
+                    <br />
+                  泉田良輔「テクノロジーが引き寄せるモビリティ革命のリアル」
+                  </p>
+                </div>
+                <div className="shape1"></div>
+              </div>
+              <div className="item_box--center">
+              </div>
+              <div className="item_box--item">
+                <div className="shape2">
+                </div>
+                <div className="content">
+                  <p><span>PROGRAM 2</span><span>パネルディスカッション</span></p>
+                  <p>「モビリティ革命最前線で何が起きているのか」</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

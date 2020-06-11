@@ -118,9 +118,9 @@
       &__box {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         &__item {
-          width: calc(50% - 60px);
+          width: calc(50% - 30px);
           @media screen and (max-width: 780px) {
             width: 100%;
           }
