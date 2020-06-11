@@ -29,7 +29,7 @@ class Banner extends Component {
     this.timer = setInterval(() => {
       const dot = document.querySelector('.banner__dot');
       dot.classList.add('hide');
-    }, 1000);
+    }, 7000);
     this.timeLine1 = setInterval(() => {
       const line = document.querySelector('.line-3');
       line.classList.add('hide');
