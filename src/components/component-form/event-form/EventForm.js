@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form/dist/react-hook-form.ie11';
 import './event-form.scss';
 const EventForm = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors, setValue, getValues } = useForm();
   let [selects, setSelect] = useState({ other1: false, other2: false, other3: false });
   let [choose, setChoose] = useState(false);
-  let [valueInput, setValueInput] = useState({ email: '', url: '', positionOther3: '', fullname: '', company: '', industry: '', industryOther: '', occupationOther: '', department: '' });
+
   const handleChange = () => {
     setChoose(!choose);
   };
@@ -39,43 +39,27 @@ const EventForm = () => {
     return true;
   };
   const validationEmpty = (event) => {
-    console.log(event);
     if (event.length === 0 || !event.trim()) {
       return false;
     }
     return true;
   };
-  const enterValue = (e) => {
-    setValueInput({ ...valueInput, [e.target.name]: e.target.value });
-  };
-  const resValue = () => {
-    if (valueInput.fullname) {
-      setValueInput({ ...valueInput, fullname: '' });
+  const clearSpace = () => {
+    if (!getValues().fullname.trim()) setValue('fullname', '');
+    if (!getValues().company.trim()) setValue('company', '');
+    if (selects.other1) {
+      if (!getValues().industryOther.trim()) setValue('industryOther', '');
     }
-    if (valueInput.company) {
-      setValueInput({ ...valueInput, company: '' });
+    if (selects.other2) {
+      if (!getValues().occupationOther.trim()) setValue('occupationOther', '');
     }
-    if (valueInput.email) {
-      setValueInput({ ...valueInput, email: '' });
+    if (selects.other3) {
+      if (!getValues().positionOther3.trim()) setValue('occupatipositionOther3onOther', '');
     }
-    if (valueInput.url) {
-      setValueInput({ ...valueInput, url: '' });
-    }
-    if (valueInput.mail) {
-      setValueInput({ ...valueInput, mail: '' });
-    }
-    if (valueInput.industry) {
-      setValueInput({ ...valueInput, industry: '' });
-    }
-    if (valueInput.industryOther) {
-      setValueInput({ ...valueInput, industryOther: '' });
-    }
-    if (valueInput.occupationOther) {
-      setValueInput({ ...valueInput, occupationOther: '' });
-    }
-    if (valueInput.department) {
-      setValueInput({ ...valueInput, department: '' });
-    }
+    if (!getValues().department.trim()) setValue('department', '');
+    if (!getValues().url.trim()) setValue('url', '');
+    if (!getValues().email.trim()) setValue('email', '');
+    if (!getValues().businessResearch.trim()) setValue('businessResearch', '');
   };
 
   return (
@@ -83,14 +67,14 @@ const EventForm = () => {
       <div className="form-detail__fields">
         <div className="form-detail__fields--input">
           <label>氏名</label>
-          <input name="fullname" value={valueInput.fullname} onChange={enterValue} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+          <input name="fullname" ref={register({ required: true, maxLength: 20, validate: validationEmpty, setValue })} />
           {errors.fullname && (errors.fullname.type === 'required' || errors.fullname.type === 'validate') && <p className="form-detail__errors--color">必須項目です </p>}
           {errors.fullname && errors.fullname.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
         </div>
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline--top"></div>
           <label>会社名（学校名）</label>
-          <input name="company" value={valueInput.company} onChange={enterValue} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+          <input name="company" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
           {errors.company && (errors.company.type === 'required' || errors.company.type === 'validate') && <p className="form-detail__errors--color">必須項目です </p>}
           {errors.company && errors.company.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
         </div>
@@ -110,7 +94,7 @@ const EventForm = () => {
           <div className="form-detail__fields--input">
             <div className="form-detail__fields--underline"></div>
             <label>業種（学部名）</label>
-            <input name="industryOther" onChange={enterValue} value={valueInput.industryOther} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} onClick={focus} />
+            <input name="industryOther" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} onClick={focus} />
             {errors.industryOther && (errors.industryOther.type === 'required' || errors.industryOther.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
             {errors.industryOther && errors.industryOther.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
           </div>
@@ -131,7 +115,7 @@ const EventForm = () => {
           <div className="form-detail__fields--input">
             <div className="form-detail__fields--underline"></div>
             <label>職種（学科名）</label>
-            <input name="occupationOther" onChange={enterValue} value={valueInput.occupationOther} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+            <input name="occupationOther" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
             {errors.occupationOther && (errors.occupationOther.type === 'required' || errors.occupationOther.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
             {errors.occupationOther && errors.occupationOther.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
           </div>
@@ -139,7 +123,7 @@ const EventForm = () => {
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>部署名</label>
-          <input name="department" onChange={enterValue} value={valueInput.department} ref={register({ maxLength: 20 })} />
+          <input name="department" ref={register({ maxLength: 20 })} />
           {errors.department && errors.department.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
         </div>
         <div className="form-detail__fields--input">
@@ -158,7 +142,7 @@ const EventForm = () => {
           <div className="form-detail__fields--input">
             <div className="form-detail__fields--underline"></div>
             <label>役職名</label>
-            <input name="positionOther3" onChange={enterValue} value={valueInput.positionOther3} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+            <input name="positionOther3" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
             {errors.positionOther3 && (errors.positionOther3.type === 'required' || errors.positionOther3.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
             {errors.positionOther3 && errors.positionOther3.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
           </div>
@@ -177,25 +161,25 @@ const EventForm = () => {
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>URL</label>
-          <input name="url" onChange={enterValue} value={valueInput.url} ref={register({ maxLength: 320 })} />
+          <input name="url" ref={register({ maxLength: 320 })} />
           {errors.url && errors.url.type === 'maxLength' && <p className="form-detail__errors--color">320文字以下で入力してください </p>}
         </div>
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>メールアドレス</label>
-          <input name="email" onChange={enterValue} value={valueInput.email} ref={register({ required: true, maxLength: 320, validate: validateEmail })} />
+          <input name="email" ref={register({ required: true, maxLength: 320, validate: validateEmail })} />
           {errors.email && errors.email.type === 'required' && <p className="form-detail__errors--color">必須項目です</p>}
           {errors.email && errors.email.type === 'maxLength' && <p className="form-detail__errors--color">320文字以下で入力してください </p>}
           {errors.email && errors.email.type === 'validate' && <p className="form-detail__errors--color">正しいメールアドレスの形式で入力して下さい</p>}
         </div>
         <div className="form-detail__fields--textarea">
           <div className="form-detail__fields--underline"></div>
-          <label>あなたが取り組んでいる事業や研究内容についてご紹介ください。</label>
-          <textarea name="business-research" rows="10" ref={register({ required: true, maxLength: 1000, validate: validationEmpty })} />
-          {errors['business-research'] && (errors['business-research'].type === 'required' || errors['business-research'].type === 'validate') && (
+          <label>あなたが取り組んでいる事業や研究内容についてご紹介ください</label>
+          <textarea name="businessResearch" rows="10" ref={register({ required: true, maxLength: 1000, validate: validationEmpty })} />
+          {errors['businessResearch'] && (errors['businessResearch'].type === 'required' || errors['businessResearch'].type === 'validate') && (
             <p className="form-detail__errors--color">必須項目です</p>
           )}
-          {errors['business-research'] && errors['business-research'].type === 'maxLength' && <p className="form-detail__errors--color">320文字以下で入力してください </p>}
+          {errors['businessResearch'] && errors['businessResearch'].type === 'maxLength' && <p className="form-detail__errors--color">320文字以下で入力してください </p>}
         </div>
         <div className="form-detail__fields--textarea">
           <div className="form-detail__fields--underline"></div>
@@ -236,10 +220,10 @@ const EventForm = () => {
       </div>
       <div className="form-detail__confirmation">
         <input type="checkbox" className="form-detail__confirmation--checkbox" name="checkbox" onChange={handleChange} ref={register({ required: true })} />
-        <p className="form-detail__confirmation--text">上記内容に同意する</p>
+        <label className="form-detail__confirmation--text">上記内容に同意する</label>
       </div>
       <div className="form-detail__btn-area">
-        <button type="submit" onClick={resValue} className={!choose ? 'btn-disable' : 'form-detail__btn-area--submit-btn'}>
+        <button type="submit" onClick={clearSpace} className={!choose ? 'btn-disable' : 'form-detail__btn-area--submit-btn'}>
           送信
         </button>
       </div>
