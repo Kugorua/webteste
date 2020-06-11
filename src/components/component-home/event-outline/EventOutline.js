@@ -16,40 +16,41 @@ export default function EventOutline() {
             </p>
           </div>
           <div className="event__box" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
-            <div className="event__box__item">
-              <div className="title">開催</div>
-              <div className="content">7月27日（月）19:00〜</div>
-            </div>
-            <div className="event__box__item">
-              <div className="title">形式</div>
-              <div className="content">オンラインイベント　TOKYO JCT から配信</div>
-            </div>
-            <div className="event__box__item">
-              <div className="title">定員</div>
-              <div className="content">150人程度</div>
-            </div>
-            <div className="event__box__item">
-              <div className="title">参加費</div>
-              <div className="content">無料</div>
-            </div>
-            <div className="event__box__item">
-              <div className="title">テーマ</div>
-              <div className="content">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</div>
-            </div>
-
-            <table className="event__box__table">
+            <table className="event__box__table mobile">
+              <tr>
+                <th>開催<br/>日時</th>
+                <td>7月27日（月）19:00〜</td>
+              </tr>
+              <tr>
+                <th>形式</th>
+                <td>オンラインイベント　TOKYO JCT から配信</td>
+              </tr>
+              <tr>
+                <th>定員</th>
+                <td>150人程度</td>
+              </tr>
+              <tr>
+                <th>参加費</th>
+                <td>無料</td>
+              </tr>
+              <tr>
+                <th>テーマ</th>
+                <td colSpan="3">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</td>
+              </tr>
+            </table>
+            <table className="event__box__table desktop">
               <tbody>
                 <tr>
-                  <th>時期</th>
-                  <td>7月下旬</td>
-                  <th>時間</th>
-                  <td>平日の夜　19時～　2時間程度</td>
+                  <th>開催日時</th>
+                  <td>7月27日（月）19:00〜</td>
+                  <th>形式</th>
+                  <td>オンラインイベント　TOKYO JCT から配信</td>
                 </tr>
                 <tr>
-                  <th>形式</th>
-                  <td>オンラインイベント TOKYO JCT から配信</td>
                   <th>定員</th>
                   <td>150人程度</td>
+                  <th>参加費</th>
+                  <td>無料</td>
                 </tr>
                 <tr>
                   <th>テーマ</th>
@@ -63,7 +64,7 @@ export default function EventOutline() {
               <div className="item_box--item">
                 <div className="content">
                   <p><span>PROGRAM 1</span><span>講演</span></p>
-                  <p>斎藤祐馬 「アフターコロナのスタートアップ事情」<br className="mobile"/>
+                  <p>斎藤祐馬 「アフターコロナのスタートアップ事情」<br className="mobile" />
                     <br />
                   泉田良輔「テクノロジーが引き寄せるモビリティ革命のリアル」
                   </p>
