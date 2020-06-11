@@ -174,13 +174,8 @@ const EventForm = () => {
         </div>
         <div className="form-detail__fields--textarea">
           <div className="form-detail__fields--underline"></div>
-<<<<<<< HEAD
           <label>あなたが取り組んでいる事業や研究内容についてご紹介ください</label>
           <textarea name="businessResearch" rows="10" ref={register({ required: true, maxLength: 1000, validate: validationEmpty })} />
-=======
-          <label>あなたが取り組んでいる事業や研究内容についてご紹介ください。</label>
-          <textarea name="business-research" rows="10" ref={register({ required: true, maxLength: 1000, validate: validationEmpty })} />
->>>>>>> c5962f86c67fd7bf0d3242ccd7d469723d95fff6
           {errors['business-research'] && (errors['business-research'].type === 'required' || errors['business-research'].type === 'validate') && (
             <p className="form-detail__errors--color">必須項目です</p>
           )}
