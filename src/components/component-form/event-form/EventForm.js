@@ -176,10 +176,10 @@ const EventForm = () => {
           <div className="form-detail__fields--underline"></div>
           <label>あなたが取り組んでいる事業や研究内容についてご紹介ください</label>
           <textarea name="businessResearch" rows="10" ref={register({ required: true, maxLength: 1000, validate: validationEmpty })} />
-          {errors['business-research'] && (errors['business-research'].type === 'required' || errors['business-research'].type === 'validate') && (
+          {errors['businessResearch'] && (errors['businessResearch'].type === 'required' || errors['businessResearch'].type === 'validate') && (
             <p className="form-detail__errors--color">必須項目です</p>
           )}
-          {errors['business-research'] && errors['business-research'].type === 'maxLength' && <p className="form-detail__errors--color">320文字以下で入力してください </p>}
+          {errors['businessResearch'] && errors['businessResearch'].type === 'maxLength' && <p className="form-detail__errors--color">320文字以下で入力してください </p>}
         </div>
         <div className="form-detail__fields--textarea">
           <div className="form-detail__fields--underline"></div>
@@ -219,10 +219,8 @@ const EventForm = () => {
         </div>
       </div>
       <div className="form-detail__confirmation">
-        <input id="check" type="checkbox" className="form-detail__confirmation--checkbox" name="checkbox" onChange={handleChange} ref={register({ required: true })} />
-        <label for="check" className="form-detail__confirmation--text">
-          上記内容に同意する
-        </label>
+        <input type="checkbox" className="form-detail__confirmation--checkbox" name="checkbox" onChange={handleChange} ref={register({ required: true })} />
+        <label className="form-detail__confirmation--text">上記内容に同意する</label>
       </div>
       <div className="form-detail__btn-area">
         <button type="submit" onClick={clearSpace} className={!choose ? 'btn-disable' : 'form-detail__btn-area--submit-btn'}>
