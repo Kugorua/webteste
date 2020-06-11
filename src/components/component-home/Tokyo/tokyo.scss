@@ -111,6 +111,7 @@
           font-family: 'Noto Sans', sans-serif;
           font-size: 17px;
           font-weight: bold;
+          letter-spacing: 0.85px;
         }
         @media screen and (max-width: 780px) {
           display: inline-block;
@@ -121,6 +122,8 @@
           span {
             display: block;
             font-size: 12px;
+            line-height: 1.42;
+            letter-spacing: 0.6px;
           }
         }
       }
@@ -131,7 +134,8 @@
         font-family: 'Noto Sans', sans-serif;
         p {
           display: inline-block;
-          padding: 13px 55px;
+          letter-spacing: 0.8px;
+          padding: 13px 24px 13px 29px;
           background-color: #4382c1;
           align-items: center;
           display: inline-flex;
@@ -142,18 +146,18 @@
             margin-right: 10px;
           }
           @media screen and (max-width: 780px) {
-            // padding: 15px 17px;
             padding: 15px 0px;
             font-size: 11px;
             width: 260px;
+            font-weight: bold;
             justify-content: center;
           }
           @media screen and (max-width: 480px) {
-            padding: 15px 0px;
             width: 100%;
-            font-size: 11px;
             text-align: center;
             display: block;
+            line-height: 1.82;
+            letter-spacing: 0.55px;
           }
         }
       }
