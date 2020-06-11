@@ -126,6 +126,15 @@ const EventForm = () => {
           <input name="department" ref={register({ maxLength: 20 })} />
           {errors.department && errors.department.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
         </div>
+        {selects.other3 && (
+          <div className="form-detail__fields--input" style={{ visibility: 'hidden' }}>
+            <div className="form-detail__fields--underline"></div>
+            <label>役職名</label>
+            <input name="positionOther3" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+            {errors.positionOther3 && (errors.positionOther3.type === 'required' || errors.positionOther3.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
+            {errors.positionOther3 && errors.positionOther3.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
+          </div>
+        )}
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>役職名</label>
