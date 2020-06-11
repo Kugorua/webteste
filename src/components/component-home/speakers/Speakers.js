@@ -1,6 +1,8 @@
 import React from 'react';
 import './speakers.scss';
 import imgSpeaker from '../../../svgs/speaker.svg';
+import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
+
 export default function Speakers() {
   return (
     <div className="bg__speaker" id="scroll-speaker">
@@ -24,8 +26,8 @@ export default function Speakers() {
                 <p className="thumbnail__text thumbnail__text--below">斎藤 祐馬</p>
               </div>
               <div className="speaker__box__item--text">
-                2010年よりトーマツ ベンチャーサポート株式会社（現 デロイト トーマツ ベンチャーサポート株式会社）の事業立ち上げに参画。 2019年デロイト トーマツ ベンチャーサポート
-                代表取締役社長。公認会計士。<br/> 世界中の大企業の新規事業創出支援、ベンチャー政策の立案まで手掛けている。起業家が大企業100人にプレゼンを行う早朝イベントMorning
+                2010年よりトーマツ ベンチャーサポート株式会社（現 デロイト トーマツ ベンチャーサポート株式会社）の事業立ち上げに参画。<br className="mobile" /> 2019年デロイト トーマツ ベンチャーサポート
+                代表取締役社長。公認会計士。<br /> 世界中の大企業の新規事業創出支援、ベンチャー政策の立案まで手掛けている。起業家が大企業100人にプレゼンを行う早朝イベントMorning
                 Pitch発起人。主な著書は『一生を賭ける仕事の見つけ方』（ダイヤモンド社）。新聞・雑誌・テレビ・オンラインメディア等、メディア掲載多数。「2017年 日経ビジネス 次代を創る100人」に選出。
               </div>
             </div>
@@ -53,7 +55,7 @@ export default function Speakers() {
               <div className="speaker__box__item--text">
                 慶応義塾大学
                 <br />
-                東京大学大学院工学系研究科航空宇宙工学専攻 修士課程修了
+                東京大学大学院工学系研究科航空宇宙工学専攻 修士課程修了<br className="mobile" />
                 その後、三菱電機株式会社にて宇宙開発に従事。技術試験衛星VII型（ETS-VII）、宇宙ステーション補給機（HTV）等の開発に参加。特にHTVの開発では初期設計から初号機ミッション完了まで携わる。途中1年8ヶ月間、欧州の人工衛星開発メーカに駐在し、欧州宇宙機関（ESA）向けの開発に参加。「こうのとり」（HTV:
                 H-II TransferVehicle）開発では多くの賞を受賞。
               </div>
@@ -66,9 +68,11 @@ export default function Speakers() {
                 <p className="thumbnail__text thumbnail__text--center">DUMMY</p>
               </div>
               <div className="speaker__box__item--text">
-                京都大学　イノベーター・マネジメント・サイエンス研究本部　教授
+                京都大学　イノベーター・マネジメント・サイエンス研究本部　教授 <br className="mobile" />
                 マッキンゼー・アンド・カンパニーにて、アソシエートプリンシパルを務め、自動車・機械・ハイテク・通信業界における戦略立案、オペレーション改善プロジェクト、金融機関の新規事業戦略プロジェクトなどを手がける。日本興業銀行およびメリル・リンチ・キャピタルマーケット（NY）にて、金融支援スキームの構築、プロジェクトファイナンスのクレジットリスク審査業務、M&Aアドバイザリー業務など企業金融業務を担当。企業再建ファーム、アリックス・パートナーズのディレクターとしてネットベンチャー企業、エアライン企業のターンアラウンド業務を担当した後、現在、京都大学産官学連携センター寄附研究部門教授。九州大学経済学府
                 非常勤講師(企業戦略論)。
+                <br />
+                <img src={icon__buttonmenu} /> <a className="link" href="https://kyouindb.iimc.kyoto-u.ac.jp/j/wE6kW">https://kyouindb.iimc.kyoto-u.ac.jp/j/wE6kW</a>
               </div>
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
@@ -83,7 +87,7 @@ export default function Speakers() {
               <div className="speaker__box__item--text">
                 2000年から編集者としてカルチャー／IT・テクノロジーを中心に雑誌・書籍の制作に携わる。講談社「hot-dog
                 PRESS」、リクルート「R25」など多数の媒体に参加。同時にブックライターとして多数のビジネス書を制作。2015年よりNewsPicksに参画し、Brand
-                Designのクリエイティブディレクターを務める。現在はBrand Design編集長に就任。 （スタートアップ色を出す場合に担当）
+                Designのクリエイティブディレクターを務める。現在はBrand Design編集長に就任。<br className="mobile"/> （スタートアップ色を出す場合に担当）
               </div>
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">

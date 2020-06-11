@@ -216,6 +216,13 @@
               padding: 14px 0px;
               line-height: 1.92;
               letter-spacing: 1.2px;
+              .link {
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 1.4;
+                letter-spacing: 0.5px;
+              }
             }
           }
           @media screen and (max-width: 780px) {

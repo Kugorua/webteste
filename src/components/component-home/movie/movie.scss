@@ -55,6 +55,11 @@
             border-bottom: 1px solid white;
           }
         }
+        @media screen and (max-width: 780px) {
+          font-size: 23px;
+          line-height: 1.22;
+          letter-spacing: 2.3px;
+        }
       }
       &__img {
         width: 700px;
