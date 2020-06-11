@@ -17,20 +17,20 @@ export default function EventOutline() {
           </div>
           <div className="event__box" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
             <div className="event__box__item">
-              <div className="title">時期</div>
-              <div className="content">7月下旬</div>
-            </div>
-            <div className="event__box__item">
-              <div className="title">時間</div>
-              <div className="content">平日の夜　19時～　2時間程度</div>
+              <div className="title">開催</div>
+              <div className="content">7月27日（月）19:00〜</div>
             </div>
             <div className="event__box__item">
               <div className="title">形式</div>
-              <div className="content">オンラインイベント TOKYO JCT から配信</div>
+              <div className="content">オンラインイベント　TOKYO JCT から配信</div>
             </div>
             <div className="event__box__item">
               <div className="title">定員</div>
               <div className="content">150人程度</div>
+            </div>
+            <div className="event__box__item">
+              <div className="title">参加費</div>
+              <div className="content">無料</div>
             </div>
             <div className="event__box__item">
               <div className="title">テーマ</div>
