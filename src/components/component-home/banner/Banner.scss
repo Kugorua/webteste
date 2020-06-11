@@ -17,6 +17,11 @@
     transform: rotate(-45deg) scale(1);
   }
 }
+@-webkit-keyframes pulsate {
+  0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+  50% {opacity: 1.0;}
+  100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
 @keyframes showtg {
   from{
     opacity: 0;
@@ -37,6 +42,9 @@
     left: 0;
     opacity: .6;
     clip-path: polygon(44% 66%, 0 1%, 0 99%);
+    @media (max-width:767px) {
+      clip-path: polygon(0 68%, 0% 89%, 37% 76%);
+    }
 }
 .banner__triangle-right {
   position: absolute;
@@ -46,7 +54,11 @@
   background-image: linear-gradient(to right, #ffeb34, #3de8ba);
   bottom: 0;
   right: 0;
+  transition: .5s;
   clip-path: polygon(42% 0, 100% 1%, 100% 100%, 100% 100%, 0% 24%);
+  @media (max-width:767px) {
+    clip-path: polygon(100% 43%, 58% 51%, 100% 58%);
+  }
 }
   .banner__np.hide{
     opacity: 0;
@@ -76,8 +88,8 @@
 }
   .banner__dot {
     position: absolute;
-    width: 2px;
-    height: 2px;
+    width: 10px;
+    height: 10px;
     background: black;
     border-radius: 50%;
     top: 50%;
@@ -150,12 +162,16 @@
   }
   .tg-1.wow.fadeIn.transform{
     clip-path: polygon(0% 0%, 37% 0, 61% 27%, 2% 100%, 0 99%);
+    @media (max-width:767px) {
+      clip-path: polygon(0 69%, -1% 61%, 70% 94%, 39% 110%, 0% 100%);
+    }
+
   }
   .tg-5 {
     width: 50%;
     height: 100%;
     position: absolute;
-    z-index: 99;
+    z-index: 999;
     a {
       display: inline-block;
       position: absolute;
@@ -224,6 +240,9 @@
   }
   .tg-2.transform2{
     clip-path: polygon(100% 0, 100% 1%, 100% 100%, 57% 100%, 38% 76%);
+    @media (max-width:767px) {
+      clip-path: polygon(70% 0, 100% 0, 100% 52%, 100% 52%, 14% 15%);
+    }
   }
   .tg-3 {
     background: #d3e6ea;

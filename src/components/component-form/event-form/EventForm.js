@@ -174,8 +174,13 @@ const EventForm = () => {
         </div>
         <div className="form-detail__fields--textarea">
           <div className="form-detail__fields--underline"></div>
+<<<<<<< HEAD
           <label>あなたが取り組んでいる事業や研究内容についてご紹介ください</label>
           <textarea name="businessResearch" rows="10" ref={register({ required: true, maxLength: 1000, validate: validationEmpty })} />
+=======
+          <label>あなたが取り組んでいる事業や研究内容についてご紹介ください。</label>
+          <textarea name="business-research" rows="10" ref={register({ required: true, maxLength: 1000, validate: validationEmpty })} />
+>>>>>>> c5962f86c67fd7bf0d3242ccd7d469723d95fff6
           {errors['business-research'] && (errors['business-research'].type === 'required' || errors['business-research'].type === 'validate') && (
             <p className="form-detail__errors--color">必須項目です</p>
           )}
@@ -183,7 +188,7 @@ const EventForm = () => {
         </div>
         <div className="form-detail__fields--textarea">
           <div className="form-detail__fields--underline"></div>
-          <label>自由記入欄（アピールポイントやビジョン、KINTOやトヨタへのご意見など）</label>
+          <label>自由記入欄</label>
           <textarea name="free-text" rows="10" placeholder="アピールポイントやビジョン、KINTOやトヨタへのご意見など" ref={register({ maxLength: 1000 })} />
           {errors['free-text'] && errors['free-text'].type === 'maxLength' && <p className="form-detail__errors--color">1000文字以下で入力してください </p>}
         </div>
