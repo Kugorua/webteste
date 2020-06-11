@@ -27,7 +27,13 @@ export default function Concept() {
             <br className="desktop" />
             シェアするサービスへ。テクノロジーが、移動の概念を覆しつつある。
           </p>
-          <p className="concept__description fontnoto-700">「移動＝モビリティ」を問い直すことで、これからのビジネス、
+          <p className="concept__description fontnoto-700">
+            一方、パンデミックに接し、人が移動し、行動を広げる
+            <br />
+            ことのリスクにも直面している。
+          </p>
+          <p className="concept__description fontnoto-700">
+            「移動＝モビリティ」を見つめ直すことで、これからのビジネス、
             <br />
             そして世界の動きが見えてくる。
           </p>
@@ -52,7 +58,11 @@ export default function Concept() {
                 <img className="desktop" src={mobiebo_next_pc} />
                 <img className="mobile" src={mobiebo_next_pc} />
               </div>
-              <p className="concept__box-text c-white">モビエボ<br className="mobile" />NEXTとは</p>
+              <p className="concept__box-text c-white">
+                モビエボ
+                <br className="mobile" />
+                NEXTとは
+              </p>
             </div>
             <p className="des-bottom c-white">
               モビエボの「次」を見出し、発掘していくための視聴者参加型のオンラインイベント。モビリティビジネスに関心があり、次のアクションを考えるビジネスパーソンを対象に、よりリアルにビジネス視点で議論し、次世代のモビリティビジネスを生み出す場を目指す。
