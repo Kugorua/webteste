@@ -20,8 +20,16 @@ class Banner extends Component {
     this.tg = setTimeout(() => {
       const tg1 = document.querySelector('.tg-1');
       tg1.classList.add('transform');
+      const triangleLeft = document.querySelector('.banner__triangle-left');
+      triangleLeft.classList.add('transform');
+      const triangleRight = document.querySelector('.banner__triangle-right');
+      triangleRight.classList.add('transform');
       const tg2 = document.querySelector('.tg-2');
       tg2.classList.add('transform2');
+      const tg3 = document.querySelector('.tg-3');
+      tg3.classList.add('hide');
+      const tg6 = document.querySelector('.tg-6');
+      tg6.classList.add('hide');
     }, 8000);
   }
 
@@ -33,6 +41,7 @@ class Banner extends Component {
     this.timeLine1 = setInterval(() => {
       const line = document.querySelector('.line-3');
       line.classList.add('hide');
+
     }, 6000);
     this.timeLine2 = setInterval(() => {
       const line = document.querySelector('.line2');
@@ -68,7 +77,8 @@ class Banner extends Component {
         </div>
         <div className="tg-1 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-2 wow fadeIn" data-wow-delay="5s"></div>
-        <div className="tg-3 wow fadeIn" data-wow-delay="6s"></div>
+        <div className="tg-3 wow fadeInRight" data-wow-delay="6s"></div>
+        <div className="tg-6 wow fadeInLeft" data-wow-delay="6s"></div>
         <div className="tg-4 wow fadeIn " data-wow-delay="7s"></div>
         <div className="line-3"></div>
         <div className="line2"></div>
