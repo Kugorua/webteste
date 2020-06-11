@@ -56,8 +56,9 @@
           flex-wrap: wrap;
           align-items: center;
           justify-content: space-around;
+          width: 900px;
           text-align: left;
-          padding: 30px;
+          padding: 40px 45px;
           background-color: #2269b0;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
           position: relative;
@@ -83,9 +84,14 @@
               line-height: 1.7;
             }
             h3 {
-              text-align: center;
+              text-align: left;
               font-size: 16px;
-              margin: 15px 0;
+              margin-bottom: 15px;
+              letter-spacing: 1px;
+              font-weight: 550;
+              @media screen and (max-width: 780px) {
+                margin: 20px 0;
+              }
             }
             @media screen and (max-width: 780px) {
               width: 100%;
