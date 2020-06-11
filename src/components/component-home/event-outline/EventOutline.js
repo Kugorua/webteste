@@ -63,7 +63,7 @@ export default function EventOutline() {
               <div className="item_box--item">
                 <div className="content">
                   <p><span>PROGRAM 1</span><span>講演</span></p>
-                  <p>斎藤祐馬 「アフターコロナのスタートアップ事情」<br />
+                  <p>斎藤祐馬 「アフターコロナのスタートアップ事情」<br className="mobile"/>
                     <br />
                   泉田良輔「テクノロジーが引き寄せるモビリティ革命のリアル」
                   </p>

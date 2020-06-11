@@ -1,6 +1,9 @@
 import React from 'react';
 import './speakers.scss';
-import imgSpeaker from '../../../svgs/speaker.svg';
+import user1 from '../../../images/hinh1.jpg';
+import user2 from '../../../images/hinh2.jpg';
+import user3 from '../../../images/hinh3.jpg';
+
 import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
 
 export default function Speakers() {
@@ -21,7 +24,7 @@ export default function Speakers() {
           <div className="speaker__box">
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={imgSpeaker} alt="Speaker" />
+                <img src={user1} alt="Speaker" />
                 <p className="thumbnail__text thumbnail__text--above">ベンチャー事情に精通</p>
                 <p className="thumbnail__text thumbnail__text--below">斎藤 祐馬</p>
               </div>
@@ -33,7 +36,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={imgSpeaker} alt="Speaker" />
+                <img src={user2} alt="Speaker" />
                 <p className="thumbnail__text thumbnail__text--above">テクノロジー分野に精通したアナリスト</p>
                 <p className="thumbnail__text thumbnail__text--below">泉田 良輔</p>
                 <p className="thumbnail__text thumbnail__text--center">DUMMY</p>
@@ -47,7 +50,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={imgSpeaker} alt="Speaker" />
+                <img src={user3} alt="Speaker" />
                 <p className="thumbnail__text thumbnail__text--above">テキストテキストテキスト</p>
                 <p className="thumbnail__text thumbnail__text--below">白坂 成功</p>
                 <p className="thumbnail__text thumbnail__text--center">DUMMY</p>
@@ -62,7 +65,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={imgSpeaker} alt="Speaker" />
+                <img src={user1} alt="Speaker" />
                 <p className="thumbnail__text thumbnail__text--above thumbnail__text--green">学者　ベンチャーに詳しい</p>
                 <p className="thumbnail__text thumbnail__text--below thumbnail__text--green thumbnail__text--bg">木谷 哲夫</p>
                 <p className="thumbnail__text thumbnail__text--center">DUMMY</p>
@@ -77,7 +80,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={imgSpeaker} alt="Speaker" />
+                <img src={user2} alt="Speaker" />
                 <p className="thumbnail__text thumbnail__text--above thumbnail__text--brown">ファシリテーター</p>
                 <p className="thumbnail__text thumbnail__text--brown thumbnail__text--below thumbnail__text--bg">
                   <span>NewsPicks</span> 呉琢磨
@@ -92,7 +95,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={imgSpeaker} alt="Speaker" />
+                <img src={user3} alt="Speaker" />
                 <p className="thumbnail__text thumbnail__text--above thumbnail__text--brown">ファシリテーター</p>
                 <p className="thumbnail__text thumbnail__text--brown thumbnail__text--below thumbnail__text--bg">
                   <span>NewsPicks</span> 久川桃子
