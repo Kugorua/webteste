@@ -554,6 +554,7 @@ $header__button--gradient: #ffdf57;
     padding-bottom: 28.4px;
     margin-bottom: 42.5px;
     color: white;
+    padding-top: 73px;
     &:after {
       content: '';
       width: 42px;
@@ -570,6 +571,7 @@ $header__button--gradient: #ffdf57;
       font-style: italic;
       line-height: 1.22;
       letter-spacing: 2.3px;
+      padding-top: 29px;
     }
   }
   &__description {
@@ -626,6 +628,9 @@ $header__button--gradient: #ffdf57;
   color: white;
   &--padding {
     padding: 75px 100px;
+    @media screen and (max-width: 1060px) {
+      padding: 75px 30px;
+    }
     @media screen and (max-width: 780px) {
       padding: 75px 30px;
     }
