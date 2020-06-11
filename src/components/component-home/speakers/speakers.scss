@@ -109,6 +109,11 @@
           margin-left: -21px;
           border-bottom: 1px solid white;
         }
+        @media screen and(max-width: 780px) {
+          font-size: 23px;
+          line-height: 1.22;
+          letter-spacing: 2.3px;
+        }
       }
       &__box {
         display: flex;
@@ -145,6 +150,7 @@
                   padding: 6px 14px 7px 11px;
                   bottom: 15%;
                   font-size: 12px;
+                  letter-spacing: 0.6px;
                 }
               }
               &--below {
@@ -160,6 +166,7 @@
                   padding: 0;
                   margin-top: 11px;
                   background-color: #308e85;
+                  letter-spacing: 0.9px;
                 }
               }
               &--center {
@@ -178,7 +185,10 @@
                 letter-spacing: 0.9px;
                 @media screen and (max-width: 780px) {
                   font-size: 12px;
-                  height: 8px 20px;
+                  height: 33px;
+                  width: 92px;
+                  margin-left: -46px;
+                  margin-top: -16.5px;
                 }
               }
               &--green {
@@ -204,6 +214,8 @@
             @media screen and (max-width: 780px) {
               font-size: 12px;
               padding: 14px 0px;
+              line-height: 1.92;
+              letter-spacing: 1.2px;
             }
           }
           @media screen and (max-width: 780px) {
