@@ -8,7 +8,7 @@ const EventForm = () => {
   const handleChange = () => {
     setChoose(!choose);
   };
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => console.log('data', data);
   const selectOrther1 = (e) => {
     if (e.target.value === 'other1') {
       setSelect({ ...selects, [e.target.value]: !selects[e.target.value] });
@@ -31,7 +31,6 @@ const EventForm = () => {
     }
   };
   const validateEmail = (event) => {
-    console.log(event);
     if (!/\S+@\S+\.\S+/.test(event)) {
       return false;
     }
@@ -95,7 +94,6 @@ const EventForm = () => {
           <label>業種（学部名）</label>
           {selects.other1 ? (
             <>
-              {' '}
               <input name="industryOther" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
               {errors.industryOther && (errors.industryOther.type === 'required' || errors.industryOther.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
               {errors.industryOther && errors.industryOther.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
@@ -140,14 +138,7 @@ const EventForm = () => {
           {errors.department && errors.department.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
         </div>
 
-        <div className="form-detail__fields--input" style={{ visibility: 'hidden' }}>
-          <div className="form-detail__fields--underline"></div>
-          <label>役職名</label>
-          <input name="positionOther3" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
-          {errors.positionOther3 && (errors.positionOther3.type === 'required' || errors.positionOther3.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
-          {errors.positionOther3 && errors.positionOther3.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
-        </div>
-
+        <div className="form-detail__fields--input desktop" style={{ visibility: 'hidden' }}></div>
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>役職名</label>
