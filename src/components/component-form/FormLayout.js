@@ -8,6 +8,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './form-layout.scss';
+import { Link } from 'gatsby';
 import imgGp972svg from '../../svgs/Group-972.svg';
 
 const FormFooter = () => {
@@ -24,7 +25,9 @@ const FormLayout = ({ children }) => {
       <div className="form-area">
         <div className="form-area__upper-space"></div>
         <div className="form-area__upper-area">
-          <img src={imgGp972svg} />
+          <Link to="/">
+            <img src={imgGp972svg} />
+          </Link>
           <p className="form-area__upper-area--title">イベントエントリーフォーム</p>
         </div>
         <main>{children}</main>
