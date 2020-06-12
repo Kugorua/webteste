@@ -18,8 +18,7 @@ export default function Concept() {
           <p className="concept__description fontnoto-700">移動は人間の本能。</p>
           <p className="concept__description fontnoto-700">
             馬から鉄道、クルマ、飛行機と、人間は移動によって文明を進化させてきた。
-            <br />
-            現代も、物流は不可欠なインフラであり、旅行や観光は巨大産業に成長した。
+            <br />現代も、物流は不可欠なインフラであり、旅行や観光は巨大産業に成長した。
           </p>
           <p className="concept__description fontnoto-700">その「移動」がいま、変革期を迎えている。</p>
           <p className="concept__description fontnoto-700">

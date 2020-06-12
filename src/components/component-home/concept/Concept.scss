@@ -9,7 +9,7 @@
     position: absolute;
     width: 60%;
     height: 490px;
-    background-image: linear-gradient(to right, #3de8ba, #3de8ba);
+    background-image: linear-gradient(333deg, #ffeb34 85%, #ffffff 85%, #3de8ba 8%);
     opacity: 0.3;
     clip-path: polygon(0 0, 15% 0, 31% 29%, 7% 89%, 0 89%);
     top: 0;
@@ -20,7 +20,7 @@
     position: absolute;
     width: 170px;
     height: 530px;
-    background-image: linear-gradient(to right, #3de8ba, #3de8ba);
+    background-image: linear-gradient(340deg, #ffeb34 86%, #ffffff 86%, #3de8ba 10%);
     opacity: 0.3;
     clip-path: polygon(0 0, 100% 50%, 0 100%);
     opacity: 0.05;
@@ -29,7 +29,7 @@
   }
   &__3 {
     position: absolute;
-    background-image: linear-gradient(to right, #3de8ba, #3de8ba);
+    background-image: linear-gradient(24deg, #ffeb34 15%, #ffffff 15%, #3de8ba 91%);
     clip-path: polygon(100% 0, 0 45%, 100% 100%);
     opacity: 0.05;
     top: 4%;
@@ -37,17 +37,16 @@
     width: 250px;
     height: 585px;
     top: 45%;
-
   }
   &__4 {
     position: absolute;
-    background-image: linear-gradient(to right, #3de8ba, #3de8ba);
+    background-image: linear-gradient(23deg, #ffeb34 15%, #ffffff 15%, #3de8ba 91%);
     clip-path: polygon(100% 0, 0 45%, 100% 100%);
     opacity: 0.05;
     top: 4%;
     right: 0;
-    width: 250px;
-    height: 585px;
+    width: 208.1px;
+    height: 574.3px;
   }
   @media screen and (max-width: 780px) {
     &__1,
@@ -62,6 +61,7 @@
     &__title {
       text-align: center;
       width: 642px;
+      max-width: 100%;
       margin: 0 auto;
       @media screen and (max-width: 780px) {
         width: 100%;
@@ -89,8 +89,9 @@
         @media screen and (max-width: 780px) {
           width: 100%;
           p {
+            line-height: 1.92;
+            letter-spacing: 1.2px;
             font-family: 'Noto Sans', sans-serif;
-            line-height: 23px;
             font-size: 12px;
             font-weight: 600;
           }
