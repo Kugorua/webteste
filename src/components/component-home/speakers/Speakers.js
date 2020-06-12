@@ -1,10 +1,8 @@
 import React from 'react';
 import './speakers.scss';
-import user1 from '../../../images/hinh1.jpg';
-import user2 from '../../../images/hinh2.jpg';
-import user3 from '../../../images/hinh3.jpg';
-
-import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
+import speaker1 from '../../../images/speaker_saito.png';
+import speaker3 from '../../../images/speaker_kotera.png';
+import speaker4 from '../../../images/speaker_moriguchi.png';
 
 export default function Speakers() {
   return (
@@ -24,7 +22,7 @@ export default function Speakers() {
           <div className="speaker__box">
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={user2} alt="Speaker" />
+                <img src={speaker1} alt="Speaker" />
                 <div className="thumbnail__text">
                   <p className="thumbnail__text--above">ベンチャー事情に精通</p>
                   <p className="thumbnail__text--below">斎藤 祐馬</p>
@@ -41,7 +39,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={user2} alt="Speaker" />
+                <img src={speaker1} alt="Speaker" />
                 <div className="thumbnail__text">
                   <p className="thumbnail__text--above">テクノロジー分野に精通したアナリスト</p>
                   <p className="thumbnail__text--below">泉田 良輔</p>
@@ -59,7 +57,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={user1} alt="Speaker" />
+                <img src={speaker3} alt="Speaker" />
                 <div className="thumbnail__text">
                   <p className="thumbnail__text--above">モビリティビジネスのトップランナー</p>
                   <p className="thumbnail__text--below">小寺 信也</p>
@@ -74,7 +72,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={user3} alt="Speaker" />
+                <img src={speaker4} alt="Speaker" />
                 <div className="thumbnail__text">
                   <p className="thumbnail__text--above">モビリティ起業家</p>
                   <p className="thumbnail__text--below">森口 拓也</p>
@@ -90,7 +88,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={user2} alt="Speaker" />
+                <img src={speaker1} alt="Speaker" />
                 <div className="thumbnail__text">
                   <p className="thumbnail__text--above thumbnail__text--brown">ファシリテーター</p>
                   <p className="thumbnail__text--brown thumbnail__text--below thumbnail__text--bg">久川 桃子</p>
