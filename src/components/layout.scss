@@ -431,6 +431,7 @@ $header__button--gradient: #ffdf57;
     -webkit-transform: skew(160deg);
     -moz-transform: skew(160deg);
     -o-transform: skew(160deg);
+
     &--title {
       color: #000000;
       letter-spacing: 3px;
@@ -439,6 +440,7 @@ $header__button--gradient: #ffdf57;
     @include breakpointminmax(320, 779) {
       margin-top: 10px;
       font-size: 12px;
+      width: 220px;
     }
   }
   &__brebCrumb {
@@ -526,7 +528,7 @@ $header__button--gradient: #ffdf57;
         content: '';
         position: absolute;
         width: 35%;
-        height: 2px;
+        height: 1px;
         top: 50%;
         background: white;
         right: 0;
@@ -536,7 +538,7 @@ $header__button--gradient: #ffdf57;
         content: '';
         position: absolute;
         width: 35%;
-        height: 2px;
+        height: 1px;
         top: 50%;
         background: white;
         left: 0;
@@ -548,6 +550,13 @@ $header__button--gradient: #ffdf57;
       padding-bottom: 10px;
       text-align: center;
       border-bottom: 1px solid white;
+      @media screen and (max-width: 780px) {
+        font-size: 26px;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 1.22;
+        letter-spacing: 1.15px;
+      }
     }
   }
   &__box {
