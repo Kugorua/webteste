@@ -16,7 +16,7 @@ export default function Header() {
     new WOW().init();
   }, []);
   return (
-    <div className="header wow fadeInDown" data-wow-delay="8s">
+    <div className="header wow fadeInDown" data-wow-delay="7s">
       <div className="container-fluid h-100">
         <div className="header__menu d-flex h-100">
           <div className="header__logo">
