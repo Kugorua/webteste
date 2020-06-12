@@ -59,16 +59,16 @@
   }
 }
 @keyframes hideTg {
-  from{
+  from {
     opacity: 1;
   }
-  to{
+  to {
     opacity: 0;
   }
 }
 .banner {
   position: relative;
-  #banner__triangle-left{
+  #banner__triangle-left {
     @media (max-width: 767px) {
       clip-path: polygon(0 68%, 0% 89%, 37% 76%);
     }
@@ -83,14 +83,14 @@
     clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
     opacity: 0.6;
 
-    &.transform{
+    &.transform {
       width: 25%;
       height: 80%;
       clip-path: polygon(44% 66%, 0 1%, 0 99%);
       opacity: 0.6;
     }
   }
-  #banner__triangle-right{
+  #banner__triangle-right {
     @media (max-width: 767px) {
       clip-path: polygon(100% 43%, 58% 51%, 100% 58%);
     }
@@ -107,7 +107,7 @@
     -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
     clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
 
-    &.transform{
+    &.transform {
       width: 25%;
       height: 100%;
       clip-path: polygon(42% 0, 100% 1%, 100% 100%, 100% 100%, 0% 24%);
@@ -162,6 +162,16 @@
       transform: rotate(90deg) translateX(50%);
       color: black;
       font-size: 16px;
+      @media screen and (max-width: 780px) {
+        font-size: 11px;
+      }
+    }
+    @media screen and(max-width: 780px) {
+      img {
+        width: 40px;
+        height: 20px;
+        margin-left: 40px;
+      }
     }
   }
 
@@ -214,20 +224,20 @@
     clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
     opacity: 0.6;
     background: black;
-   &::before{
-    content: '';
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    background-image: linear-gradient(to right, #18d5de, #c9abf8);
-    display: block;
-    position: absolute;
-    clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
-    top: 1px;
-    left: 1px;
-   }
-   @media (max-width:767px) {
-    background: transparent;
-  }
+    &::before {
+      content: '';
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      background-image: linear-gradient(to right, #18d5de, #c9abf8);
+      display: block;
+      position: absolute;
+      clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
+      top: 1px;
+      left: 1px;
+    }
+    @media (max-width: 767px) {
+      background: transparent;
+    }
   }
   .tg-1.transform {
     clip-path: polygon(0% 0%, 37% 0, 61% 27%, 2% 100%, 0 99%);
@@ -301,10 +311,10 @@
     position: absolute;
     bottom: 0;
     z-index: 99;
-    transition: .5s;
+    transition: 0.5s;
     background: #d3e6ea;
     clip-path: polygon(75% 100%, 25% 100%, 50% 0);
-    &.hide{
+    &.hide {
       opacity: 0;
     }
   }
@@ -319,18 +329,18 @@
     opacity: 0.6;
     -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
     clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
-    &::before{
+    &::before {
       content: '';
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    display: block;
-    position: absolute;
-    top: 1px;
-    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
-    background-image: linear-gradient(to right, #ffeb34, #3de8ba);
-    left: 1px;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      display: block;
+      position: absolute;
+      top: 1px;
+      clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
+      background-image: linear-gradient(to right, #ffeb34, #3de8ba);
+      left: 1px;
     }
-    @media (max-width:767px) {
+    @media (max-width: 767px) {
       background: transparent;
     }
   }
@@ -349,10 +359,10 @@
     z-index: 99;
     background: #d3e6ea;
     clip-path: polygon(75% 0, 25% 0, 50% 100%);
-    transition: .5s;
-   &.hide{
-     opacity: 0;
-   }
+    transition: 0.5s;
+    &.hide {
+      opacity: 0;
+    }
   }
   .tg-4 {
     background: url(../../../images/banner.png) no-repeat center;
