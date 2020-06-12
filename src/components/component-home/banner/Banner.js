@@ -37,7 +37,6 @@ class Banner extends Component {
     this.timeLine1 = setInterval(() => {
       const line = document.querySelector('.line-3');
       line.classList.add('hide');
-
     }, 6000);
     this.timeLine2 = setInterval(() => {
       const line = document.querySelector('.line2');
@@ -67,11 +66,6 @@ class Banner extends Component {
         </div>
         <div className="tg-5 wow fadeIn " data-wow-delay="8s">
           <a href="#scroll-concept">Scroll</a>
-        </div>
-        <div class="isolate">
-          <div class="circle circle-1"></div>
-          <div class="circle circle-2"></div>
-          <div class="circle circle-3"></div>
         </div>
         <div className="tg-1 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-2 wow fadeIn" data-wow-delay="5s"></div>
@@ -128,7 +122,9 @@ class Banner extends Component {
           </li>
           <li className="banner__brebCrumb-item">
             <a href="#" className="c-white fontnoto-700 banner__brebCrumb-item--active">
-              <span>セッションを</span><span>更新</span><span>しました</span>
+              <span>セッションを</span>
+              <span>更新</span>
+              <span>しました</span>
             </a>
           </li>
         </ul>
