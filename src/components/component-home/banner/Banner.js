@@ -68,6 +68,11 @@ class Banner extends Component {
         <div className="tg-5 wow fadeIn " data-wow-delay="8s">
           <a href="#scroll-concept">Scroll</a>
         </div>
+        <div class="isolate">
+          <div class="circle circle-1"></div>
+          <div class="circle circle-2"></div>
+          <div class="circle circle-3"></div>
+        </div>
         <div className="tg-1 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-2 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-3 wow fadeInRight" data-wow-delay="6s"></div>
