@@ -13,10 +13,6 @@ class Banner extends Component {
   componentDidMount() {
     const WOW = require('wow.js');
     new WOW().init();
-    this.time = setTimeout(() => {
-      const textRight = document.querySelector('.banner__np');
-      textRight.classList.add('hide');
-    }, 10000);
     this.tg = setTimeout(() => {
       const tg1 = document.querySelector('.tg-1');
       tg1.classList.add('transform');
@@ -52,9 +48,6 @@ class Banner extends Component {
     if (this.timer) {
       clearInterval(this.timer);
     }
-    if (this.time) {
-      clearTimeout(this.time);
-    }
     if (this.tg) {
       clearTimeout(this.tg);
     }
@@ -74,6 +67,11 @@ class Banner extends Component {
         </div>
         <div className="tg-5 wow fadeIn " data-wow-delay="8s">
           <a href="#scroll-concept">Scroll</a>
+        </div>
+        <div class="isolate">
+          <div class="circle circle-1"></div>
+          <div class="circle circle-2"></div>
+          <div class="circle circle-3"></div>
         </div>
         <div className="tg-1 wow fadeIn" data-wow-delay="5s"></div>
         <div className="tg-2 wow fadeIn" data-wow-delay="5s"></div>
@@ -130,7 +128,7 @@ class Banner extends Component {
           </li>
           <li className="banner__brebCrumb-item">
             <a href="#" className="c-white fontnoto-700 banner__brebCrumb-item--active">
-              セッションを更新しました
+              <span>セッションを</span><span>更新</span><span>しました</span>
             </a>
           </li>
         </ul>

@@ -228,13 +228,13 @@ ol {
 .text-center {
   text-align: center;
 }
-$fontweight: 400, 700, 900;
+$fontweight: 400, 500, 600, 700, 900;
 @each $fontweights in $fontweight {
   .fontlato-#{$fontweights} {
     font-weight: $fontweights;
   }
 }
-$fontweights: 400, 700;
+$fontweights: 400, 500, 600, 700, 900;
 @each $fontweight in $fontweight {
   .fontnoto-#{$fontweight} {
     font-weight: $fontweight;
@@ -426,23 +426,28 @@ $header__button--gradient: #ffdf57;
     text-align: center;
     line-height: 35px;
     color: black;
-    font-weight: 700;
     font-size: 18px;
+    font-weight: 500;
     -webkit-transform: skew(160deg);
     -moz-transform: skew(160deg);
     -o-transform: skew(160deg);
+
     &--title {
       color: #000000;
       letter-spacing: 3px;
+      transform: skew(20deg);
     }
     @include breakpointminmax(320, 779) {
       margin-top: 10px;
       font-size: 12px;
+      width: 220px;
     }
   }
   &__brebCrumb {
     font-family: 'Lato', sans-serif;
-    // width: calc(1000/1200 * 100%);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.19;
     padding: 18px 0;
     background-color: #097996;
     position: absolute;
@@ -452,6 +457,18 @@ $header__button--gradient: #ffdf57;
     align-items: center;
     flex-wrap: wrap;
     transform: translateX(-50%);
+    li {
+      &:nth-child(2) {
+        font-size: 14px;
+        line-height: 1.21;
+        letter-spacing: 0.7px;
+      }
+      &:last-child {
+        font-size: 14px;
+        line-height: 1.36;
+        letter-spacing: 0.7px;
+      }
+    }
     &-item {
       a,
       p {
@@ -478,9 +495,25 @@ $header__button--gradient: #ffdf57;
           }
         }
       }
-      .banner__brebCrumb-item--active {
-        text-decoration: underline;
-        font-family: 'Noto Sans', sans-serif;
+      &--active {
+        span {
+          &:nth-child(2n + 1) {
+            text-decoration: underline;
+          }
+          &:nth-child(2) {
+            position: relative;
+            &::before {
+              content: '';
+              position: absolute;
+              width: 5px;
+              height: 1px;
+              background-color: white;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
       }
     }
   }
@@ -495,7 +528,7 @@ $header__button--gradient: #ffdf57;
         content: '';
         position: absolute;
         width: 35%;
-        height: 2px;
+        height: 1px;
         top: 50%;
         background: white;
         right: 0;
@@ -505,7 +538,7 @@ $header__button--gradient: #ffdf57;
         content: '';
         position: absolute;
         width: 35%;
-        height: 2px;
+        height: 1px;
         top: 50%;
         background: white;
         left: 0;
@@ -517,6 +550,13 @@ $header__button--gradient: #ffdf57;
       padding-bottom: 10px;
       text-align: center;
       border-bottom: 1px solid white;
+      @media screen and (max-width: 780px) {
+        font-size: 26px;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 1.22;
+        letter-spacing: 1.15px;
+      }
     }
   }
   &__box {
@@ -528,7 +568,7 @@ $header__button--gradient: #ffdf57;
       font-size: 18px;
       padding: 8px 14px;
       border: 1px solid white;
-      @media (max-width:780px) {
+      @media (max-width: 780px) {
         display: none;
       }
     }
@@ -539,7 +579,7 @@ $header__button--gradient: #ffdf57;
       font-style: italic;
       font-family: 'Lato', sans-serif;
       border-bottom: 1px solid white;
-      @media (max-width:780px) {
+      @media (max-width: 780px) {
         display: none;
       }
     }
@@ -570,7 +610,7 @@ $header__button--gradient: #ffdf57;
       left: 50%;
       transform: translateX(-50%);
     }
-    @media screen and (max-width: 780px){
+    @media screen and (max-width: 780px) {
       font-size: 23px;
       font-weight: bold;
       font-style: italic;
@@ -584,7 +624,6 @@ $header__button--gradient: #ffdf57;
     margin-bottom: 22px;
     color: white;
     font-size: 16px;
-    font-weight: bold;
     line-height: 1.88;
     letter-spacing: 2.3px;
     @media screen and (max-width: 780px) {
@@ -597,16 +636,14 @@ $header__button--gradient: #ffdf57;
   }
   &__box {
     &-logo {
-      border-right: 1px solid white;
       flex: 1;
       text-align: center;
     }
-    &-text {
+    &--text {
       text-align: center;
       flex: 1;
       font-family: 'Noto Sans', sans-serif;
       font-size: 18px;
-      font-weight: bold;
       line-height: 1.33;
       letter-spacing: 0.9px;
       @media screen and (max-width: 780px) {
@@ -616,16 +653,21 @@ $header__button--gradient: #ffdf57;
         letter-spacing: 0.7px;
       }
     }
+    &--separation {
+      border: 0.5px solid #ffffff;
+      opacity: 0.5;
+      height: 51px;
+    }
   }
   .des-bottom {
     margin-top: 29px;
     font-family: 'Noto Sans', sans-serif;
-    font-weight: 600;
     font-size: 14px;
     line-height: 1.36;
     letter-spacing: 0.7px;
     @media screen and (max-width: 780px) {
       margin-top: 17px;
+      font-size: 12px;
     }
   }
 }

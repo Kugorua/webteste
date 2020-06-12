@@ -67,12 +67,14 @@
         width: 100%;
         p {
           margin-top: 27px;
+          font-weight: 600;
         }
       }
     }
     &__description {
       @media screen and (max-width: 780px) {
         text-align: left;
+        font-weight: inherit;
       }
     }
     &__box {
@@ -92,8 +94,6 @@
             line-height: 1.92;
             letter-spacing: 1.2px;
             font-family: 'Noto Sans', sans-serif;
-            font-size: 12px;
-            font-weight: 600;
           }
         }
         &-box {
