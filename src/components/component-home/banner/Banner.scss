@@ -4,11 +4,9 @@
 .hidden {
   visibility: hidden;
 }
-
 .wow {
   visibility: hidden;
 }
-
 @keyframes transformdot {
   from {
     opacity: 0;
@@ -353,7 +351,7 @@
     width: 50%;
     height: 100%;
     position: absolute;
-    z-index: 999;
+    z-index: 99;
     a {
       display: inline-block;
       position: absolute;
