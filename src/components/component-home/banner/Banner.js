@@ -10,7 +10,16 @@ import { Link } from 'gatsby';
 import './banner.scss';
 var WOW;
 class Banner extends Component {
-
+  componentDidMount() {
+    const WOW = require('wow.js');
+    new WOW().init();
+    this.tg = setTimeout(() => {
+      const tg1 = document.querySelector('.tg-1clone');
+      tg1.classList.add('transform');
+      const tg2 = document.querySelector('.tg-2clone');
+      tg2.classList.add('transform2');
+    }, 8000);
+  }
 
   componentWillMount() {
     this.timer = setInterval(() => {
@@ -22,10 +31,10 @@ class Banner extends Component {
       bannerbottom.classList.add('hidden');
     }, 5000);
     this.Pentagon = setInterval(() => {
-      // const left = document.querySelector('.tg-1');
-      // left.classList.add('transform');
-      // const right = document.querySelector('.tg-2');
-      // right.classList.add('transform');
+      const left = document.querySelector('.tg-1');
+      left.classList.add('hidden');
+      const right = document.querySelector('.tg-2');
+      right.classList.add('hidden');
     }, 6000);
   }
   componentWillUnmount() {
@@ -40,13 +49,13 @@ class Banner extends Component {
   render() {
     return (
       <div className="banner">
-      <div className="banner__top"></div>
-      <div className="banner__bottom"></div>
-      <div className="tg-1"></div>
-      <div className="tg-2"></div>
-      <div className="tg-1clone"></div>
-      <div className="tg-2clone"></div>
-      <div className="banner__dot "></div>
+        <div className="banner__top"></div>
+        <div className="banner__bottom"></div>
+        <div className="tg-1"></div>
+        <div className="tg-2"></div>
+        <div className="tg-1clone wow fadeIn" data-wow-delay="6s"></div>
+        <div className="tg-2clone wow fadeIn" data-wow-delay="6s"></div>
+        <div className="banner__dot "></div>
       </div>
     );
   }
