@@ -5,7 +5,6 @@ const EventForm = () => {
   const { register, handleSubmit, errors, setValue, getValues } = useForm();
   let [selects, setSelect] = useState({ other1: false, other2: false, other3: false });
   let [choose, setChoose] = useState(false);
-
   const handleChange = () => {
     setChoose(!choose);
   };
@@ -90,15 +89,15 @@ const EventForm = () => {
           {errors.industry && errors.industry.type === 'required' && <p className="form-detail__errors--color">必須項目です </p>}
           {errors.industry && errors.industry.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
         </div>
-        {selects.other1 && (
-          <div className="form-detail__fields--input">
-            <div className="form-detail__fields--underline"></div>
-            <label>業種（学部名）</label>
-            <input name="industryOther" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} onClick={focus} />
-            {errors.industryOther && (errors.industryOther.type === 'required' || errors.industryOther.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
-            {errors.industryOther && errors.industryOther.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
-          </div>
-        )}
+
+        <div className="form-detail__fields--input">
+          <div className="form-detail__fields--underline"></div>
+          <label>業種（学部名）</label>
+          <input name="industryOther" disabled={!selects.other1 && 'disabled'} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+          {errors.industryOther && (errors.industryOther.type === 'required' || errors.industryOther.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
+          {errors.industryOther && errors.industryOther.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
+        </div>
+
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>職種（学科名）</label>
@@ -111,30 +110,30 @@ const EventForm = () => {
           {errors.occupation && errors.occupation.type === 'required' && <p className="form-detail__errors--color">必須項目です</p>}
           {/* 20 letter */}
         </div>
-        {selects.other2 && (
-          <div className="form-detail__fields--input">
-            <div className="form-detail__fields--underline"></div>
-            <label>職種（学科名）</label>
-            <input name="occupationOther" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
-            {errors.occupationOther && (errors.occupationOther.type === 'required' || errors.occupationOther.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
-            {errors.occupationOther && errors.occupationOther.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
-          </div>
-        )}
+
+        <div className="form-detail__fields--input">
+          <div className="form-detail__fields--underline"></div>
+          <label>職種（学科名）</label>
+          <input name="occupationOther" disabled={!selects.other2 && 'disabled'} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+          {errors.occupationOther && (errors.occupationOther.type === 'required' || errors.occupationOther.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
+          {errors.occupationOther && errors.occupationOther.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
+        </div>
+
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>部署名</label>
           <input name="department" ref={register({ maxLength: 20 })} />
           {errors.department && errors.department.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
         </div>
-        {selects.other3 && (
-          <div className="form-detail__fields--input" style={{ visibility: 'hidden' }}>
-            <div className="form-detail__fields--underline"></div>
-            <label>役職名</label>
-            <input name="positionOther3" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
-            {errors.positionOther3 && (errors.positionOther3.type === 'required' || errors.positionOther3.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
-            {errors.positionOther3 && errors.positionOther3.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
-          </div>
-        )}
+
+        <div className="form-detail__fields--input" style={{ visibility: 'hidden' }}>
+          <div className="form-detail__fields--underline"></div>
+          <label>役職名</label>
+          <input name="positionOther3" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+          {errors.positionOther3 && (errors.positionOther3.type === 'required' || errors.positionOther3.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
+          {errors.positionOther3 && errors.positionOther3.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
+        </div>
+
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>役職名</label>
@@ -147,15 +146,15 @@ const EventForm = () => {
           {errors.position && errors.position.type === 'required' && <p className="form-detail__errors--color">必須項目です</p>}
           {/* 20 letter  */}
         </div>
-        {selects.other3 && (
-          <div className="form-detail__fields--input">
-            <div className="form-detail__fields--underline"></div>
-            <label>役職名</label>
-            <input name="positionOther3" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
-            {errors.positionOther3 && (errors.positionOther3.type === 'required' || errors.positionOther3.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
-            {errors.positionOther3 && errors.positionOther3.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
-          </div>
-        )}
+
+        <div className="form-detail__fields--input">
+          <div className="form-detail__fields--underline"></div>
+          <label>役職名</label>
+          <input name="positionOther3" disabled={!selects.other3 && 'disabled'} ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />
+          {errors.positionOther3 && (errors.positionOther3.type === 'required' || errors.positionOther3.type === 'validate') && <p className="form-detail__errors--color">必須項目です</p>}
+          {errors.positionOther3 && errors.positionOther3.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください </p>}
+        </div>
+
         <div className="form-detail__fields--input">
           <div className="form-detail__fields--underline"></div>
           <label>会社規模</label>
