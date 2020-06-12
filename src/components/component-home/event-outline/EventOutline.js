@@ -17,26 +17,28 @@ export default function EventOutline() {
           </div>
           <div className="event__box" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
             <table className="event__box__table mobile">
-              <tr>
-                <th>開催<br/>日時</th>
-                <td>7月27日（月）19:00〜</td>
-              </tr>
-              <tr>
-                <th>形式</th>
-                <td>オンラインイベント　TOKYO JCT から配信</td>
-              </tr>
-              <tr>
-                <th>定員</th>
-                <td>150人程度</td>
-              </tr>
-              <tr>
-                <th>参加費</th>
-                <td>無料</td>
-              </tr>
-              <tr>
-                <th>テーマ</th>
-                <td colSpan="3">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th>開催<br />日時</th>
+                  <td>7月27日（月）19:00〜</td>
+                </tr>
+                <tr>
+                  <th>形式</th>
+                  <td>オンラインイベント　TOKYO JCT から配信</td>
+                </tr>
+                <tr>
+                  <th>定員</th>
+                  <td>150人程度</td>
+                </tr>
+                <tr>
+                  <th>参加費</th>
+                  <td>無料</td>
+                </tr>
+                <tr>
+                  <th>テーマ</th>
+                  <td colSpan="3">モビリティビジネスはどこで生まれるのか、モビリティアントレプレナーシップ</td>
+                </tr>
+              </tbody>
             </table>
             <table className="event__box__table desktop">
               <tbody>
