@@ -1,8 +1,10 @@
 import React from 'react';
 import './speakers.scss';
 import speaker1 from '../../../images/speaker_saito.png';
+import speaker2 from '../../../images/speaker_izumida.png';
 import speaker3 from '../../../images/speaker_kotera.png';
 import speaker4 from '../../../images/speaker_moriguchi.png';
+import speaker5 from '../../../images/speaker_hisakawa.png';
 
 export default function Speakers() {
   return (
@@ -39,7 +41,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={speaker1} alt="Speaker" />
+                <img src={speaker2} alt="Speaker" />
                 <div className="thumbnail__text">
                   <p className="thumbnail__text--above">テクノロジー分野に精通したアナリスト</p>
                   <p className="thumbnail__text--below">泉田 良輔</p>
@@ -88,7 +90,7 @@ export default function Speakers() {
             </div>
             <div className="speaker__box__item" data-sal="slide-up" ata-sal-easing="ease-in-sine" data-sal-duration="1500" data-sal-delay="200">
               <div className="thumbnail">
-                <img src={speaker1} alt="Speaker" />
+                <img src={speaker5} alt="Speaker" />
                 <div className="thumbnail__text">
                   <p className="thumbnail__text--above thumbnail__text--brown">ファシリテーター</p>
                   <p className="thumbnail__text--brown thumbnail__text--below thumbnail__text--bg">久川 桃子</p>
