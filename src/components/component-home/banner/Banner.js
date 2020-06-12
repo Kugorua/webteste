@@ -34,12 +34,6 @@ class Banner extends Component {
       const bannerbottom = document.querySelector('.banner__bottom');
       bannerbottom.classList.add('hidden');
     }, 2000);
-    this.Pentagon = setInterval(() => {
-      // const left = document.querySelector('.tg-1');
-      // left.classList.add('hidden');
-      // const right = document.querySelector('.tg-2');
-      // right.classList.add('hidden');
-    }, 6000);
   }
   componentWillUnmount() {
     if (this.timer) {
