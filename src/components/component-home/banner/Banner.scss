@@ -4,6 +4,11 @@
 .hidden {
   visibility: hidden;
 }
+
+.wow {
+  visibility: hidden;
+}
+
 @keyframes transformdot {
   from {
     opacity: 0;
@@ -365,7 +370,7 @@
       text-transform: uppercase;
       text-decoration: none;
       writing-mode: vertical-lr;
-      @media screen and(max-width: 780px){
+      @media screen and(max-width: 780px) {
         font-size: 14px;
         font-weight: 500;
         line-height: 1.21;
