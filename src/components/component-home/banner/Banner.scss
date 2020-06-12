@@ -78,7 +78,7 @@
     width: 100%;
     height: 50%;
     background: white;
-    z-index: 2;
+    z-index: 15;
     transition: 1s;
     top: 0;
     &.hidden {
@@ -90,7 +90,7 @@
     content: '';
     width: 100%;
     height: 50%;
-    z-index: 2;
+    z-index: 15;
     transition: 1s;
     background: white;
     bottom: 0;
@@ -108,13 +108,10 @@
     transition: 0.5s;
     height: 100%;
     position: absolute;
-    background-image: linear-gradient(to right, #18d5de, #c9abf8), url(../../../svgs/noisy.svg);
+    background-image: linear-gradient(to right, #18d5de, #c9abf8);
     z-index: 99;
     clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
     opacity: 0.6;
-    background-repeat: no-repeat, repeat;
-    background-blend-mode: multiply;
-    background-size: cover;
     &.transform {
       width: 25%;
       height: 80%;
@@ -131,20 +128,17 @@
     width: 50%;
     height: 100%;
     position: absolute;
-    background-image: linear-gradient(to right, #ffeb34, #3de8ba), url(../../../svgs/noisy.svg);
+    background-image: linear-gradient(to right, #ffeb34, #3de8ba);
     z-index: 99;
     right: 0;
     transition: 0.5s;
     opacity: 0.6;
     -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
     clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
-    background-repeat: no-repeat, repeat;
-    background-blend-mode: multiply;
-    background-size: cover;
     &.transform {
       width: 25%;
       height: 100%;
-      clip-path: polygon(42% 0, 100% 1%, 100% 100%, 100% 100%, 0% 24%);
+      clip-path: polygon(42% 0, 100% 0%, 100% 100%, 100% 100%, 0% 24%);
       opacity: 0.6;
     }
   }
@@ -164,7 +158,7 @@
     border-radius: 50%;
     top: 50%;
     left: 50%;
-    z-index: 3;
+    z-index: 20;
     transform: translate(-50%, -50%);
     animation: showdot 3s linear;
   }
@@ -234,12 +228,10 @@
 
   .tg-1 {
     width: 50%;
-    transition: 0.5s;
     height: 100%;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
-    opacity: 0.6;
     background: black;
     &::before {
       content: '';
@@ -259,11 +251,9 @@
     width: 50%;
     height: 100%;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     background: black;
     right: 0;
-    transition: 0.5s;
-    opacity: 0.6;
     -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
     clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
     &::before {
@@ -289,7 +279,7 @@
     transition: 0.5s;
     height: 100%;
     position: absolute;
-    z-index: 3;
+    z-index: 30;
     clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
     opacity: 0.6;
     background: black;
@@ -297,10 +287,7 @@
       content: '';
       width: calc(100% - 2px);
       height: calc(100% - 2px);
-      background-repeat: no-repeat, repeat;
-      background-blend-mode: multiply;
-      background-size: cover;
-      background-image: linear-gradient(to right, #18d5de, #c9abf8), url(../../../svgs/noisy.svg);
+      background-image: linear-gradient(to right, #18d5de, #c9abf8);
       display: block;
       position: absolute;
       clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
@@ -322,7 +309,7 @@
     width: 50%;
     height: 100%;
     position: absolute;
-    z-index: 99;
+    z-index: 30;
     background: black;
     right: 0;
     transition: 0.5s;
@@ -336,11 +323,8 @@
       display: block;
       position: absolute;
       top: 1px;
-      background-repeat: no-repeat, repeat;
-      background-blend-mode: multiply;
-      background-size: cover;
       clip-path: polygon(50% 0, 100% 0%, 100% 100%, 49% 100%, 0% 50%);
-      background-image: linear-gradient(to right, #ffeb34, #3de8ba), url(../../../svgs/noisy.svg);
+      background-image: linear-gradient(to right, #ffeb34, #3de8ba);
       left: 1px;
     }
     @media (max-width: 767px) {
@@ -418,12 +402,9 @@
     height: 50%;
     position: absolute;
     bottom: 0;
-    z-index: 99;
+    z-index: 25;
     transition: 0.5s;
-    background: #d3e6ea, url(../../../svgs/noisy.svg);
-    background-repeat: no-repeat, repeat;
-    background-blend-mode: multiply;
-    background-size: cover;
+    background: #d3e6ea;
     clip-path: polygon(75% 100%, 25% 100%, 50% 0);
     &.hide {
       opacity: 0;
@@ -436,11 +417,8 @@
     height: 50%;
     position: absolute;
     bottom: 0;
-    z-index: 99;
-    background: #d3e6ea, url(../../../svgs/noisy.svg);
-    background-repeat: no-repeat, repeat;
-    background-blend-mode: multiply;
-    background-size: cover;
+    z-index: 25;
+    background: #d3e6ea;
     clip-path: polygon(75% 0, 25% 0, 50% 100%);
     transition: 0.5s;
     &.hide {
@@ -448,14 +426,12 @@
     }
   }
   .tg-4 {
+    z-index: 27;
     background: url(../../../images/banner.png);
-    background: url(../../../images/banner.png), url(../../../svgs/noisy.svg);
     background-size: cover;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat center;
-    background-blend-mode: multiply;
   }
   .banner__brebCrumb {
     z-index: 99;
