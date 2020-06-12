@@ -13,10 +13,6 @@ class Banner extends Component {
   componentDidMount() {
     const WOW = require('wow.js');
     new WOW().init();
-    this.time = setTimeout(() => {
-      const textRight = document.querySelector('.banner__np');
-      textRight.classList.add('hide');
-    }, 10000);
     this.tg = setTimeout(() => {
       const tg1 = document.querySelector('.tg-1');
       tg1.classList.add('transform');
@@ -51,9 +47,6 @@ class Banner extends Component {
   componentWillUnmount() {
     if (this.timer) {
       clearInterval(this.timer);
-    }
-    if (this.time) {
-      clearTimeout(this.time);
     }
     if (this.tg) {
       clearTimeout(this.tg);
@@ -130,7 +123,7 @@ class Banner extends Component {
           </li>
           <li className="banner__brebCrumb-item">
             <a href="#" className="c-white fontnoto-700 banner__brebCrumb-item--active">
-              セッションを更新しました
+              <span>セッションを</span><span>更新</span><span>しました</span>
             </a>
           </li>
         </ul>

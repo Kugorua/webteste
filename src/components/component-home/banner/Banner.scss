@@ -153,7 +153,7 @@
   }
   .banner__np {
     position: absolute;
-    top: 27px;
+    top: 90px;
     z-index: 999;
     left: -44px;
     display: flex;
@@ -183,10 +183,10 @@
   }
   .banner__text-right {
     position: absolute;
-    top: 89px;
-    right: 0;
+    top: 90px;
+    right: 16px;
     z-index: 99;
-    text-align: center;
+    text-align: right;
     .hidden-text-mb {
       display: initial;
       width: 43.26%;

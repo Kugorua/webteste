@@ -426,14 +426,15 @@ $header__button--gradient: #ffdf57;
     text-align: center;
     line-height: 35px;
     color: black;
-    font-weight: 700;
     font-size: 18px;
+    font-weight: 500;
     -webkit-transform: skew(160deg);
     -moz-transform: skew(160deg);
     -o-transform: skew(160deg);
     &--title {
       color: #000000;
       letter-spacing: 3px;
+      transform: skew(20deg);
     }
     @include breakpointminmax(320, 779) {
       margin-top: 10px;
@@ -442,7 +443,9 @@ $header__button--gradient: #ffdf57;
   }
   &__brebCrumb {
     font-family: 'Lato', sans-serif;
-    // width: calc(1000/1200 * 100%);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.19;
     padding: 18px 0;
     background-color: #097996;
     position: absolute;
@@ -452,6 +455,18 @@ $header__button--gradient: #ffdf57;
     align-items: center;
     flex-wrap: wrap;
     transform: translateX(-50%);
+    li {
+      &:nth-child(2) {
+        font-size: 14px;
+        line-height: 1.21;
+        letter-spacing: 0.7px;
+      }
+      &:last-child {
+        font-size: 14px;
+        line-height: 1.36;
+        letter-spacing: 0.7px;
+      }
+    }
     &-item {
       a,
       p {
@@ -478,9 +493,25 @@ $header__button--gradient: #ffdf57;
           }
         }
       }
-      .banner__brebCrumb-item--active {
-        text-decoration: underline;
-        font-family: 'Noto Sans', sans-serif;
+      &--active {
+        span {
+          &:nth-child(2n + 1) {
+            text-decoration: underline;
+          }
+          &:nth-child(2) {
+            position: relative;
+            &::before {
+              content: '';
+              position: absolute;
+              width: 5px;
+              height: 1px;
+              background-color: white;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
       }
     }
   }
@@ -528,7 +559,7 @@ $header__button--gradient: #ffdf57;
       font-size: 18px;
       padding: 8px 14px;
       border: 1px solid white;
-      @media (max-width:780px) {
+      @media (max-width: 780px) {
         display: none;
       }
     }
@@ -539,7 +570,7 @@ $header__button--gradient: #ffdf57;
       font-style: italic;
       font-family: 'Lato', sans-serif;
       border-bottom: 1px solid white;
-      @media (max-width:780px) {
+      @media (max-width: 780px) {
         display: none;
       }
     }
@@ -570,7 +601,7 @@ $header__button--gradient: #ffdf57;
       left: 50%;
       transform: translateX(-50%);
     }
-    @media screen and (max-width: 780px){
+    @media screen and (max-width: 780px) {
       font-size: 23px;
       font-weight: bold;
       font-style: italic;
