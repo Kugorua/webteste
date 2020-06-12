@@ -322,7 +322,10 @@
     bottom: 0;
     z-index: 99;
     transition: 0.5s;
-    background: #d3e6ea;
+    background: #d3e6ea, url(../../../svgs/noisy.svg);
+    background-repeat: no-repeat, repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
     clip-path: polygon(75% 100%, 25% 100%, 50% 0);
     &.hide {
       opacity: 0;
@@ -370,7 +373,10 @@
     position: absolute;
     bottom: 0;
     z-index: 99;
-    background: #d3e6ea;
+    background: #d3e6ea, url(../../../svgs/noisy.svg);
+    background-repeat: no-repeat, repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
     clip-path: polygon(75% 0, 25% 0, 50% 100%);
     transition: 0.5s;
     &.hide {
