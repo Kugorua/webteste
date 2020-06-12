@@ -116,7 +116,9 @@ class Banner extends Component {
           </li>
           <li className="banner__brebCrumb-item">
             <a href="#" className="c-white fontnoto-700 banner__brebCrumb-item--active">
-              <span>セッションを</span><span>更新</span><span>しました</span>
+              <span>セッションを</span>
+              <span>更新</span>
+              <span>しました</span>
             </a>
           </li>
         </ul>
