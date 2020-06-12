@@ -126,7 +126,7 @@ const EventForm = () => {
           {errors.department && errors.department.type === 'maxLength' && <p className="form-detail__errors--color">20文字以下で入力してください</p>}
         </div>
 
-        <div className="form-detail__fields--input" style={{ visibility: 'hidden' }}>
+        <div className="form-detail__fields--input desktop" style={{ visibility: 'hidden' }}>
           <div className="form-detail__fields--underline"></div>
           <label>役職名</label>
           <input name="positionOther3" ref={register({ required: true, maxLength: 20, validate: validationEmpty })} />

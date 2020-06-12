@@ -61,7 +61,7 @@ class Banner extends Component {
           <img src={banner__np} />
           <p id="text-vertical">powered by NewsPicks</p>
         </div>
-        <div className="tg-5 wow fadeIn " data-wow-delay="10s">
+        <div className="tg-5 wow fadeIn " data-wow-delay="7s">
           <a href="#scroll-concept">Scroll</a>
         </div>
         <div className="banner__top"></div>
@@ -92,10 +92,10 @@ class Banner extends Component {
           <div className="banner__text-img wow fadeIn" data-wow-delay="3.5s">
             <img src={banner_text} />
           </div>
-          <div className="banner__bg wow fadeIn" data-wow-delay="6.5s">
+          <div className="banner__bg wow fadeIn" data-wow-delay="7s">
             <p className="banner__bg--title">オンラインイベント開催決定</p>
           </div>
-          <div className="banner__box d-flex hide-mb wow fadeIn" data-wow-delay="6.5s">
+          <div className="banner__box d-flex hide-mb wow fadeIn" data-wow-delay="7s">
             <p href="#" className="banner__box-button fontnoto-700 c-white">
               第1回
             </p>
@@ -108,7 +108,7 @@ class Banner extends Component {
             <p className="banner__boxs-dates c-white fontlato-700">2020.07.27 MON</p>
           </div>
         </div>
-        <ul className="banner__brebCrumb d-flex container wow fadeIn banner__brebCrumb__mobile--hidden" data-wow-delay="6.5s">
+        <ul className="banner__brebCrumb d-flex container wow fadeIn banner__brebCrumb__mobile--hidden" data-wow-delay="7s">
           <li className="banner__brebCrumb-item">
             <p href="#" className="c-white fontlato-700">
               WHAT’S NEW
