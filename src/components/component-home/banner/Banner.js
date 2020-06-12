@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import icon__buttonmenu from '../../../svgs/icon__buttonmenu.svg';
 import banner_text from '../../../svgs/banner_text.svg';
 import banner_text_mb from '../../../svgs/banner_text_mb.svg';
-
+import noysi from '../../../svgs/noisy.svg';
 import text_banner from '../../../svgs/text.svg';
 import banner__np from '../../../svgs/np_logo.svg';
 import { Link } from 'gatsby';
@@ -22,10 +22,6 @@ class Banner extends Component {
       triangleLeft.classList.add('transform');
       const triangleRight = document.querySelector('.banner__triangle-right');
       triangleRight.classList.add('transform');
-      // const tg3 = document.querySelector('.tg-3');
-      // tg3.classList.add('hide');
-      // const tg6 = document.querySelector('.tg-6');
-      // tg6.classList.add('hide');
     }, 6000);
   }
 
@@ -52,6 +48,9 @@ class Banner extends Component {
     if (this.Pentagon) {
       clearInterval(this.Pentagon);
     }
+    if (this.tg) {
+      clearInterval(this.tg);
+    }
 
   }
   render() {
@@ -72,11 +71,13 @@ class Banner extends Component {
         <div className="tg-2clone wow fadeInRight" data-wow-delay="3s"></div>
         <div className="tg-3 wow fadeInRight" data-wow-delay="4s"></div>
         <div className="tg-6 wow fadeInLeft" data-wow-delay="4s"></div>
-        <div className="tg-4 wow fadeIn " data-wow-delay="5s"></div>
+        <div className="tg-4 wow fadeIn " data-wow-delay="5s">
+          <img src={noysi}></img>
+        </div>
         <div className="banner__dot "></div>
         <div className="banner__triangle-left wow fadeIn" id="banner__triangle-left" data-wow-delay="5s"></div>
         <div className="banner__triangle-right  wow fadeIn" id="banner__triangle-right" data-wow-delay="5s"></div>
-        <div className="button__mb-banner ">
+        <div className="button__mb-banner wow fadeIn" data-wow-delay="7s">
           <Link to="/event-form">
             <button className="header__button-mobile c-white header__button--gradient">
               <img src={icon__buttonmenu} />
@@ -101,7 +102,7 @@ class Banner extends Component {
             </p>
             <p className="banner__box-date c-white fontlato-700 ">2020.07.27 MON</p>
           </div>
-          <div className="banner__boxs hide-desktop">
+          <div className="banner__boxs hide-desktop wow fadeIn" data-wow-delay="7s">
             <p className="banner__boxs-buttons fontnoto-700 c-white">
               <span className="text-content">第1回 </span>
             </p>
